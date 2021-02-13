@@ -6,13 +6,17 @@
   "author": "DNiev <danny.nieves411@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "concurrently": "^5.3.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
     "mongodb": "^3.6.4",
     "mongoose": "5.11.15",
     "morgan": "^1.10.0",
     "node": "^15.8.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "validator": "^13.5.2"
   },
   "scripts": {
     "start": "node server.js",
