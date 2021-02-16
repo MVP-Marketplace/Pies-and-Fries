@@ -1,4 +1,5 @@
-const User = require('../db/models/user');
+const User = require('../db/models/user'),
+    {sendWelcomeEmail} = require('../emails/');
 
 exports.createUser = async (req, res) => {
     const { name, email, password } = req.body;
@@ -8,6 +9,7 @@ exports.createUser = async (req, res) => {
             email,
             password
         });
+        sendWelcomeEmail(user.email, user.name);
         const token = await user.generateAuthToken();
         res.cookie('jwt', token, {
             httpOnly: true,

@@ -3,7 +3,7 @@ validator = require('validator'),
 bcrypt = require('bcryptjs'),
 jwt = require('jsonwebtoken');
 
-const usersSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     name: {type: String, required: true,},
     email: {type: String, required: true, trim: true, unique: true, validate(value) {
         if(!validator.isEmail(value)) {
@@ -34,7 +34,7 @@ const usersSchema = new mongoose.Schema({
 })
 
 userSchema.methods.toJSON = () => {
-    const user = this,
+    const user = this
     const userObject = user.toObject()
     delete userObject.password
     delete userObject.tokens
