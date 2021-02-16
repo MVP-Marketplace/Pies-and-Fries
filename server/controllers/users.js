@@ -1,6 +1,5 @@
-const User = require('../db/models/user');
-const { sendWelcomeEmail } = require('../emails');
-{ sendWelcomeEmail } = require('../emails/');
+const User = require('../db/models/user'),
+    {sendWelcomeEmail} = require('../emails/');
 
 exports.createUser = async (req, res) => {
     const { name, email, password } = req.body;
