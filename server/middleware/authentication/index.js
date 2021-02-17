@@ -1,3 +1,4 @@
+const { response } = require('express');
 const passport = require('passport'),
 JwtStrategy = require('passport-jwt').Strategy,
 User= require('../../db/models/user'),
@@ -18,10 +19,15 @@ let jwtOptions = {
 passport.use(
     'jwt',
     new JwtStrategy(jwtOptions, async (jwtPayload, done) => {
-        if (Date.now() > jwtPayload.expires){
-            return done (null, false, {message: 'jwt expired'});
+        try {
+            if (Date.now() > jwtPayload.expires){
+                return done (null, false, {message: 'jwt expired'});
         }
-        let {iat, exp, ...userData } = jwtPayload;
+        } catch (e) {
+            res.status(400).json({ error: e.toString() });
+        }
+       
+        let {iat, exp, ...userData} = jwtPayload;
         userData = await User.findById(userData._id);
         return done (null, userData);
     })

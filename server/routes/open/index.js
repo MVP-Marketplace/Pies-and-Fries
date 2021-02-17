@@ -1,7 +1,8 @@
 const router = require('express').Router(),
 {
     createUser,
-    loginUser,
+    loginUser
+    
 } = require('../../controllers/users');
 
 router.post('/', createUser);
