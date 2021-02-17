@@ -5,7 +5,7 @@ const express = require('express'),
     app = express(),
     cookieParser = require('cookie-parser'),
     userRouter = require('./routes/secure/users'),
-    openRoutes = require('./routes/open'),
+    openRoutes = require('./routes/open/index.js'),
     passport = require('./middleware/authentication'),
     path = require('path');
 
