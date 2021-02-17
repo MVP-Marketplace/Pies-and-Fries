@@ -22,4 +22,31 @@ exports.createUser = async (req, res) => {
     }
 };
 
+
+// ***********************************************//
+// Login a user
+// ***********************************************//
+exports.loginUser = async (req, res) => {
+    const {email, password } =req.body;
+    try{
+        const user = await User.findByCredentials(email,password);
+        const token = await user.generateAuthToken();
+        res.cookie('jwt', token, {
+            httpOnly: true,
+            sameSite: 'Strict',
+            sercure: process.env.NODE_ENV !== 'production' ? false : true 
+        });
+        res.json(user);
+    } catch (e) {
+        res.status(400).json ({error: e.toString()});
+    }
+};
+//Authenticated Routes Below
+
+// ***********************************************//
+// Get current user
+// ***********************************************//
+
+exports.getCurrentUser = async (req,res) => res.json (req.user);
+
 exports.loginUser = async (req, res) => {}
