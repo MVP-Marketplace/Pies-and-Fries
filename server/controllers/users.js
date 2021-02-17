@@ -50,3 +50,19 @@ exports.loginUser = async (req, res) => {
 exports.getCurrentUser = async (req,res) => res.json (req.user);
 
 exports.loginUser = async (req, res) => {}
+
+// ***********************************************//
+// Logout a user
+// ***********************************************//
+exports.logoutUser = async (req, res) => {
+    try {
+    req.user.tokens = req.user.tokens.filter(token => {
+        return token.token !== req.cookies.jwt;
+    });
+    await req.user.save();
+    res.clearCookie('jwt');
+    res.json({ message: 'Logged out' });
+    } catch (e) {
+    res.status(500).json({ error: e.toString() });
+    }
+};
