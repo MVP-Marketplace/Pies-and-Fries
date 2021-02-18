@@ -19,7 +19,7 @@ exports.createUser = async (req, res) => {
         });
         res.status(201).json(user);
     } catch (e) {
-        res.status(400).json({ error: e.toString() });
+        res.status(400).json({ error: e.toString(), message: "Email already exists" });
     }
 };
 

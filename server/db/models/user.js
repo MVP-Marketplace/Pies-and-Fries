@@ -1,6 +1,7 @@
 const mongoose = require('mongoose'),
     validator = require('validator'),
     bcrypt = require('bcryptjs'),
+    uniqueValidator = require('mongoose-unique-validator')
     jwt = require('jsonwebtoken');
 
 const userSchema = new mongoose.Schema(
@@ -32,6 +33,8 @@ const userSchema = new mongoose.Schema(
         }
     ]
 });
+
+userSchema.plugin(uniqueValidator)
 
 userSchema.methods.toJSON = function () {
     const user = this;
