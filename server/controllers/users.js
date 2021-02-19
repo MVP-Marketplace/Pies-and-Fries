@@ -1,6 +1,6 @@
 const User = require('../db/models/user'),
     jwt = require('jsonwebtoken'),
-    {sendWelcomeEmail} = require('../emails/');
+    {sendWelcomeEmail, sendCancellationEmail} = require('../emails/');
 
 exports.createUser = async (req, res) => {
     const { name, email, password } = req.body;
@@ -86,5 +86,27 @@ exports.logoutUser = async (req, res) => {
     res.json({ message: 'Logged out' });
     } catch (e) {
     res.status(500).json({ error: e.toString() });
+    }
+};
+
+exports.logoutAllDevices = async (req, res) => {
+    try{
+        req.user.tokens = [];
+        await req.user.save();
+        res.clearCookie('jwt');
+        res.json({message: 'All devices logged out'});
+    } catch (e) {
+        res.status(500).send();
+    }
+};
+
+exports.deleteUser = async (req, res) => {
+    try {
+        await req.user.remove();
+        sendCancellationEmail(req.user.email, req.user.name);
+        res.clearCookie('jwt');
+        res.json({message: 'User deleted'});
+    } catch (e) {
+        res.status(500).json({error: e.toString()});
     }
 };
