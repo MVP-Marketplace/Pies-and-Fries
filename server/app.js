@@ -1,19 +1,24 @@
 require('./db/config');
-
 const express = require('express'),
     morgan = require('morgan'),
     app = express(),
     cookieParser = require('cookie-parser'),
+    cors = require('cors'),
     userRouter = require('./routes/secure/users'),
     openRoutes = require('./routes/open/index.js'),
     passport = require('./middleware/authentication'),
     path = require('path');
+    
 
+///middleware
 app.use(express.json());
-
+app.use(cors())
 app.use(morgan('dev'));
 
+//OpenRoutes
 app.use('/api/users', openRoutes);
+app.use('/api/payments', openRoutes)
+
 
 app.use(cookieParser());
 
