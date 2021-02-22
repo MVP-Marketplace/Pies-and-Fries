@@ -1,6 +1,6 @@
 const User = require('../db/models/user'),
   jwt = require('jsonwebtoken'),
-  { sendWelcomeEmail, sendCancellationEmail } = require('../emails/');
+  { sendWelcomeEmail, sendCancellationEmail, forgotPasswordEmail } = require('../emails/');
 
 exports.createUser = async (req, res) => {
   const { name, email, password } = req.body;
@@ -120,7 +120,7 @@ exports.deleteUser = async (req, res) => {
 // ***********************************************//
 exports.requestPasswordReset = async (req, res) => {
   try {
-    const { email } = req.query,
+    const { email } = req.body,
       user = await User.findOne({ email });
     if (!user) throw new Error("account doesn't exist");
     const token = jwt.sign(
@@ -130,7 +130,8 @@ exports.requestPasswordReset = async (req, res) => {
         expiresIn: '10m',
       }
     );
-    forgotPassowordEmail(email, token);
+    //check token parameter
+    forgotPasswordEmail(token, user.email, user.name,);
     res.json({ message: 'reset password email sent' });
   } catch (err) {
     res.json({ error: err.toString() });
@@ -140,7 +141,7 @@ exports.requestPasswordReset = async (req, res) => {
 exports.passwordRedirect = async (req, res) => {
   const { token } = req.params;
   try {
-    jwt.verify(token, process.env.JWT_SECRET, function (err, decoded) {
+    jwt.verify(token, process.env.JWT_SECRET, function (err) {
       if (err) throw new Error(err.message);
     });
     res.cookie('jwt', token, {
