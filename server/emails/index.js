@@ -23,11 +23,13 @@ const sendCancellationEmail = (email, name) => {
 
 const forgotPasswordEmail = (email, token, name) => {
     const exampleHTMLEmail = `<a target= "_blank" rel="noopener noreferrer" href="${process.env.APP_URL}/api/password/${token}">Reset Password</a>`
+
     sgMail.send({
         to: email,
         from: `${process.env.FROM_EMAIL}`,
         text: `Hi ${name}! Please click the link below to reset your password.`,
-        subject: "Password reset." 
+        subject: "Password reset.",
+        html: exampleHTMLEmail
     })
 }
 
