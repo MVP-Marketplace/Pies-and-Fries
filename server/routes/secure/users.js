@@ -7,4 +7,5 @@ router.post('/logout', logoutUser);
 router.post('/logoutall', logoutAllDevices);
 router.delete('/', deleteUser);
 
+
 module.exports = router; 
