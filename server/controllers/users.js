@@ -131,7 +131,7 @@ exports.requestPasswordReset = async (req, res) => {
       }
     );
     //check token parameter
-    forgotPasswordEmail(token, user.email, user.name,);
+    forgotPasswordEmail(user.email, token, user.name,);
     res.json({ message: 'reset password email sent' });
   } catch (err) {
     res.json({ error: err.toString() });
@@ -157,7 +157,7 @@ exports.passwordRedirect = async (req, res) => {
 
 exports.updatePassword = async (req, res) => {
   try {
-    req.user.password = re.body.password;
+    req.user.password = req.body.password;
     await req.user.save();
     res.clearCookie('jwt');
     res.json({ message: 'password updated successfully' });
