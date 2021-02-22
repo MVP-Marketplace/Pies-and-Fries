@@ -1,12 +1,13 @@
 const router = require('express').Router(),
-{
+  {
     createUser,
-    loginUser
-    
-} = require('../../controllers/users');
+    loginUser,
+    requestPasswordReset,
+  } = require('../../controllers/users');
 
 router.post('/', createUser);
 
 router.post('/login', loginUser);
+router.patch('/resetpassword', requestPasswordReset);
 
 module.exports = router;
