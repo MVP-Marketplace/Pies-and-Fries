@@ -2,10 +2,14 @@ import './App.css';
 import { Route } from 'react-router-dom'
 import SignIn from './components/SignIn'
 import UserDashboard from './components/UserDashboard'
+import { AppContextProvider } from './context/AppContext'
+
+
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <AppContextProvider>
       <Route exact path="/signin" render={() => (
         <SignIn 
         signIn={true}
@@ -20,7 +24,8 @@ function App() {
         <UserDashboard 
         />
       )} />
-    </div>
+      </AppContextProvider>
+    </>
   );
 }
 
