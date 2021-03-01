@@ -18,7 +18,7 @@ function App() {
         signIn={false}
         />
       )} />
-      <Route exact path="/user" render={() => (
+      <Route exact path="/dashboard" render={() => (
         <UserDashboard 
         />
       )} />

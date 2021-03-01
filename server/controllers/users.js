@@ -3,12 +3,15 @@ const User = require('../db/models/user'),
   { sendWelcomeEmail, sendCancellationEmail, forgotPasswordEmail } = require('../emails/');
 
 exports.createUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, address, number } = req.body;
   try {
     const user = await new User({
       name,
       email,
       password,
+      address,
+      number
+      
     });
     sendWelcomeEmail(user.email, user.name);
     const token = await user.generateAuthToken();
@@ -21,7 +24,7 @@ exports.createUser = async (req, res) => {
   } catch (e) {
     res
       .status(400)
-      .json({ error: e.toString(), message: 'Email already exists' });
+      // .json({ error: e.toString(), message: 'Email already exists' });
   }
 };
 

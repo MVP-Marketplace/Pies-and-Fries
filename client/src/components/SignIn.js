@@ -9,19 +9,18 @@ const SignIn = (props) => {
         
        // comments to test the forms till we can trigger the check. 
         <div>
-            <signInForm />
-            {/* {props.signIn && (
-            <div>
-                <h1>this is sign in</h1>
-                <SignInForm />
-            </div>
-            )} */}
-            {/* {props.signIn === false && (<> */}
-                <h1>this is sign up</h1>
-                <CreateAccountForm />
-                {/* </> */}
-            {/* // )} */}
-
+            {props.signIn && (
+                <div>
+                    <h1>This is sign In</h1>
+                    <SignInForm />
+                </div>
+            )}
+            {!props.signIn && (
+                <div>
+                    <h1>this is sign up</h1>
+                    <CreateAccountForm />
+                </div>
+            )} 
         </div>
        
     )
