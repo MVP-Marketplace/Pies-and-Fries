@@ -21,7 +21,6 @@ const userSchema = new mongoose.Schema(
         }
     }},
     admin: {type: Boolean, default: false},
-    username: {type: String,trim: true},    
     number: {type: Number},
     address: {type: String},
     order: [String],
