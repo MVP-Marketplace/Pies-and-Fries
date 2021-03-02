@@ -1,0 +1,28 @@
+.container {
+  border: 1px solid black;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  justify-content: space-between;
+}
+
+.navLogo h1 {
+  margin: 0;
+}
+.navOptions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navItem {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  font-weight: bold;
+}
