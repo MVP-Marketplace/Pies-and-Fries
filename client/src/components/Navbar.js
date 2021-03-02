@@ -29,6 +29,7 @@ const Navbar = (props) => {
                     <Link to="/signin" className="navItem" onClick={() => logoutUser()}>Logout</Link>
                 :   <Link to ="/signin" className="navItem">Login</Link>
                 }
+                {!props.userLoggedIn &&  <Link to ="/signUp" className="navItem">Sign Up</Link>}
                
             </div>
         </div>
