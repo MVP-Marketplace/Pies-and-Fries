@@ -17,6 +17,7 @@ const UserDashboard = (props) => {
        getUserInfo()
     },[])
 
+
     return(
 
         <div>
@@ -41,6 +42,7 @@ const UserDashboard = (props) => {
             <div>
                 <h1>Favorite Orders</h1>
             </div>
+   
         </div>
     )
 }
