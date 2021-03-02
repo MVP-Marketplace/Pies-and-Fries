@@ -41,6 +41,9 @@ exports.loginUser = async (req, res) => {
       sameSite: 'Strict',
       sercure: process.env.NODE_ENV !== 'production' ? false : true,
     });
+    // if(user) {
+    //   res.redirect('/dashboard')
+    // }
     res.json(user);
   } catch (e) {
     res.status(400).json({ error: e.toString() });

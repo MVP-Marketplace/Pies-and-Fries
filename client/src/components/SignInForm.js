@@ -22,6 +22,9 @@ const handleFormSubmit = (e) => {
     .then((res) => {
       console.log(res)
       res.json()
+      if(res.status === 200) {
+        window.location.href="/dashboard"
+      } 
     }
       )
     .catch((err) => {
@@ -54,15 +57,14 @@ const handleFormSubmit = (e) => {
                        We'll never share your email with anyone else.
                       </Form.Text>
                          </Form.Group>
- <Form.Group controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password"  value = {password} onChange={(e) => setPassword(e.target.value)}/>
-  </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>
-<button onClick={() => logoutUser()}>logout</button>
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Password"  value = {password} onChange={(e) => setPassword(e.target.value)}/>
+                      </Form.Group>
+                      <Button variant="primary" type="submit">
+                        Submit
+                      </Button>
+                    </Form>
        </> 
     )
 }
