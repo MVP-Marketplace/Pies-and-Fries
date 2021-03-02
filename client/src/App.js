@@ -1,13 +1,20 @@
 import './App.css';
+import {useState} from 'react'
 import { Route } from 'react-router-dom'
 import SignIn from './components/SignIn'
 import UserDashboard from './components/UserDashboard'
 import { AppContextProvider } from './context/AppContext'
+import Navbar from './components/Navbar'
+import Store from './components/Store'
 
 function App() {
+  const [userLoggedIn, setUserLogginIn] = useState(false)
   return (
     <>
     <AppContextProvider>
+      <Navbar 
+      userLoggedIn={userLoggedIn} 
+       setUserLogginIn ={setUserLogginIn}/>
       <Route exact path="/signin" render={() => (
         <SignIn 
         signIn={true}
@@ -20,6 +27,11 @@ function App() {
       )} />
       <Route exact path="/dashboard" render={() => (
         <UserDashboard 
+        setUserLogginIn ={setUserLogginIn}
+        />
+      )} />
+       <Route exact path="/store" render={() => (
+        <Store 
         />
       )} />
       </AppContextProvider>
