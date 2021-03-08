@@ -8,8 +8,8 @@ const express = require('express'),
     openRoutes = require('./routes/open/index.js'),
     passport = require('./middleware/authentication'),
     path = require('path');
-    
-
+    store = require('./routes/open/store.js')
+    order = require('./routes/open/order.js')
 ///middleware
 app.use(express.json());
 app.use(cors())
@@ -18,8 +18,8 @@ app.use(morgan('dev'));
 //OpenRoutes
 app.use('/api/users', openRoutes);
 app.use('/api/payments', openRoutes)
-
-
+app.use('/api/store', store)
+app.use('/api/orders', order)
 app.use(cookieParser());
 
 if (process.env.NODE_ENV === 'production') {
