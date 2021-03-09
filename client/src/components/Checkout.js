@@ -13,26 +13,24 @@ const [product, setProduct] = useState({
 });
 
 
-const makePayment = token =>{
+const makePayment = token => {
     const body = {
         token, 
         product
     }
-    const headers ={ 
-        "content-Type": "application/json"
-    }
-return fetch (`/api/payments`, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body)
-}).then(res =>{
-    console.log("RESPONSE ", res)
-    const {status} = res;
-    console.log("status" , status)
-})
-.catch(error=> console.log(error))
-
-
+//     const headers ={ 
+//         "content-Type": "application/json"
+//     }
+// return fetch (`/api/payments`, {
+//     method: "POST",
+//     headers,
+//     body: JSON.stringify(body)
+// }).then(res =>{
+//     console.log("RESPONSE ", res)
+//     const {status} = res;
+//     console.log("status" , status)
+// })
+// .catch(error=> console.log(error))
 
 }
 
