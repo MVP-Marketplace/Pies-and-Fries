@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Pies-and-Fries/static/css/main.60a589d2.chunk.css",
+    "main.js": "/Pies-and-Fries/static/js/main.822c8733.chunk.js",
+    "main.js.map": "/Pies-and-Fries/static/js/main.822c8733.chunk.js.map",
+    "runtime-main.js": "/Pies-and-Fries/static/js/runtime-main.e52cdb4f.js",
+    "runtime-main.js.map": "/Pies-and-Fries/static/js/runtime-main.e52cdb4f.js.map",
+    "static/js/2.e90c6738.chunk.js": "/Pies-and-Fries/static/js/2.e90c6738.chunk.js",
+    "static/js/2.e90c6738.chunk.js.map": "/Pies-and-Fries/static/js/2.e90c6738.chunk.js.map",
+    "index.html": "/Pies-and-Fries/index.html",
+    "static/css/main.60a589d2.chunk.css.map": "/Pies-and-Fries/static/css/main.60a589d2.chunk.css.map",
+    "static/js/2.e90c6738.chunk.js.LICENSE.txt": "/Pies-and-Fries/static/js/2.e90c6738.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e52cdb4f.js",
+    "static/js/2.e90c6738.chunk.js",
+    "static/css/main.60a589d2.chunk.css",
+    "static/js/main.822c8733.chunk.js"
+  ]
+}
