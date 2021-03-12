@@ -15,7 +15,7 @@ const UserDashboard = (props) => {
     }
     useEffect(() => {
        getUserInfo()
-    })
+    }, [])
 
 
     return(
