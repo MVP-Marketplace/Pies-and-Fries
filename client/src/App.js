@@ -1,20 +1,29 @@
 import './App.css';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { Route } from 'react-router-dom'
 import SignIn from './components/SignIn'
 import UserDashboard from './components/UserDashboard'
 import { AppContextProvider } from './context/AppContext'
 import Navbar from './components/Navbar'
 import Store from './components/Store'
-
+import ShoppingCart from './components/ShoppingCart'
+import { propTypes } from 'react-bootstrap/esm/Image';
 function App() {
   const [userLoggedIn, setUserLogginIn] = useState(false)
+  const [cart,setCart] = useState([])
+  const [counter,setCounter] = useState(1)
+  // for use in shopping cart to delete item 
+  const cartLength = cart.length
+ useEffect(() => {
+   console.log('length',cart)
+ },[cart])
   return (
     <>
     <AppContextProvider>
       <Navbar 
       userLoggedIn={userLoggedIn} 
-       setUserLogginIn ={setUserLogginIn}/>
+       setUserLogginIn ={setUserLogginIn}
+       cartLength={cartLength}/>
       <Route exact path="/signin" render={() => (
         <SignIn 
         signIn={true}
@@ -30,8 +39,19 @@ function App() {
         setUserLogginIn ={setUserLogginIn}
         />
       )} />
+      <Route exact path="/checkout" render={() => (
+        <ShoppingCart 
+        setUserLogginIn ={setUserLogginIn}
+        cart = {cart}
+        counter={counter}
+        setCart={setCart}
+
+        />
+      )} />
        <Route exact path="/store" render={() => (
         <Store 
+        cart={cart}
+        setCart ={setCart}
         />
       )} />
       </AppContextProvider>

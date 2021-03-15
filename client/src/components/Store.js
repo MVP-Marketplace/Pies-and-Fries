@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 
-const Store = () => {
+const Store = (props) => {
     const[items, setItems] = useState(null)
 
     const getStoreItems = () => {
@@ -16,15 +16,18 @@ const Store = () => {
         getStoreItems()
     },[])
 
+    const updateCart = (itemsToUpdate) => {
+        props.setCart(itemsToUpdate)
+    }
     return (
         <div>
             <h1>This is the store page</h1>
             <h1>Pizza's</h1>
             {items && (
                 items.map((item, i) => (
-                    <div>
+                    <div key={i}>
                         <p>{item.name}</p>
-                        <button>Add to cart</button>
+                        <button onClick={() => updateCart([...props.cart,item])}>Add to cart</button>
                         <select>
                             <option>Medium</option>
                             <option>Large</option>
