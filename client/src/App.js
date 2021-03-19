@@ -6,6 +6,7 @@ import UserDashboard from './components/UserDashboard'
 import { AppContextProvider } from './context/AppContext'
 import Navbar from './components/Navbar'
 import Store from './components/Store'
+import Home from './pages/Home'
 
 function App() {
   const [userLoggedIn, setUserLogginIn] = useState(false)
@@ -14,7 +15,8 @@ function App() {
     <AppContextProvider>
       <Navbar 
       userLoggedIn={userLoggedIn} 
-       setUserLogginIn ={setUserLogginIn}/>
+      setUserLogginIn ={setUserLogginIn}/>
+      <Route exact path="/" component={Home}/>
       <Route exact path="/signin" render={() => (
         <SignIn 
         signIn={true}

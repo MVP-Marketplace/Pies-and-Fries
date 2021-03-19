@@ -18,19 +18,18 @@ const Navbar = (props) => {
     return(
         <div className="container">
             <div className="navLogo">
-                <h1>Logo</h1>
+              <Link to = "/">
+                <button type = "button">Logo</button>
+                </Link>
             </div>
             <div className="navOptions">
               
                
                 {props.userLoggedIn &&  <Link to ="/dashboard" className="navItem">Dashboard</Link>}
-                <Link to ="/store" className="navItem">Store</Link>
                 {props.userLoggedIn ? 
                     <Link to="/signin" className="navItem" onClick={() => logoutUser()}>Logout</Link>
-                :   <Link to ="/signin" className="navItem">Login</Link>
+                :   <Link to ="/signin" className="navItem">Sign In</Link>
                 }
-                {!props.userLoggedIn &&  <Link to ="/signUp" className="navItem">Sign Up</Link>}
-               
             </div>
         </div>
     )
