@@ -35,8 +35,8 @@
     "client-install": "yarn install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"yarn run client\" \" yarn run server \" ",
+    "client": "cd client && yarn run start",
+    "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
     "db:reset": "node db/seeds.js",
     "prettier": "prettier '*/**/*.js' --write",
     "heroku-postbuild": "cd client && yarn && yarn run build"
