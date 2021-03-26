@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
-import Navbar from '../components/Navbar';
 
 const home = () => {
 
@@ -16,12 +15,14 @@ const home = () => {
                 <Container>Right Box</Container>
             </Container>
             <Container>
-                <h2>BEST pizza in FASTEST way!</h2>
+                <h2>BEST pizza in the FASTEST way!</h2>
             </Container>
             <Container>
-                <h2>Join our rewards program!</h2>
+                <h2>Get our REWARDS!</h2>
             </Container>
-            
+            <Container>
+                <h2>#PIESANDFRIES</h2>
+            </Container>
         </div>
     )
 }
