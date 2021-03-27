@@ -1,5 +1,7 @@
 import './styles/Navbar.css'
 import { Link } from 'react-router-dom'
+import { Cart } from 'react-bootstrap-icons';
+
 const Navbar = (props) => {
     const logoutUser = () => {
         fetch('/api/users/logout', {
@@ -17,8 +19,11 @@ const Navbar = (props) => {
       
     return(
         <div className="container">
+          <Cart/>
             <div className="navLogo">
-                <h1>Logo</h1>
+              <Link to = "/">
+                <button type = "button">Logo</button>
+                </Link>
             </div>
             <div className="navOptions">
               
@@ -27,16 +32,13 @@ const Navbar = (props) => {
              
                 <Link to ="/store" className="navItem">Store</Link>
                <Link to ="/checkout" className="navItem">Cart {props.cartLength}</Link>
-
                 {props.userLoggedIn ? 
                     <Link to="/signin" className="navItem" onClick={() => logoutUser()}>Logout</Link>
-                :   <Link to ="/signin" className="navItem">Login</Link>
+                :   <Link to ="/signin" className="navItem">Sign In</Link>
                 }
-                {!props.userLoggedIn &&  <Link to ="/signUp" className="navItem">Sign Up</Link>}
-               
             </div>
         </div>
     )
 }
 
-export default Navbar
+export default Navbar;
