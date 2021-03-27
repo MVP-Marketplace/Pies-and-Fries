@@ -27,8 +27,11 @@ const Navbar = (props) => {
             </div>
             <div className="navOptions">
               
-               
+
                 {props.userLoggedIn &&  <Link to ="/dashboard" className="navItem">Dashboard</Link>}
+             
+                <Link to ="/store" className="navItem">Store</Link>
+               <Link to ="/checkout" className="navItem">Cart {props.cartLength}</Link>
                 {props.userLoggedIn ? 
                     <Link to="/signin" className="navItem" onClick={() => logoutUser()}>Logout</Link>
                 :   <Link to ="/signin" className="navItem">Sign In</Link>
@@ -38,4 +41,4 @@ const Navbar = (props) => {
     )
 }
 
-export default Navbar
+export default Navbar;
