@@ -1,5 +1,7 @@
 import './styles/Navbar.css'
 import { Link } from 'react-router-dom'
+import { Cart } from 'react-bootstrap-icons';
+
 const Navbar = (props) => {
     const logoutUser = () => {
         fetch('/api/users/logout', {
@@ -17,6 +19,7 @@ const Navbar = (props) => {
       
     return(
         <div className="container">
+          <Cart/>
             <div className="navLogo">
               <Link to = "/">
                 <button type = "button">Logo</button>
