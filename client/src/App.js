@@ -23,7 +23,7 @@ function App() {
         <Route exact path='/dashboard' render={() => <UserDashboard setUserLogginIn={setUserLogginIn} />} />
         <Route exact path='/store' render={() => <Store />} />
         <Route exact path='/profile' render={() => <Profile />} />
-        <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} />
+        {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
       </AppContextProvider>
     </>
   );
