@@ -1,0 +1,85 @@
+.heading-homepage {
+  margin-top: -1rem;
+  margin-left: 1.7rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+.box1 {
+  display: flex;
+  background: lightgrey;
+  width: 20rem;
+  margin-left: 1.5rem;
+  height: 6rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.heading-2 {
+  font-size: 12px;
+  margin-left: 0.3rem;
+  height: fit-content;
+}
+
+.container-midsection {
+  width: 22rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  margin-left: 8px;
+}
+
+.midsection-left {
+  background: lightgrey;
+  width: 155px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+}
+
+.midsection-right {
+  background: lightgrey;
+  width: 155px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+  margin-left: -21px;
+}
+.best-pizza-box {
+  background: lightgrey;
+  width: 20rem;
+  height: 8rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  margin-left: 1.4rem;
+  display: flex;
+}
+
+.heading3 {
+  margin-left: 0.3rem;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.reward-box {
+  background: lightgrey;
+  width: 20rem;
+  height: 8rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  margin-left: 1.4rem;
+  display: flex;
+}
+
+.heading4 {
+  margin-left: 0.3rem;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
