@@ -5,23 +5,61 @@ const home = () => {
   return (
     <div>
       <h1 className='heading-homepage'>Shalom, Friend!</h1>
-      <div className='box1'>
-        <h2 className='heading-2'>Are you hungry?</h2>
+      <div className='box1'></div>
+      <h2 className='heading2'>Get our REWARDS!</h2>
+      <div className='heading-cont'>
+        <h2 className='heading-3'>Your top 3</h2>
       </div>
       <div className='container-midsection'>
-        <div className='midsection-left'></div>
-        <div className='midsection-right'></div>
+        <div className='midsection-left'>
+          <p className='midsection-addto-cart-btn'>+</p>
+        </div>
+        <div className='midsection-middle'>
+          <p className='midsection-addto-cart-btn'>+</p>
+        </div>
+        <div className='midsection-right'>
+          <p className='midsection-addto-cart-btn'>+</p>
+        </div>
       </div>
-      <div className='best-pizza-box'>
-        <h2 className='heading3'>BEST pizza in the FASTEST way!</h2>
+      <div className='picked-for-you-section'>
+        <h2 className='heading4'>Picked For You</h2>
+        <div className='product-card'>
+          <div className='product-card-left'>
+            <p className='product-card-des'>
+              Lorem ipsum dolor sit amet
+              <br />
+              Lorem ipsum dolor sit amet
+            </p>
+          </div>
+          <div className='product-card-right'>
+            <p className='product-card-addto-cart-btn'>+</p>
+          </div>
+        </div>
+        <div className='product-card'>
+          <div className='product-card-left'>
+            <p className='product-card-des'>
+              Lorem ipsum dolor sit amet
+              <br />
+              Lorem ipsum dolor sit amet
+            </p>
+          </div>
+          <div className='product-card-right'>
+            <p className='product-card-addto-cart-btn'>+</p>
+          </div>
+        </div>
+        <div className='product-card'>
+          <div className='product-card-left'>
+            <p className='product-card-des'>
+              Lorem ipsum dolor sit amet
+              <br />
+              Lorem ipsum dolor sit amet
+            </p>
+          </div>
+          <div className='product-card-right'>
+            <p className='product-card-addto-cart-btn'>+</p>
+          </div>
+        </div>
       </div>
-      <div className='reward-box'>
-        <h2 className='heading4'>Get our REWARDS!</h2>
-      </div>
-      {/* I dont think we will need this anymore however im not sure just commenting it out for now */}
-      {/* <Container>
-        <h2>#PIESANDFRIES</h2>
-      </Container> */}
     </div>
   );
 };

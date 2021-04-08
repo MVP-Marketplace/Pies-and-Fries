@@ -7,48 +7,114 @@
 .box1 {
   display: flex;
   background: lightgrey;
-  width: 20rem;
+  width: 85%;
   margin-left: 1.5rem;
   height: 6rem;
   border-radius: 2px;
   margin-bottom: 1rem;
 }
 
-.heading-2 {
+.heading2 {
+  margin-left: 1.5rem;
+  margin-top: -8px;
   font-size: 12px;
-  margin-left: 0.3rem;
-  height: fit-content;
+  width: fit-content;
+  font-weight: 700;
+  line-height: 14px;
+}
+.heading-cont {
+  display: flex;
+  justify-content: center;
+}
+.heading-3 {
+  margin-top: -8px;
+  font-size: 20px;
+  font-weight: 700;
+  width: fit-content;
+  font-weight: 700;
+  line-height: 14px;
 }
 
 .container-midsection {
-  width: 22rem;
+  width: 80%;
   height: 70px;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   margin-bottom: 1rem;
-  margin-left: 8px;
+  margin-left: 1.5rem;
 }
 
 .midsection-left {
   background: lightgrey;
-  width: 155px;
+  width: 23%;
   height: 70px;
+  border-radius: 12px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 2px;
+  justify-content: flex-end;
 }
-
+.midsection-middle {
+  background: lightgrey;
+  width: 23%;
+  height: 70px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
 .midsection-right {
   background: lightgrey;
-  width: 155px;
+  width: 23%;
   height: 70px;
+  border-radius: 12px;
   display: flex;
+  justify-content: flex-end;
+}
+.midsection-addto-cart-btn {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 9px;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+.picked-for-you-section {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 2px;
-  margin-left: -21px;
+}
+.heading4 {
+  margin-top: 3px;
+  font-size: 20px;
+  font-weight: 700;
+  width: fit-content;
+  font-weight: 700;
+  line-height: 14px;
+}
+.product-card {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  margin-left: -18px;
+  margin-bottom: 17px;
+}
+.product-card-left {
+}
+.product-card-des {
+  width: 9rem;
+  font-size: 12px;
+}
+.product-card-right {
+  background: lightgray;
+  width: 9rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+.product-card-addto-cart-btn {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 9px;
+  margin-bottom: 5px;
+  font-size: 25px;
 }
 .best-pizza-box {
   background: lightgrey;
@@ -58,28 +124,4 @@
   margin-bottom: 1rem;
   margin-left: 1.4rem;
   display: flex;
-}
-
-.heading3 {
-  margin-left: 0.3rem;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 14px;
-}
-
-.reward-box {
-  background: lightgrey;
-  width: 20rem;
-  height: 8rem;
-  border-radius: 2px;
-  margin-bottom: 1rem;
-  margin-left: 1.4rem;
-  display: flex;
-}
-
-.heading4 {
-  margin-left: 0.3rem;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 14px;
 }
