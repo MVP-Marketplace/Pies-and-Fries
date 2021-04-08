@@ -1,7 +1,9 @@
+import {useState} from 'react'
 import SignInForm from './SignInForm';
 import CreateAccountForm from './CreateAccountForm';
 
 const SignIn = props => {
+  const[isSignIn, setIsSignIn] = useState(props.signIn)
   return (
     // comments to test the forms till we can trigger the check.
 
@@ -16,17 +18,19 @@ const SignIn = props => {
           <p className='toggle-name'>Customers</p>
         </div>
       </div>
-      {props.signIn && (
-        <div>
-          <h1>This is sign In</h1>
-
-          <SignInForm />
+      {isSignIn && (
+        <div class="sign-in-form">
+          <SignInForm 
+          setIsSignIn={setIsSignIn}
+          />
         </div>
       )}
-      {!props.signIn && (
+      {!isSignIn && (
         <div>
           <h1>this is sign up</h1>
-          <CreateAccountForm />
+          <CreateAccountForm 
+          setIsSignIn={setIsSignIn}
+          />
         </div>
       )}
     </div>

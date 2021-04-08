@@ -1,8 +1,8 @@
 import {useState} from 'react'
-
+import {Link} from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap';
 
-const SignInForm = () => {
+const SignInForm = (props) => {
 
 const [email, setEmail] = useState('')
 const[password,setPassword] = useState('')
@@ -48,24 +48,36 @@ const handleFormSubmit = (e) => {
    
 
     return (
-        <>
-            <Form onSubmit={handleFormSubmit}>
+        <div>
+            <Form className="signInFormContainer"onSubmit={handleFormSubmit}>
                 <Form.Group controlId="formBasicEmail">
-                     <Form.Label>Email address</Form.Label>
-                     <Form.Control type="email" placeholder="Enter email"  value = {email}  onChange={(e) => setEmail(e.target.value)}/>
-                      <Form.Text className="text-muted">
-                       We'll never share your email with anyone else.
-                      </Form.Text>
+                     <Form.Control className="email-input"type="email" placeholder="Enter email"  value = {email}  onChange={(e) => setEmail(e.target.value)}/>
                          </Form.Group>
                     <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password"  value = {password} onChange={(e) => setPassword(e.target.value)}/>
+
+                        <Form.Control className="password-input" type="password" placeholder="Password"  value = {password} onChange={(e) => setPassword(e.target.value)}/>
                       </Form.Group>
-                      <Button variant="primary" type="submit">
-                        Submit
+                      <div className="submitButtonContainer">
+                      <Button className="submitButton" variant="primary" type="submit">
+                        Start!
                       </Button>
-                    </Form>
-       </> 
+                      </div>
+              </Form>
+              <div className="remember-me-checkbox">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                <label class="form-check-label" for="flexCheckDefault"> Remember Me</label>
+              </div>
+              
+              <p className="switch-login-signup"onClick={() => props.setIsSignIn(false)}>Create new account?</p>
+              <div className="socials-login">
+                <div className="socials-button-container">
+                <img src={require('../assets/google-icon.svg').default}/>                
+                </div>
+                <div className="socials-button-container">
+                  <img src={require('../assets/facebook-icon.svg').default}/>
+                </div>
+              </div>
+       </div> 
     )
 }
 export default SignInForm
