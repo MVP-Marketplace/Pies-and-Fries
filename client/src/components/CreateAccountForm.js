@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
-const CreateAccountForm = () => {
+const CreateAccountForm = (props) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -99,6 +99,7 @@ const CreateAccountForm = () => {
           Submit
         </Button>
       </Form>
+      <p onClick={() => props.setIsSignIn(true)}>Already Have an Account?</p>
     </>
   );
 };

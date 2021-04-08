@@ -1,7 +1,7 @@
 import './App.css';
 import './styles/Home.css';
-import './styles/Navbar.css';
-import './styles/Signin.css';
+import './styles/Navbar.css'
+import './styles/Signin.css'
 import { useState } from 'react';
 import { Route } from 'react-router-dom';
 import SignIn from './components/SignIn';
