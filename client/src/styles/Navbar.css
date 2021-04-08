@@ -10,6 +10,7 @@
   margin: 0;
 }
 .navOptions {
+  margin-left: 11rem;
   display: flex;
   justify-content: space-evenly;
 }
