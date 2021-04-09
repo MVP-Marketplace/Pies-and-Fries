@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Cart from '../assets/Cart.svg';
+import Cart from './Cart';
 
 const Navbar = props => {
   const logoutUser = () => {
@@ -15,7 +16,6 @@ const Navbar = props => {
         console.log(err);
       });
   };
-
   return (
     <div className='Navbar'>
       <div className='navLogo'>
@@ -47,10 +47,9 @@ const Navbar = props => {
             Sign In
           </Link>
         )}
-        <Link to='/checkout' className='navItem-cart'>
-          <img src={Cart} alt='cart' /> {props.cartLength}
-        </Link>
+        {props.cartLength}
       </div>
+      <Cart />
     </div>
   );
 };
