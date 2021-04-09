@@ -1,0 +1,23 @@
+.hamburger-menu-icon {
+  margin-left: -7px;
+  position: absolute;
+  top: 19px;
+  left: 32px;
+}
+
+.HamburgerMenu {
+  position: fixed;
+  left: -92vw;
+  width: 85%;
+  height: 25rem;
+  border-radius: 0px 16px 16px 0px;
+  margin-left: 1.5rem;
+  top: 40px;
+  background-color: #c5c5c5;
+  box-shadow: 0 0 4px 0px rgb(0 0 0 / 15%);
+  transition: all 1s ease-out;
+  z-index: 10;
+}
+.HamburgerMenu.Show {
+  margin-left: 0px;
+}
