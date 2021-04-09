@@ -71,10 +71,10 @@ const handleFormSubmit = (e) => {
               <p className="switch-login-signup"onClick={() => props.setIsSignIn(false)}>Create new account?</p>
               <div className="socials-login">
                 <div className="socials-button-container">
-                <img src={require('../assets/google-icon.svg').default}/>                
+                <img src={require('../assets/google-icon.svg').default} alt="google logo"/>                
                 </div>
                 <div className="socials-button-container">
-                  <img src={require('../assets/facebook-icon.svg').default}/>
+                  <img src={require('../assets/facebook-icon.svg').default} alt="facebook logo"/>
                 </div>
               </div>
        </div> 
