@@ -93,7 +93,7 @@
   display: flex;
   width: 85%;
   justify-content: space-evenly;
-  margin-left: -18px;
+  margin-left: -2px;
   margin-bottom: 17px;
 }
 .product-card-left {
@@ -104,7 +104,7 @@
 }
 .product-card-right {
   background: lightgray;
-  width: 9rem;
+  width: 10rem;
   border-radius: 12px;
   display: flex;
   justify-content: flex-end;
