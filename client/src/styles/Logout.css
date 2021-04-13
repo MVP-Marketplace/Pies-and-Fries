@@ -1,4 +1,4 @@
-.hm-if-cards {
+.hm-logout-card {
   margin-top: 0rem;
   margin-left: 1.7rem;
   display: flex;
@@ -7,17 +7,17 @@
   width: 80%;
 }
 
-.hm-if-image {
+.hm-logout-image {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  margin-left: -3rem;
+  margin-left: -5.7rem;
   width: 30px;
   height: 26px;
   background: #c4c4c4;
   border-radius: 3rem;
 }
 
-.hm-if-title {
+.hm-out-title {
   font-size: 14px;
   font-weight: bold;
   margin-left: 13px;

@@ -8,6 +8,7 @@ import InviteFriends from './InviteFriends';
 import FeedBack from './FeedBack';
 import Legal from './Legal';
 import Help from './Help';
+import Logout from './Logout';
 
 const HamburgerMenu = () => {
   const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false);
@@ -28,6 +29,7 @@ const HamburgerMenu = () => {
         <FeedBack />
         <Legal />
         <Help />
+        <Logout />
       </div>
     </>
   );

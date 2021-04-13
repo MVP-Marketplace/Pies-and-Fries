@@ -11,6 +11,8 @@ import './styles/InviteFriends.css';
 import './styles/Legal.css';
 import './styles/NotficationPreferences.css';
 import './styles/Rewards.css';
+import './styles/Help.css';
+import './styles/Logout.css';
 import { useState } from 'react';
 import { Route } from 'react-router-dom';
 import SignIn from './components/SignIn';
