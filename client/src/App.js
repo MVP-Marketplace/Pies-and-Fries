@@ -23,6 +23,7 @@ import Store from './components/Store';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import ShoppingCart from './components/ShoppingCart';
+import PaymentConfirmation from './pages/PaymentConfirmation';
 
 function App() {
   const [userLoggedIn, setUserLogginIn] = useState(false);
@@ -40,6 +41,11 @@ function App() {
         />
         <Route exact path='/store' render={() => <Store />} />
         <Route exact path='/profile' render={() => <Profile />} />
+        <Route
+          exact
+          path='paymentconfirmation'
+          render={() => <PaymentConfirmation />}
+        />
         {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
       </AppContextProvider>
     </>
