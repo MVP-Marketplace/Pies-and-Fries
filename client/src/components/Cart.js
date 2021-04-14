@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CartIcon from '../assets/CartIcon.svg';
-
+import { Link } from 'react-router-dom';
 export const Cart = () => {
   const [displayModal, setDisplayModal] = useState(false);
   return (
@@ -23,7 +23,9 @@ export const Cart = () => {
             <p className='cart-card-product-price'>$16.00</p>
           </div>
         </div>
-        <button className='checkout-btn'>Checkout</button>
+        <Link to='/paymentconfirmation'>
+          <button className='checkout-btn'>Checkout</button>
+        </Link>
         <button
           className='Close'
           onClick={() => setDisplayModal(!displayModal)}
