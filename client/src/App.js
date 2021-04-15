@@ -13,6 +13,7 @@ import './styles/NotficationPreferences.css';
 import './styles/Rewards.css';
 import './styles/Help.css';
 import './styles/Logout.css';
+import './styles/PaymentConfirmation.css';
 import { useState } from 'react';
 import { Route } from 'react-router-dom';
 import SignIn from './components/SignIn';
@@ -32,6 +33,11 @@ function App() {
       <AppContextProvider>
         <Navbar userLoggedIn={userLoggedIn} setUserLogginIn={setUserLogginIn} />
         <Route exact path='/' component={Home} />
+        <Route
+          exact
+          path='/paymentconfirmation'
+          render={() => <PaymentConfirmation />}
+        />
         <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
         <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
         <Route
@@ -41,11 +47,7 @@ function App() {
         />
         <Route exact path='/store' render={() => <Store />} />
         <Route exact path='/profile' render={() => <Profile />} />
-        <Route
-          exact
-          path='paymentconfirmation'
-          render={() => <PaymentConfirmation />}
-        />
+
         {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
       </AppContextProvider>
     </>
