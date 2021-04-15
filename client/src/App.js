@@ -16,6 +16,7 @@ import './styles/Logout.css';
 import { useState } from 'react';
 import { Route } from 'react-router-dom';
 import SignIn from './components/SignIn';
+import Admin from './components/Admin'
 import UserDashboard from './components/UserDashboard';
 import { AppContextProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
@@ -23,6 +24,7 @@ import Store from './components/Store';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import ShoppingCart from './components/ShoppingCart';
+import './styles/Admin.css'
 
 function App() {
   const [userLoggedIn, setUserLogginIn] = useState(false);
@@ -33,6 +35,8 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
         <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
+        <Route exact path='/admin' render={() => <Admin />} />
+
         <Route
           exact
           path='/dashboard'

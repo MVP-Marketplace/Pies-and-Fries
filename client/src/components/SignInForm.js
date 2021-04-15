@@ -23,7 +23,7 @@ const handleFormSubmit = (e) => {
       console.log(res)
       res.json()
       if(res.status === 200) {
-        window.location.href="/dashboard"
+        window.location.href="/"
       } 
     }
       )
