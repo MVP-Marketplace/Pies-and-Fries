@@ -1,0 +1,41 @@
+.pc-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-adderss-card {
+  margin-top: 0rem;
+  margin-left: 1.7rem;
+  display: flex;
+  margin-left: 12px;
+  justify-content: space-between;
+  width: 89%;
+  margin-bottom: 1rem;
+}
+.pc-location-container {
+}
+.pc-location-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+.pc-address {
+  font-size: 14px;
+  margin-top: -0.55rem;
+}
+.pc-address-edit-btn {
+  border: none;
+  border-radius: 8px;
+  width: 23%;
+  height: 26px;
+  margin-top: 1rem;
+}
+
+.pc-cart-item-heading {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0rem;
+  margin-left: 12px;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 1rem;
+}
