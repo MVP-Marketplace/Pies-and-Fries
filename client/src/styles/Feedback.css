@@ -1,0 +1,82 @@
+.hm-feedback-card {
+  margin-top: 0rem;
+  margin-left: 1.7rem;
+  display: flex;
+  margin-left: 23px;
+  justify-content: center;
+  width: 80%;
+}
+.hm-feedback-image {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: -3rem;
+  width: 30px;
+  height: 26px;
+  background: #c4c4c4;
+  border-radius: 3rem;
+}
+.hm-feedback-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 13px;
+}
+.ModalFeedback {
+  position: fixed;
+  left: 0;
+  width: 85%;
+  height: 15rem;
+  border-radius: 17px;
+  margin-left: 1.5rem;
+  top: -150vh;
+  background-color: #b9b9b9;
+  box-shadow: 0 0 4px 0px rgb(0 0 0 / 15%);
+  transition: top 0.9s ease-in-out;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ModalFeedback.Show {
+  top: 7rem;
+}
+
+.feedback-heading {
+  margin-left: -5rem;
+}
+
+.feedback-img-container {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.feedback-happy-face-logo {
+}
+
+.feedback-netural-face-logo {
+}
+.feedback-sad-face-logo {
+}
+.feedback-label {
+  font-size: 14px;
+  margin-left: -7rem;
+  margin-bottom: 0.3rem;
+}
+.feedback-textarea {
+  margin: 0px;
+  width: 87%;
+  height: 40%;
+  resize: none;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.feedback-submit-btn {
+  margin-bottom: 0.7rem;
+  margin-left: 14rem;
+  border: none;
+  border-radius: 2px;
+}
