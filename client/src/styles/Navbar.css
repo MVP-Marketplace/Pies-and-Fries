@@ -21,13 +21,10 @@
   justify-content: space-evenly;
 }
 .logo {
-  font-size: 13px;
-  font-weight: 700;
-  color: #eee;
-  border: none;
-  background: slategray;
-  border-radius: 2px;
-  margin-left: 32px;
+  height: 4rem;
+  width: 5rem;
+  margin-top: -1rem;
+  margin-left: 22px;
 }
 .navItem-sigin {
   display: flex;
@@ -39,10 +36,12 @@
   font-size: 13px;
   font-weight: 700;
   height: 17px;
-  padding-top: 3px;
+  padding-top: 2px;
   padding-bottom: 2px;
   width: 56px;
-  margin: 4px 10px;
+
+  margin-left: -6rem;
+  margin-top: 1px;
   background: slategray;
   border-radius: 80px;
   cursor: pointer;

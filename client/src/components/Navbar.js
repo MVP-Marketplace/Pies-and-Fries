@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 import HamburgerMenu from './HamburgerMenu';
+import logo from '../assets/logo.svg';
 
 const Navbar = props => {
   const logoutUser = () => {
@@ -23,9 +24,7 @@ const Navbar = props => {
       <div className='Navbar'>
         <div className='navLogo'>
           <Link to='/'>
-            <button type='button' className='logo'>
-              Logo
-            </button>
+            <img src={logo} alt='logo' className='logo' />
           </Link>
         </div>
         <div className='navOptions'>

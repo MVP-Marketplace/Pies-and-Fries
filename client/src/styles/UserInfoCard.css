@@ -1,5 +1,5 @@
 .hm-user-info-card {
-  margin-top: 1rem;
+  margin-top: -1rem;
   margin-left: 1.7rem;
   display: flex;
   justify-content: space-evenly;
@@ -17,11 +17,11 @@
   border-radius: 3rem;
 }
 .hm-user-info {
-  margin-top: 8px;
+  margin-top: 26px;
   margin-left: -4rem;
-
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 
 .hm-user-name {
@@ -31,5 +31,5 @@
 
 .hm-user-email {
   font-size: 12px;
-  margin-top: -8px;
+  margin-top: -1px;
 }

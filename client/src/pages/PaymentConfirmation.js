@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItem from '../components/CartItem';
+import Checkout from '../components/Checkout';
 
 const PaymentConfirmation = () => {
   return (
@@ -15,40 +16,42 @@ const PaymentConfirmation = () => {
       <CartItem />
       <div className='pc-delivery-type-container'>
         <div className='pc-contact-free-delivery-container'>
-          <p className='pc-contact-type-heading'>Contact Free Delivery</p>
-          <p className='pc-contact-type-des'>
-            Driver will drop off order and notify you
-          </p>
+          <div className='pc-contact-delivery-des'>
+            <p className='pc-contact-type-heading'>Contact Free Delivery</p>
+            <p className='pc-contact-type-des'>
+              Driver will drop off order and notify you
+            </p>
+          </div>
 
-          <input
-            class='pc-check-delivery-type'
-            type='checkbox'
-            value=''
-            id='pc-check-delivery-type-1'
-          />
-          <label
-            class='form-check-label'
-            for='pc-check-delivery-type-1'
-          ></label>
+          <div className='pc-contact-checkbox'>
+            <input
+              className='pc-check-delivery-type'
+              class='pc-check-delivery-type'
+              type='checkbox'
+              value=''
+              id='pc-check-delivery-type-1'
+            />
+          </div>
         </div>
         <div className='pc-door-delivery-container'>
-          <p className='pc-contact-type-heading'>Door Delivery</p>
-          <p className='pc-contact-type-des'>
-            Driver will drop notify you and meet at your door
-          </p>
-
-          <input
-            class='pc-check-delivery-type'
-            type='checkbox'
-            value=''
-            id='pc-check-delivery-type-2'
-          />
-          <label
-            class='form-check-label'
-            for='pc-check-delivery-type-2'
-          ></label>
+          <div className='pc-contact-delivery-des'>
+            <p className='pc-contact-type-heading'>Door Delivery</p>
+            <p className='pc-contact-type-des'>
+              Driver will drop notify you and meet at your door
+            </p>
+          </div>
+          <div className='pc-contact-checkbox'>
+            <input
+              className='pc-check-delivery-type'
+              class='pc-check-delivery-type'
+              type='checkbox'
+              value=''
+              id='pc-check-delivery-type-2'
+            />
+          </div>
         </div>
       </div>
+      <Checkout />
     </div>
   );
 };
