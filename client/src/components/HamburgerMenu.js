@@ -9,6 +9,8 @@ import FeedBack from './FeedBack';
 import Legal from './Legal';
 import Help from './Help';
 import Logout from './Logout';
+import logo from '../assets/logo.svg';
+import Cart from '../components/Cart';
 
 const HamburgerMenu = () => {
   const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false);
@@ -21,6 +23,17 @@ const HamburgerMenu = () => {
         onClick={() => setDisplayHamburgerMenu(!displayHamburgerMenu)}
       />
       <div className={`HamburgerMenu ${displayHamburgerMenu ? 'Show' : ''}`}>
+        <div className='hm-top-row-container'>
+          <img
+            src={menu}
+            alt='menu-icon'
+            className='hamburger-menu-icon'
+            onClick={() => setDisplayHamburgerMenu(!displayHamburgerMenu)}
+          />
+          <img src={logo} alt='logo' className='hm-logo' />
+          <Cart />
+        </div>
+
         <UserInfoCard />
         <Profile />
         <NotificationPreferences />

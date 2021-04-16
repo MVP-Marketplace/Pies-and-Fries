@@ -9,6 +9,7 @@ export const Cart = () => {
       <img
         src={CartIcon}
         alt='cart'
+        className='hm-cart'
         onClick={() => setDisplayModal(!displayModal)}
       />
       <div className={`Modal ${displayModal ? 'Show' : ''}`}>

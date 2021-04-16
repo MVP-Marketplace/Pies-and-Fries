@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
   margin-left: 1.5rem;
-  top: 40px;
+  top: 0px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 4px 0px rgb(0 0 0 / 15%);
   transition: all 1s ease-out;
@@ -21,4 +21,22 @@
   left: -7vw;
   display: flex;
   flex-direction: column;
+}
+
+.hm-top-row-container {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.hm-cart {
+  position: absolute;
+  left: 20rem;
+}
+
+.hm-logo {
+  display: flex;
+  margin-left: 7rem;
+  height: 7rem;
+  width: 9rem;
 }
