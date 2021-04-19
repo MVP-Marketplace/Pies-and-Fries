@@ -1,0 +1,17 @@
+.single-order {
+  display: flex;
+  border-bottom: none;
+  padding: 0;
+}
+h1 {
+  margin: 0;
+}
+.driver-options {
+  display: flex;
+  flex-direction: column;
+}
+.delivering-to,
+.customer-info {
+  border-bottom: 1px solid black;
+  padding: 20px;
+}

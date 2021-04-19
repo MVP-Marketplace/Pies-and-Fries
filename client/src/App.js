@@ -27,7 +27,7 @@ import Profile from './pages/Profile';
 import ShoppingCart from './components/ShoppingCart';
 import './styles/Admin.css'
 import PaymentConfirmation from './pages/PaymentConfirmation';
-
+import Driver from './components/Driver'
 function App() {
   const [userLoggedIn, setUserLogginIn] = useState(false);
   return (
@@ -43,7 +43,7 @@ function App() {
         <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
         <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
         <Route exact path='/admin' render={() => <Admin />} />
-
+        <Route exact path='/driver' render={() => <Driver />} />
         <Route
           exact
           path='/dashboard'

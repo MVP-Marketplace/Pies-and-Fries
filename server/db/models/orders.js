@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 const ordersSchema = new mongoose.Schema({
-    user_id: {type: String},
-    customer_name: {type: String},
+    user_id: {type: String, default: null},
+    customer_name: {type: String, default: null},
     driver_id: {type:String, default: null},
     cost: {type: Number},
     delivered: {type: Boolean, default: false},
