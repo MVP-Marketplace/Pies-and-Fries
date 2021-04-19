@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 //OpenRoutes
 app.use('/api/users', openRoutes);
 app.use('/api/payments', openRoutes)
-app.use('/api/store', store)
+app.use('/api/store', openRoutes)
 app.use('/api/orders', order)
 app.use(cookieParser());
 
