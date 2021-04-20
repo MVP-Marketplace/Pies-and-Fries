@@ -27,7 +27,6 @@ import Profile from './pages/Profile';
 import ShoppingCart from './components/ShoppingCart';
 import './styles/Admin.css'
 import PaymentConfirmation from './pages/PaymentConfirmation';
-
 function App() {
   const [userLoggedIn, setUserLogginIn] = useState(false);
   return (

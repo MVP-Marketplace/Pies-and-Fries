@@ -1,10 +1,11 @@
 
-const stripe = require('stripe')
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const { v4: uuidv4 } = require('uuid');
 
 exports.payment = async (req,res)=>{
 	const {product,token} = req.body;
-	const idempontencyKey = uuidv4()
+    console.log("product", product)
+	const idempotencyKey = uuidv4()
 
     return stripe.customers.create({
     email:token.email,
@@ -14,9 +15,10 @@ exports.payment = async (req,res)=>{
         amount:product.price * 100,
         currency:'usd',
         customer: customer.id,
+        receipt_email: token.email,
         description: `purchase of ${product.name}`,
-        }, {idempontencyKey})
-}) 
-.then(result =>res.status(200).json(result))
+        }, {idempotencyKey})
+    }) 
+    .then(result =>res.status(200).json(result))
 .catch(err => console.log(err))
 }
