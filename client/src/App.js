@@ -30,7 +30,7 @@ import PaymentConfirmation from './pages/PaymentConfirmation';
 
 import Driver from './components/Driver'
 
-function App() 
+function App() {
   const [userLoggedIn, setUserLogginIn] = useState(false);
   return (
     <>
