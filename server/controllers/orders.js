@@ -5,6 +5,8 @@ exports.createOrder = async (req, res) => {
   const newOrderPost = req.body
   const newOrder = new Order(newOrderPost)
   try {
+    console.log('HEYYYY')
+    console.log(req.body)
     await newOrder.save()
     res.status(201).json(newOrder);
   } catch (e) {

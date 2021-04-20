@@ -29,6 +29,25 @@ const makePayment = token => {
             console.log("RESPONSE ", res)
             const {status} = res;
             console.log("status" , status)
+            if(status === 200) {
+                console.log('working')
+                fetch(`/api/orders/create`, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                      },
+                    body: JSON.stringify({
+                        foodItems: {
+                          item: product.name,
+                          quantity: 1,
+                        }
+                    })
+                })
+                .then((res => {
+                    console.log(res)
+                }))
+            }
         })
         .catch(error=> {
             console.log('DID NOT WORK')
