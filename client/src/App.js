@@ -15,12 +15,11 @@ import './styles/Help.css';
 import './styles/Logout.css';
 import './styles/PaymentConfirmation.css';
 import './styles/CreateAccountForm.css';
-import { useState } from 'react';
-import { Route } from 'react-router-dom';
+import { useState, useContext, useEffect } from 'react';
+import { Route, Redirect } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import Admin from './components/Admin';
 import UserDashboard from './components/UserDashboard';
-import { AppContextProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
 import Store from './components/Store';
 import Home from './pages/Home';
@@ -28,35 +27,44 @@ import Profile from './pages/Profile';
 import ShoppingCart from './components/ShoppingCart';
 import './styles/Admin.css';
 import PaymentConfirmation from './pages/PaymentConfirmation';
-
+import {AppContext} from './context/AppContext'
 import Driver from './components/Driver';
 
 function App() {
-  const [userLoggedIn, setUserLogginIn] = useState(false);
+  const {user, userCheck} = useContext(AppContext)
+  const [currentUser,setCurrentUser] = user
+  const checkUser = userCheck
+
+  useEffect(() => {
+    checkUser()
+  },[])
+
   return (
     <>
-      <AppContextProvider>
-        <Navbar userLoggedIn={userLoggedIn} setUserLogginIn={setUserLogginIn} />
+        <Navbar/>
         <Route exact path='/' component={Home} />
         <Route
           exact
           path='/paymentconfirmation'
           render={() => <PaymentConfirmation />}
         />
+        {currentUser ? 
+        <Redirect to ="/" />
+        :
         <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
+        }
         <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
         <Route exact path='/admin' render={() => <Admin />} />
         <Route exact path='/driver' render={() => <Driver />} />
         <Route
           exact
           path='/dashboard'
-          render={() => <UserDashboard setUserLogginIn={setUserLogginIn} />}
+          render={() => <UserDashboard  />}
         />
         <Route exact path='/store' render={() => <Store />} />
         <Route exact path='/profile' render={() => <Profile />} />
 
         {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
-      </AppContextProvider>
     </>
   );
 }

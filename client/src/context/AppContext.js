@@ -1,35 +1,44 @@
 import React, { createContext, useState, useEffect } from "react";
-import axios from 'axios'
 
 const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null)
-  const [loading, setloading] = useState(false)
   const user = sessionStorage.getItem('user')
 
-  useEffect(()=> {
-    if(user && !currentUser){
-      axios
-      //not sure if this is the correct route
-      .get(`/api/users/me` , {
-        withCredentials:true
-      }).then
-      (({ data })=> {
-        setCurrentUser(data);
-      }).catch
-      ((error)=> console.error(error))
+  const userCheck = async () => {
+    fetch('./api/users/me', 
+    {'credentials': 'include'})
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+      setCurrentUser(res)
+    })
+    .catch(err => {
+       setCurrentUser(null)
+        console.log(err)})
     }
-  },[currentUser, user]);
+ 
+  // useEffect(()=> {
+  //   if(user && !currentUser){
+  //     axios
+  //     //not sure if this is the correct route
+  //     .get(`/api/users/me` , {
+  //       withCredentials:true
+  //     }).then
+  //     (({ data })=> {
+  //       setCurrentUser(data);
+  //     }).catch
+  //     ((error)=> console.error(error))
+  //   }
+  // },[]);
+  const state = {
+    user: [currentUser,setCurrentUser],
+    userCheck: userCheck
+  }
 
   return (
-    <AppContext.Provider value={{
-      currentUser,
-      setCurrentUser,
-      loading,
-      setloading
-
-    }}>
+    <AppContext.Provider value={state}>
       {children}
     </AppContext.Provider>
   );

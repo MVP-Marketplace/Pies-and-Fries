@@ -1,8 +1,9 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import {Link} from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap';
-
+import {AppContext} from '../context/AppContext'
 const SignInForm = (props) => {
+const { userCheck} = useContext(AppContext)
 
 const [email, setEmail] = useState('')
 const[password,setPassword] = useState('')
@@ -21,12 +22,8 @@ const handleFormSubmit = (e) => {
     })
     .then((res) => {
       console.log(res)
-      res.json()
-      if(res.status === 200) {
-        window.location.href="/"
-      } 
-    }
-      )
+      userCheck()
+    })
     .catch((err) => {
       console.log(err)
     })

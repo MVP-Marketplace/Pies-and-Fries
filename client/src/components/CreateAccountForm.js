@@ -27,7 +27,9 @@ const CreateAccountForm = props => {
           'Content-Type': 'application/json',
         },
       })
-        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+          console.log(res.json())})
         .catch(err => {
           console.log(err);
         });

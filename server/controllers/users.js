@@ -36,14 +36,15 @@ exports.loginUser = async (req, res) => {
   try {
     const user = await User.findByCredentials(email, password);
     const token = await user.generateAuthToken();
+    // console.log(user)
     res.cookie('jwt', token, {
       httpOnly: true,
       sameSite: 'Strict',
       sercure: process.env.NODE_ENV !== 'production' ? false : true,
     });
-    // if(user) {
-    //   res.redirect('/dashboard')
-    // }
+   
+    // res.send({user})
+   
     res.json(user);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
@@ -57,6 +58,7 @@ exports.loginUser = async (req, res) => {
 
 exports.getCurrentUser = async (req, res) => {
   try {
+    console.log(req.user)
     res.json(req.user);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
