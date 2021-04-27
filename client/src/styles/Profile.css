@@ -1,11 +1,9 @@
 .hm-profile-card {
   margin-top: 1rem;
-  margin-left: 1.7rem;
+  margin-left: 6.7rem;
   display: flex;
-  margin-left: -14px;
-  justify-content: center;
-  width: 80%;
 }
+
 .hm-profile-image {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
@@ -19,4 +17,25 @@
   font-size: 14px;
   font-weight: bold;
   margin-left: 13px;
+}
+.profiledropdown-content {
+  display: none;
+}
+.profiledropdown-content.show {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: fit-content;
+
+  margin-top: -1rem;
+  margin-left: 2.4rem;
+}
+.profile-personal-info {
+  display: none;
+}
+.profile-personal-info.show {
+  margin-top: -1rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
 }
