@@ -24,47 +24,45 @@ import Navbar from './components/Navbar';
 import Store from './components/Store';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import Tracking from './pages/Tracking';
 import ShoppingCart from './components/ShoppingCart';
 import './styles/Admin.css';
 import PaymentConfirmation from './pages/PaymentConfirmation';
-import {AppContext} from './context/AppContext'
+import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
 
 function App() {
-  const {user, userCheck} = useContext(AppContext)
-  const [currentUser,setCurrentUser] = user
-  const checkUser = userCheck
+  const { user, userCheck } = useContext(AppContext);
+  const [currentUser, setCurrentUser] = user;
+  const checkUser = userCheck;
 
   useEffect(() => {
-    checkUser()
-  },[])
+    checkUser();
+  }, []);
 
   return (
     <>
-        <Navbar/>
-        <Route exact path='/' component={Home} />
-        <Route
-          exact
-          path='/paymentconfirmation'
-          render={() => <PaymentConfirmation />}
-        />
-        {currentUser ? 
-        <Redirect to ="/" />
-        :
+      <Navbar />
+      <Route exact path='/' component={Home} />
+      <Route
+        exact
+        path='/paymentconfirmation'
+        render={() => <PaymentConfirmation />}
+      />
+      {currentUser ? (
+        <Redirect to='/' />
+      ) : (
         <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
-        }
-        <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
-        <Route exact path='/admin' render={() => <Admin />} />
-        <Route exact path='/driver' render={() => <Driver />} />
-        <Route
-          exact
-          path='/dashboard'
-          render={() => <UserDashboard  />}
-        />
-        <Route exact path='/store' render={() => <Store />} />
-        <Route exact path='/profile' render={() => <Profile />} />
+      )}
+      <Route exact path='/tracking' render={() => <Tracking />} />
+      <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
+      <Route exact path='/admin' render={() => <Admin />} />
+      <Route exact path='/driver' render={() => <Driver />} />
+      <Route exact path='/dashboard' render={() => <UserDashboard />} />
+      <Route exact path='/store' render={() => <Store />} />
+      <Route exact path='/profile' render={() => <Profile />} />
 
-        {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
+      {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
     </>
   );
 }
