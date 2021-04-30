@@ -13,7 +13,6 @@ import './styles/NotficationPreferences.css';
 import './styles/Rewards.css';
 import './styles/Help.css';
 import './styles/Logout.css';
-import './styles/PaymentConfirmation.css';
 import './styles/CreateAccountForm.css';
 import { useState, useContext, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
