@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import pizzaMonster from '../assets/pizzamonster.svg';
+import '../styles/Home.css';
 
 const home = () => {
   return (
@@ -27,10 +29,16 @@ const home = () => {
           </p>
         </div>
         <div className='midsection-middle'>
-          <p className='midsection-des-1'>Get our REWARDS! </p>
-          <p className='midsection-des-2'>
-            Order 6 pies and earn 7th on us, isn’t AWESOME!!
-          </p>
+          <div className="midsection-top">
+          <div className='midsection-middle-text'>
+            <p className='midsection-des-2'>Earn our</p>
+            <p className='midsection-des-1'>Rewards!</p>
+            <p className='midsection-des-2'>Are you hungry?</p>
+          </div>
+          <div>
+            <img src={pizzaMonster} alt="pizza monster"/>
+          </div>
+          </div>
         </div>
       </div>
     </div>
