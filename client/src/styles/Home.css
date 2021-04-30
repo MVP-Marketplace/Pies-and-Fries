@@ -5,20 +5,18 @@
 }
 .heading-homepage {
   margin-top: -1rem;
-  margin-left: 1.7rem;
+  /* margin-left: 1.7rem; */
   font-size: 20px;
   font-weight: 700;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 
 .box1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background: #e0dfdf;
+  align-items: flex-start;
   width: 85%;
-  width: 85%;
-  margin-left: -0.5rem;
   height: 12rem;
   border-radius: 4px;
   margin-bottom: 1rem;
@@ -26,27 +24,22 @@
 .box-1-des {
   font-size: 13px;
   font-weight: bold;
-  margin-left: 0.5rem;
+  /* margin-left: 0.5rem; */
   margin-top: -4rem;
 }
-
-.box-1-des-2 {
-  font-size: 13px;
-  width: 95%;
-  margin-left: 0.5rem;
-  margin-top: -2rem;
+ 
+.pizza-des-cont{
+  display:flex;
+  flex-direction:column;
+  font-size: .5rem;
+ 
 }
 .heading2 {
-  margin-left: 0.5rem;
   margin-top: 12px;
-  margin-bottom: 11rem;
   font-size: 12px;
-  width: -moz-fit-content;
-  height: fit-content;
-  width: fit-content;
   font-weight: 700;
-  line-height: 14px;
-}
+  /* line-height: 14px; */
+} 
 .hungry-order-btn {
   border: none;
   background: #04adbf;
@@ -57,26 +50,19 @@
   font-size: 14px;
   font-weight: bold;
   color: whitesmoke;
-  margin-top: -9rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .hungry-cont {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   width: 85%;
   margin-left: -0.5rem;
   height: 8rem;
-  background: #e0dfdf;
-  margin-bottom: 1rem;
-}
-.heading-3 {
-  margin-top: -8px;
-  font-size: 20px;
-  font-weight: 700;
-  width: fit-content;
-  font-weight: 700;
-  line-height: 14px;
-}
+  background: #FFFFFF;
+  margin-top: 100px;
+} 
+
+
 
 .container-midsection {
   width: 85%;
@@ -97,13 +83,14 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.midsection-middle {
+.midsection-right {
   border-radius: 4px;
   background: #C5E7EB;
   width: 47%;
   height: 7rem;
   border-radius: 4px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 .midsection-des-1 {
@@ -128,8 +115,17 @@
   color:#660650;
 }
 
-.see-more-btn{
+.midsection-btn{
   background: transparent !important;
   border: none !important; 
+  text-align: end;
+  height: 10%;
+  font-size: .5rem;
+  margin-top: -20px;
+  padding-top: 0;
+  font-weight: 700;
 
+}
+#right-btn{
+  color:#444347;
 }
