@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import face from '../assets/face.svg';
 
 const Profile = () => {
   const [displayModal, setDisplayModal] = useState(false);
@@ -6,7 +7,7 @@ const Profile = () => {
   return (
     <>
       <div className='hm-profile-card'>
-        <div className='hm-profile-image'></div>
+          <img src={face} alt="face icon no eye" className='hm-profile-image'/>
         <h3
           className='hm-profile-title'
           onClick={() => setDisplayModal(!displayModal)}
@@ -17,7 +18,7 @@ const Profile = () => {
       <div className={`profiledropdown-content ${displayModal ? 'show' : ''}`}>
         <ul>
           <li onClick={() => setDisplayPersonalInfo(!displayPersonalInfo)}>
-            personal Info
+            Personal Info
           </li>
           <div
             className={`profile-personal-info ${

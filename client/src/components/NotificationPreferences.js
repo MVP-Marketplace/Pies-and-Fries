@@ -1,10 +1,11 @@
 import React from 'react';
+import Notification from '../assets/notification.svg';
 
 const NotificationPreferences = () => {
   return (
     <div className='hm-np-card'>
-      <div className='hm-np-image'></div>
-      <h3 className='hm-np-title'>Notification Perferences</h3>
+        <img src={Notification} alt="bell" className='hm-np-image'/>
+      <h3 className='hm-np-title'>Notification Preferences</h3>
     </div>
   );
 };

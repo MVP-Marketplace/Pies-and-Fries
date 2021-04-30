@@ -99,23 +99,37 @@
 }
 .midsection-middle {
   border-radius: 4px;
-  background: #e0dfdf;
+  background: #C5E7EB;
   width: 47%;
   height: 7rem;
   border-radius: 4px;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
 }
 .midsection-des-1 {
   font-size: 13px;
   font-weight: bold;
   margin-left: 5px;
-  margin-top: -21px;
 }
 .midsection-des-2 {
   font-size: 12px;
   width: 96%;
   margin-left: 5px;
-  margin-top: -44px;
+}
+.midsection-top{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+.midsection-middle-text{
+  display:flex;
+  flex-direction: column;
+  align-items: left;
+  color:#660650;
+}
+
+.see-more-btn{
+  background: transparent !important;
+  border: none !important; 
+
 }
