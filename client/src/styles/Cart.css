@@ -69,7 +69,7 @@ body {
   border-radius: 17px;
   margin-left: 1.5rem;
   top: -150vh;
-  background-color: #b9b9b9;
+  background-color: #f8f8f8;
   box-shadow: 0 0 4px 0px rgb(0 0 0 / 15%);
   transition: top 0.6s ease-out;
   z-index: 10;
@@ -90,10 +90,9 @@ body {
   color: rgb(24, 23, 23);
 }
 .pc-adderss-card {
-  margin-top: 0rem;
-  margin-left: 1.7rem;
+  margin-top: -0.9rem;
   display: flex;
-  margin-left: 12px;
+  margin-left: 16px;
   justify-content: space-between;
   width: 89%;
   margin-bottom: 1rem;
@@ -110,6 +109,8 @@ body {
   margin-top: -0.1rem;
 }
 .pc-address-edit-btn {
+  background: #04adbf;
+  color: #eee;
   border: none;
   border-radius: 8px;
   width: 23%;
@@ -120,14 +121,14 @@ body {
 .cart-heading {
   font-size: 20px;
   margin-left: 12px;
-  color: #eee;
+  color: #04adbf;
 }
 .cart-card-container {
   display: flex;
   justify-content: space-between;
   width: 91%;
   height: 4.5rem;
-  border: 1px solid whitesmoke;
+  border: 1px solid #04adbf;
   margin-left: 12px;
   margin-top: -11px;
   margin-bottom: 1rem;
@@ -138,7 +139,7 @@ body {
   width: 30%;
 }
 .img-place-holder {
-  background: white;
+  background: #04adbf;
   width: 92%;
   height: 3.7rem;
   border-radius: 0px 6px 3px 3px;
@@ -155,21 +156,29 @@ body {
   color: rgb(24, 23, 23);
   font-size: 14px;
   width: fit-content;
+  margin-top: 0.6rem;
 }
 .cart-card-right-section {
+  display: flex;
   width: 30%;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .cart-card-product-price {
   color: rgb(24, 23, 23);
   font-size: 14px;
   width: fit-content;
 }
+.cart-card-remove-product {
+  font-size: 11px;
+  color: #074095;
+}
 .pc-delivery-type-container {
-  margin-left: 1.7rem;
+  margin-left: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 80%;
+  width: 89%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.21);
 }
 
@@ -196,6 +205,8 @@ body {
   justify-content: space-between;
 }
 .StripeCheckout {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   width: 100%;
   display: flex;
@@ -209,4 +220,72 @@ body {
   cursor: pointer;
   visibility: visible;
   user-select: none;
+}
+.amount-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtotal-container {
+  display: flex;
+  width: 89%;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: 12px;
+}
+.subtotal-heading {
+  font-size: 14px;
+  font-weight: bold;
+}
+.subtotal-amount {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tax-container {
+  display: flex;
+  width: 89%;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: 12px;
+}
+.tax-heading {
+  font-size: 14px;
+  font-weight: bold;
+}
+.tax-amount {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tip-container {
+  display: flex;
+  width: 89%;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: 12px;
+}
+.tip-heading {
+  font-size: 14px;
+  font-weight: bold;
+}
+.tip-amount {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.total-container {
+  display: flex;
+  width: 89%;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-left: 12px;
+}
+.total-heading {
+  font-size: 14px;
+  font-weight: bold;
+}
+.total-amount {
+  font-size: 12px;
+  font-weight: bold;
 }

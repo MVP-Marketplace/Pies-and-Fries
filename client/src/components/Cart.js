@@ -14,6 +14,8 @@ export const Cart = () => {
         onClick={() => setDisplayModal(!displayModal)}
       />
       <div className={`Modal ${displayModal ? 'Show' : ''}`}>
+        <h3 className='cart-heading'>Cart:</h3>
+        <CartItem />
         <div className='pc-adderss-card'>
           <div className='pc-location-container'>
             <p className='pc-location-name'>Home</p>
@@ -21,8 +23,7 @@ export const Cart = () => {
           </div>
           <button className='pc-address-edit-btn'>Edit</button>
         </div>
-        <h3 className='cart-heading'>Items in Cart:</h3>
-        <CartItem />
+
         <div className='pc-delivery-type-container'>
           <div className='pc-contact-free-delivery-container'>
             <div className='pc-contact-delivery-des'>
@@ -58,6 +59,24 @@ export const Cart = () => {
                 id='pc-check-delivery-type-2'
               />
             </div>
+          </div>
+        </div>
+        <div className='amount-container'>
+          <div className='subtotal-container'>
+            <p className='subtotal-heading'>Subtotal</p>
+            <p className='subtotal-amount'> $0.00</p>
+          </div>
+          <div className='tax-container'>
+            <p className='tax-heading'>Tax</p>
+            <p className='tax-amount'>$0.00</p>
+          </div>
+          <div className='tip-container'>
+            <p className='tip-heading'>Tip</p>
+            <p className='tip-amount'>$0.00</p>
+          </div>
+          <div className='total-container'>
+            <p className='total-heading'>Total</p>
+            <p className='total-amount'>$0.00</p>
           </div>
         </div>
 
