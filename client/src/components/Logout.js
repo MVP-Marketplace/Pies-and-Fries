@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
 import axios from 'axios'
 import {AppContext} from '../context/AppContext'
+import LogoutIcon from '../assets/logout.svg';
+
 const Logout = () => {
   const {userCheck} = useContext(AppContext)
 
@@ -16,7 +18,7 @@ const Logout = () => {
   }
   return (
     <div className='hm-logout-card' onClick={() => logoutFunc()}>
-      <div className='hm-logout-image'></div>
+      <img src={LogoutIcon} alt="open door arrow"className='hm-logout-image'/>
       <h3 className='hm-out-title'>LogOut</h3>
     </div>
   );
