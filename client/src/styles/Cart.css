@@ -65,7 +65,7 @@ body {
   position: fixed;
   left: 0;
   width: 85%;
-  height: 15rem;
+  height: fit-content;
   border-radius: 17px;
   margin-left: 1.5rem;
   top: -150vh;
@@ -88,6 +88,33 @@ body {
   border: 0;
   font-size: 14px;
   color: rgb(24, 23, 23);
+}
+.pc-adderss-card {
+  margin-top: 0rem;
+  margin-left: 1.7rem;
+  display: flex;
+  margin-left: 12px;
+  justify-content: space-between;
+  width: 89%;
+  margin-bottom: 1rem;
+}
+.pc-location-container {
+  margin-top: 1rem;
+}
+.pc-location-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+.pc-address {
+  font-size: 13px;
+  margin-top: -0.1rem;
+}
+.pc-address-edit-btn {
+  border: none;
+  border-radius: 8px;
+  width: 23%;
+  height: 26px;
+  margin-top: 1rem;
 }
 
 .cart-heading {
@@ -137,12 +164,49 @@ body {
   font-size: 14px;
   width: fit-content;
 }
-.checkout-btn {
-  width: 136px;
-  height: 45px;
-  margin-left: 5rem;
-  border: none;
-  background: #04adbf;
-  border-radius: 13px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.pc-delivery-type-container {
+  margin-left: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+}
+
+.pc-contact-free-delivery-container {
+  display: flex;
+  justify-content: space-between;
+}
+.pc-contact-delivery-des {
+}
+.pc-contact-type-heading {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pc-contact-type-des {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+.pc-contact-checkbox {
+  margin-top: 12px;
+}
+.pc-door-delivery-container {
+  display: flex;
+  justify-content: space-between;
+}
+.StripeCheckout {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background: linear-gradient(rgb(40, 160, 229), rgb(1, 94, 148)); */
+  border: 0px;
+  padding: 4px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 0px;
+  cursor: pointer;
+  visibility: visible;
+  user-select: none;
 }

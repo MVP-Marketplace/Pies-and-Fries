@@ -60,14 +60,12 @@ export const Cart = () => {
             </div>
           </div>
         </div>
-        <Checkout />
+
         <Link to='/paymentconfirmation'>
-          <button
+          <Checkout
             className='checkout-btn'
             onClick={() => setDisplayModal(!displayModal)}
-          >
-            Checkout
-          </button>
+          />
         </Link>
         <button
           className='Close'
