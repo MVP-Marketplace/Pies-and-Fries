@@ -4,6 +4,7 @@ import pizzaPaddle from '../assets/pizzaPaddle.png';
 import pizzaHero from '../assets/pizzaHero.png';
 import rating from '../assets/rating.svg';
 import Instagram from '../components/Instagram';
+import Dino from '../assets/DinoHolder.png';
 
 const home = () => {
   return (
@@ -53,7 +54,11 @@ const home = () => {
           </div>
           <img src={pizzaPaddle} alt="pizza on paddle"  id="pizza-pad-img"/>
         </div>
+        <div className="game-container">
+          <img src={Dino} alt="dino game" id="dino-img"/>
+        </div>
         <div className="instagram-container">
+          <h5>Tag us! @PiesandFries</h5>
           <Instagram />
         </div>
       </div>

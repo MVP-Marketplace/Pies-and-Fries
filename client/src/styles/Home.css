@@ -62,7 +62,7 @@
   border-radius: 25px;
   width:90%;
   height: 25vh;
-  margin-top: 40px;
+  margin-top: 25px;
   box-shadow: 16.310823440551758px 33.87632369995117px 41.40439987182617px 0px #0000000D;
   ;
 
@@ -82,4 +82,22 @@
 
 #pizza-pad-img{
   height: 60%;
+}
+/* ************* Game************* */
+
+.game-container{
+  height: 20vh;
+  width:90%;
+  margin-top: 10px;
+
+}
+#dino-img{
+  width: 100%;
+}
+/* ************* Instagram************* */
+
+.instagram-container {
+ display: flex; 
+ flex-direction: column;
+ justify-content: flex-start;
 }
