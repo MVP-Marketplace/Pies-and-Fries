@@ -1,110 +1,73 @@
-.hompage-container {
-  display: flex;
+/* ************* Home Page************* */
+.hompage-container{
+  display: flex; 
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-evenly;
+  border:none !important;
+  height: 100%;
 }
-
-/* Header Section */
-.heading-homepage {
-  font-size: 1.5rem;
-  font-weight: 700;
+/* ************* Header************* */
+.header-container{
+  width: 100vw; 
+  border: none;
+  border-radius: none;
+  background-color: none !important;
+  text-align: left;
+  margin-left: .5rem;
 }
-.box1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  width: 85%;
-  height: 12rem;
-  border-radius: 4px;
- 
-}
-.box-1-des {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 0em;
-  margin-top: -30px;
-}
-
-/* **************Middle Section ************* */
+/* ************* Discounts and Rewards************* */
 .container-midsection {
-  width: 85%;
-  height: 70px;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.midsection-left {
-  border-radius: 4px;
-  background: #e0dfdf;
-  height: 7rem;
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
-.midsection-right {
-  border-radius: 4px;
-  background: #C5E7EB;
-  height: 7rem;
-  border-radius: 4px;
+.card-container{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 47%;
+  border-radius: 10px;
+  height: 19vh;
+}
+.card-text{
   display: flex;
-  justify-content: space-around;
-}
-.midsection-des-1 {
-  font-size: 13px;
-  font-weight: bold;
-  margin-left: 5px;
-}
-.midsection-des-2 {
-  font-size: 12px;
-  width: 96%;
-  margin-left: 5px;
-}
-#pizza-img{
-  height: 50%;
-  width: 50%;
-}
-
-.midsection-middle-text{
-  display:flex;
   flex-direction: column;
-  align-items: left;
-  color:#660650;
+}
+.left-text{
+  margin-left: 0.5rem;
 }
 
-
-
-
-/* *****************Order Section ******************* */
-.order-section-container{
-  border: 1px solid black;
-  height: 15rem;
+.card-left{
+  background-color: #444347;
+  color: whitesmoke;
+  line-height: 1;
 }
-.hungry-cont {
-  display: flex;
-  justify-content: space-between;
+.card-right{
+  background-color:#C5E7EB;
+  color: #660650;
+}
+
+.img-left{
+  margin-top: -6rem;
+  height: 5rem;
+  width:6rem;
+}
+/* ************* Ordering************* */
+.pizza-des-container{
+  display: flex; 
+  justify-content: space-evenly;
   align-items: center;
-  margin-left: -0.5rem;
-  height: 15rem;
-  background: #FFFFFF;
-  border: 1px black solid;
-} 
-.pizza-des-cont{
-  display:flex;
-  flex-direction:column;
-  font-size: .5rem;
+  background-color: #E5E5E5;
+  border-radius: 25px;
+  width:90%;
+  height: 25vh;
+  margin-top: 40px;
+  box-shadow: 16.310823440551758px 33.87632369995117px 41.40439987182617px 0px #0000000D;
+  ;
 
 }
-.heading2 {
-  margin-top: 12px;
-  font-size: 12px;
-  font-weight: 700;
-  /* line-height: 14px; */
-} 
-.hungry-order-btn {
+.order-btn {
   border: none;
   background: #04adbf;
   border-radius: 16px;
@@ -116,7 +79,7 @@
   color: whitesmoke;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-/*  */
 
-
-
+#pizza-pad-img{
+  height: 60%;
+}
