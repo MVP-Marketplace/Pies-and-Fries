@@ -33,7 +33,7 @@ const AppContextProvider = ({ children }) => {
   //   }
   // },[]);
   const state = {
-    user: [currentUser,setCurrentUser],
+    userState: [currentUser,setCurrentUser],
     userCheck: userCheck
   }
 

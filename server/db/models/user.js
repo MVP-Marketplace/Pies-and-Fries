@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema(
         }
     }},
     admin: {type: Boolean, default: false},
+    driver: {type: Boolean, default: false},
     number: {type: Number},
     address: {type: String},
     order: [String],

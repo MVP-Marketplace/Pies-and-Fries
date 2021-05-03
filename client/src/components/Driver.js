@@ -54,7 +54,7 @@ const Driver = () => {
 
                     </div>
                     <div>
-                        <p className="order-items"> {order.foodItems[0].quantity} {order.foodItems[0].item}</p>
+                        {/* <p className="order-items"> {order.foodItems[0].quantity} {order.foodItems[0].item}</p> */}
                         <button className="pickup-button">Pick Up</button>
                     </div>
                   
