@@ -26,7 +26,7 @@ import Profile from './pages/Profile';
 import Tracking from './pages/Tracking';
 import ShoppingCart from './components/ShoppingCart';
 import './styles/Admin.css';
-import PaymentConfirmation from './pages/PaymentConfirmation';
+
 import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
 
@@ -43,11 +43,7 @@ function App() {
     <>
       <Navbar />
       <Route exact path='/' component={Home} />
-      <Route
-        exact
-        path='/paymentconfirmation'
-        render={() => <PaymentConfirmation />}
-      />
+
       {currentUser ? (
         <Redirect to='/' />
       ) : (
