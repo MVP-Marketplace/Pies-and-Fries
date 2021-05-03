@@ -3,6 +3,7 @@ import CartIcon from '../assets/CartIcon.svg';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import Checkout from '../components/Checkout';
+
 export const Cart = () => {
   const [displayModal, setDisplayModal] = useState(false);
   return (

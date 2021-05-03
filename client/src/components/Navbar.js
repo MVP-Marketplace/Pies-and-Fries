@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import { useState, useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 import HamburgerMenu from './HamburgerMenu';
 import logo from '../assets/logo.svg';
 
 const Navbar = props => {
+  const { userState } = useContext(AppContext);
+  const [user, setUser] = userState;
   const logoutUser = () => {
     fetch('/api/users/logout', {
       method: 'POST',
@@ -20,7 +23,7 @@ const Navbar = props => {
   };
   return (
     <>
-      <HamburgerMenu />
+      {user ? <HamburgerMenu /> : ''}
       <div className='Navbar'>
         <div className='navLogo'>
           <Link to='/'>
@@ -51,7 +54,7 @@ const Navbar = props => {
           )}
           {props.cartLength}
         </div>
-        <Cart />
+        {user ? <Cart /> : ''}
       </div>
     </>
   );
