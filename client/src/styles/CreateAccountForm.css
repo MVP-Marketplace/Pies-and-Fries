@@ -1,9 +1,20 @@
+.create-acount-form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.creation-form-list {
+  width: 80%;
+}
 .profile-creation-form {
   display: flex;
   flex-direction: column;
   margin: 1rem;
 }
 .profile-creation-personal-i {
+  margin-top: -1.5rem;
+  margin-left: 0rem;
   margin-bottom: 0.5rem;
 }
 
@@ -81,12 +92,6 @@
   margin-left: -4rem;
 }
 
-.profile-creation-submit-btn {
-  margin-top: 9px;
-  margin-left: -4rem;
-  width: 103%;
-  margin-bottom: 0.3rem;
-}
 .already-have-an-account {
   font-size: 12px;
   margin-left: -3rem;
@@ -95,8 +100,33 @@
 }
 
 .profile-creation-payment-i {
+  margin-top: -0.5rem;
+  margin-left: 0rem;
   margin-bottom: 0.5rem;
 }
 .profile-creation-password-i {
+  margin-top: -0.5rem;
+  margin-left: 0rem;
   margin-bottom: 0.5rem;
+}
+.forPaymentInfo {
+  margin-top: 1rem;
+  font-size: 14px;
+  margin-left: -2rem;
+}
+#forPaymentInfo {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  margin-left: -2rem;
+  margin-bottom: 0.3rem;
+  width: 100%;
+}
+
+.profile-creation-submit-btn {
+  margin-top: 1px;
+  margin-left: -0.5rem;
+  width: 100%;
+  margin-bottom: 2.3rem;
 }

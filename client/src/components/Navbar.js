@@ -39,14 +39,8 @@ const Navbar = props => {
 
           {/* <Link to ="/store" className="navItem">Store</Link> */}
 
-          {props.userLoggedIn ? (
-            <Link
-              to='/signin'
-              className='navItem-signin'
-              onClick={() => logoutUser()}
-            >
-              Logout
-            </Link>
+          {user ? (
+            ''
           ) : (
             <Link to='/signin' className='navItem-sigin'>
               Sign In

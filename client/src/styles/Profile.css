@@ -5,34 +5,35 @@
 }
 
 .hm-profile-image {
-
   margin-bottom: 1rem;
   margin-left: -1.9rem;
- 
 }
 .hm-profile-title {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold;
-  margin-left: 13px;
+  margin-top: 0rem;
+  margin-left: -11rem;
 }
 .profiledropdown-content {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  /* margin-top: -1rem; */
+  align-content: center;
+  align-items: center;
 }
 .profiledropdown-content.show {
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-  height: fit-content;
-
-  margin-top: -1rem;
-  margin-left: 2.4rem;
-}
-.profile-personal-info {
   display: none;
 }
-.profile-personal-info.show {
+.profile-personal-info {
   margin-top: -1rem;
-  margin-left: 2rem;
+  margin-right: -3rem;
+  margin-left: 1rem;
   display: flex;
   flex-direction: column;
+}
+.profile-personal-info.show {
+  display: none;
 }

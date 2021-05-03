@@ -44,11 +44,10 @@ function App() {
       <Navbar />
       <Route exact path='/' component={Home} />
 
-      {user ? (
-        <Redirect to='/' />
-      ) : (
-        <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
-      )}
+      <Redirect to='/' />
+
+      <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
+
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
       <Route exact path='/admin' render={() => <Admin />} />
