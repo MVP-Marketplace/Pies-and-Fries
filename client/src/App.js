@@ -31,8 +31,8 @@ import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
 
 function App() {
-  const { user, userCheck } = useContext(AppContext);
-  const [currentUser, setCurrentUser] = user;
+  const { userState, userCheck } = useContext(AppContext);
+  const [user, setUser] = userState;
   const checkUser = userCheck;
 
   useEffect(() => {
@@ -44,7 +44,7 @@ function App() {
       <Navbar />
       <Route exact path='/' component={Home} />
 
-      {currentUser ? (
+      {user ? (
         <Redirect to='/' />
       ) : (
         <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
