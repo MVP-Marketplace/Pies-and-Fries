@@ -1,5 +1,5 @@
 import {useState, useContext} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap';
 import {AppContext} from '../context/AppContext'
 const SignInForm = (props) => {
@@ -7,6 +7,8 @@ const { userCheck} = useContext(AppContext)
 
 const [email, setEmail] = useState('')
 const[password,setPassword] = useState('')
+const history = useHistory();
+
 
 const handleFormSubmit = (e) => {
     e.preventDefault()
@@ -22,6 +24,9 @@ const handleFormSubmit = (e) => {
     })
     .then((res) => {
       console.log(res)
+      if(res.status === 200) {
+        history.push("/")
+      }
       userCheck()
     })
     .catch((err) => {
