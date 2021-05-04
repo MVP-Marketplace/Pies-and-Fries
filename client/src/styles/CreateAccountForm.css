@@ -1,3 +1,47 @@
+.hm-profile-card {
+  margin-top: 1rem;
+  margin-left: 6.7rem;
+  display: flex;
+}
+
+.hm-profile-image {
+  margin-bottom: 1rem;
+  margin-left: -1.9rem;
+}
+.ac-profile-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 0rem;
+  margin-left: -11rem;
+}
+.profiledropdown-content {
+  margin-top: -1rem;
+  margin-left: 1.7rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+  align-items: center;
+}
+.profiledropdown-content.show {
+  display: none;
+}
+.ac-profile-personal-info {
+  margin-top: -1rem;
+  margin-right: -3rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.ac-profile-personal-info.show {
+  display: none;
+}
+
 .create-acount-form {
   display: flex;
   flex-direction: column;
