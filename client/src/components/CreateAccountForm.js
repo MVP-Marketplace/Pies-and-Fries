@@ -49,7 +49,7 @@ const CreateAccountForm = props => {
       <div className='hm-profile-card'>
         <div className='hm-profile-image'></div>
         <h3
-          className='hm-profile-title'
+          className='ac-profile-title'
           onClick={() => setDisplayModal(!displayModal)}
         >
           Profile
@@ -64,7 +64,7 @@ const CreateAccountForm = props => {
             personal Info
           </li>
           <div
-            className={`profile-personal-info ${
+            className={`ac-profile-personal-info ${
               displayPersonalInfo ? 'show' : ''
             }`}
           >
@@ -126,6 +126,13 @@ const CreateAccountForm = props => {
                   onChange={e => setNumber(e.target.value)}
                 />
               </Form.Group>
+              <Button
+                variant='primary'
+                type='submit'
+                className='profile-creation-submit-btn'
+              >
+                Submit
+              </Button>
               <Form.Group controlId='formBasicAddress'>
                 <Form.Label className='formBasicAddress'>Address</Form.Label>
                 <Form.Control
@@ -136,6 +143,7 @@ const CreateAccountForm = props => {
                 />
               </Form.Group>
             </Form>
+
             <p
               className='already-have-an-account'
               onClick={() => props.setIsSignIn(true)}
@@ -169,13 +177,6 @@ const CreateAccountForm = props => {
             />
           </Form.Group>
         </ul>
-        <Button
-          variant='primary'
-          type='submit'
-          className='profile-creation-submit-btn'
-        >
-          Submit
-        </Button>
       </div>
     </>
   );

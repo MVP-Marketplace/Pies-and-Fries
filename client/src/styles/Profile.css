@@ -11,10 +11,13 @@
 .hm-profile-title {
   font-size: 17px;
   font-weight: bold;
-  margin-top: 0rem;
-  margin-left: -11rem;
+  margin-top: 0.2rem;
+  margin-left: 1rem;
 }
 .profiledropdown-content {
+  display: none;
+}
+.profiledropdown-content.show {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -24,11 +27,9 @@
   align-content: center;
   align-items: center;
 }
-.profiledropdown-content.show {
-  display: none;
-}
 .profile-personal-info {
-  margin-top: -1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   margin-right: -3rem;
   margin-left: 1rem;
   display: flex;
@@ -36,4 +37,37 @@
 }
 .profile-personal-info.show {
   display: none;
+}
+.profile-info-list-container {
+  margin-top: 0rem;
+  list-style: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: -3rem;
+}
+
+.profile-user-email {
+  font-size: 12px;
+}
+.p-u-email {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.profile-user-number {
+  font-size: 12px;
+}
+.p-u-number {
+  font-size: 14px;
+  font-weight: bold;
+}
+.profile-user-address {
+  font-size: 12px;
+}
+.p-u-address {
+  font-size: 14px;
+  font-weight: bold;
 }
