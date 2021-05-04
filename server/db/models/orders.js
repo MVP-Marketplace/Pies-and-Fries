@@ -4,6 +4,7 @@ const ordersSchema = new mongoose.Schema({
     user_id: {type: String, default: null},
     customer_name: {type: String, default: null},
     driver_id: {type:String, default: null},
+    driver_name:{type:String, default:null},
     cost: {type: Number},
     delivered: {type: Boolean, default: false},
     isReady: {type: Boolean, default: false},
