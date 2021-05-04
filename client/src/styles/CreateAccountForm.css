@@ -16,6 +16,7 @@
 }
 .profiledropdown-content {
   margin-top: -1rem;
+  margin-bottom: 1rem;
   margin-left: 1.7rem;
   display: flex;
   justify-content: space-evenly;

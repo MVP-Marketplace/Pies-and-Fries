@@ -20,11 +20,14 @@ const Profile = () => {
       </div>
       <div className={`profiledropdown-content ${displayModal ? 'show' : ''}`}>
         <ul className='profile-info-list-container'>
-          <li onClick={() => setDisplayPersonalInfo(!displayPersonalInfo)}>
+          <li
+            className='profile-personal-info'
+            onClick={() => setDisplayPersonalInfo(!displayPersonalInfo)}
+          >
             Personal Info
           </li>
           <div
-            className={`profile-personal-info ${
+            className={`profile-personal-info-data ${
               displayPersonalInfo ? 'show' : ''
             }`}
           >
@@ -35,8 +38,8 @@ const Profile = () => {
             <p className='p-u-address'>Address</p>
             <p className='profile-user-address'>{user && user.address}</p>
           </div>
-          <li>Payment Info</li>
-          <li>Password</li>
+          <li className='profile-payment-info'>Payment Opition</li>
+          <li className='profile-payment-info'>Order History</li>
         </ul>
       </div>
     </>
