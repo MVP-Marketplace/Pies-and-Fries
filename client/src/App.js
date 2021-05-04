@@ -43,7 +43,9 @@ function App() {
     <>
       <Navbar />
       <Route exact path='/' component={Home} />
+
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
+
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
       <Route exact path='/admin' render={() => <Admin />} />
