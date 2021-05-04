@@ -1,6 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import '../styles/Driver.css'
+import {AppContext} from '../context/AppContext'
 const Driver = () => {
+  const {userState} = useContext(AppContext)
+  const[user,setUser] = userState
   const[readyOrders,setReadyOrders] = useState(null)
   const[currentOrder,setCurrentOrder] = useState(null)
   const[showSingleOrder,setShowSingleOrder] = useState(false)
@@ -18,6 +21,22 @@ const Driver = () => {
     useEffect(() => {
         getReadyItems()
     },[])
+    const assignOrderToDriver = (orderId) => {
+      console.log(orderId)
+      fetch(`/api/orders/update/${orderId}`,  {
+        method: 'PUT',
+        body: JSON.stringify({driver_id: user._id, driver_name: user.name}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then(res => res.json())
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => {
+        console.log(err)})
+      }
     const viewSingleOrder = (order) => {
         setCurrentOrder(order)
         setShowSingleOrder(true)
@@ -44,18 +63,17 @@ const Driver = () => {
       <h3 className='welcome-message'>Shalom Driver!</h3>
       {!showSingleOrder && (
           <div className="current-orders">
-          <h4 className="orders-header">Current Orders</h4>
+          <h4 className="orders-header">Availible for pickup</h4>
           {readyOrders && (
               readyOrders.map((order,i) => (
                 <div className="single-order" key={i} onClick={() => viewSingleOrder(order)}>  
                   <h4 className="order-details">Order Details: Order # {order._id}</h4>
                   <div className="order-pic-items">
                     <div className="order-picture">
-
                     </div>
                     <div>
-                        {/* <p className="order-items"> {order.foodItems[0].quantity} {order.foodItems[0].item}</p> */}
-                        <button className="pickup-button">Pick Up</button>
+                        <p className="order-items"> {order.foodItems[0].quantity} {order.foodItems[0].item}</p>
+                        <button className="pickup-button" onClick={() => assignOrderToDriver(order._id)}>Pick Up</button>
                     </div>
                   
                     </div>
@@ -116,7 +134,7 @@ const Driver = () => {
             <div className="order-details"></div>
             <div className="driver-options">
                 <button>Call restaraunt: (000)-000-0000</button>
-                <button>Order Complete</button>
+                {currentOrder.driver_id &&                 <button>Order Complete</button>}
             </div>
           </div>
       )}
