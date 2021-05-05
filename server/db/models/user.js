@@ -28,6 +28,9 @@ const userSchema = new mongoose.Schema(
     state:{type:String},
     zipcode:{type:Number},
     // i think this needs to be refrenced and be type Object.mongoose.schemaId
+    orders: [
+        order: {Object.mongoose.schemaId};
+    ]
     order: [String],
     tokens: [
         {
