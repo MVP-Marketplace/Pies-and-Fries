@@ -46,8 +46,8 @@ const CreateAccountForm = props => {
           <p className='hm-user-name'>Shalom Guest!</p>
         </div>
       </div>
-      <div className='hm-profile-card'>
-        <div className='hm-profile-image'></div>
+      <div className='ac-profile-card'>
+        <div className='ac-profile-image'></div>
         <h3
           className='ac-profile-title'
           onClick={() => setDisplayModal(!displayModal)}
@@ -55,7 +55,9 @@ const CreateAccountForm = props => {
           Profile
         </h3>
       </div>
-      <div className={`profiledropdown-content ${displayModal ? 'show' : ''}`}>
+      <div
+        className={`ac-profiledropdown-content ${displayModal ? 'show' : ''}`}
+      >
         <ul className='creation-form-list'>
           <li
             className='profile-creation-personal-i'

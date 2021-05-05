@@ -1,12 +1,15 @@
 .hm-profile-card {
   margin-top: 1rem;
-  margin-left: 6.7rem;
+  margin-left: 1.7rem;
   display: flex;
+  margin-left: 45px;
+  justify-content: center;
+  width: 80%;
 }
 
 .hm-profile-image {
   margin-bottom: 1rem;
-  margin-left: -1.9rem;
+  margin-left: -8.9rem;
 }
 .hm-profile-title {
   font-size: 17px;
@@ -20,12 +23,13 @@
 .profiledropdown-content.show {
   display: flex;
   flex-direction: column;
-  width: 90%;
   height: -moz-fit-content;
   height: fit-content;
-  /* margin-top: -1rem; */
-  align-content: center;
   align-items: center;
+  margin-top: -1rem;
+  margin-left: 1.7rem;
+  width: 80%;
+  border-bottom: 1px solid;
 }
 .profile-personal-info-data {
   margin-left: 2rem;
