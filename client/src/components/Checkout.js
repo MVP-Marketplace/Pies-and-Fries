@@ -1,5 +1,6 @@
-import react, { useState , useEffect } from 'react'
+import react, { useState , useEffect, useContext } from 'react'
 import StripeCheckout from "react-stripe-checkout"
+import {AppContext} from '../context/AppContext'
 
 /// we need to make the orders 
 
@@ -11,6 +12,9 @@ const [product, setProduct] = useState({
     price:12,
     productBy: "Pizza and fries"
 });
+
+const {userState} = useContext(AppContext)
+const[user,setUser] = userState
 
 
 const makePayment = token => {
@@ -38,6 +42,8 @@ const makePayment = token => {
                         'Content-Type': 'application/json'
                       },
                     body: JSON.stringify({
+                        user_id: user._id,
+                        customer_name: user.name,
                         foodItems: {
                           item: product.name,
                           quantity: 1,
