@@ -23,7 +23,11 @@ const userSchema = new mongoose.Schema(
     admin: {type: Boolean, default: false},
     driver: {type: Boolean, default: false},
     number: {type: Number},
-    address: {type: String},
+    streetAddress:{type:String},
+    city: {type: String},
+    state:{type:String},
+    zipcode:{type:Number},
+    // i think this needs to be refrenced and be type Object.mongoose.schemaId
     order: [String],
     tokens: [
         {

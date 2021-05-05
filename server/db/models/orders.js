@@ -2,7 +2,9 @@ const mongoose = require('mongoose')
 
 const ordersSchema = new mongoose.Schema({
     user_id: {type: String, default: null},
+    //how do you pull this?
     customer_name: {type: String, default: null},
+    //wouldn't this need to be driver id
     driver_id: {type:String, default: null},
     driver_name:{type:String, default:null},
     cost: {type: Number},
