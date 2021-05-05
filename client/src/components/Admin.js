@@ -71,7 +71,7 @@ const Admin = () => {
                 <p className="address">lorem ipsum dolor sit amet</p>
                 <p className="address2">lorem ipsum dolor sit amet</p>
                 <div className="customer-name">
-                  <h4>Customer Name</h4>
+                  <h4>Customer: {order.customer_name}</h4>
                   <h4>(000) 000-0000</h4>
                 </div>
                 <h4 className="order-headers">Payment Method</h4>
@@ -80,7 +80,7 @@ const Admin = () => {
                 <h4 className="order-headers">Contact-free delivery</h4>
                 <p className="delivery-instructions">Call customer when you arrive</p>
                 <button className="pickup-button" onClick={() => orderIsReady(order._id)}>Ready for Pickup</button>
-                <h4 className="driver-info">Your Driver is Danny</h4>
+                <h4 className="driver-info">{order.driver_name ? order.driver_name : 'Pending'}</h4>
                 <h4 className="driver-info">(000) 000-0000</h4>
                 </div>
                 
