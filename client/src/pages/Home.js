@@ -1,42 +1,63 @@
 import React from 'react';
+import pizzaHero from '../assets/pizzaHero2.png';
+import pizzaPaddle from '../assets/pizzaPaddle.svg'
 import pizzaMonster from '../assets/pizzamonster.svg';
-import pizzaPaddle from '../assets/pizzaPaddle.png';
-import pizzaHero from '../assets/pizzaHero.png';
-import rating from '../assets/rating.svg';
 import Instagram from '../components/Instagram';
-import Dino from '../assets/DinoHolder.png';
-import { Carousel, Jumbotron,Container,Image, Button } from 'react-bootstrap';
+import { Carousel, Container,Image, Button, Card, Jumbotron } from 'react-bootstrap';
 
 const home = () => {
   return (
-    <div>
-      <Jumbotron>
-        <h1>ONE click away to your Pizza!</h1>
-        <Button>Order Now</Button>
+    <div className="homepage-container">
+      <Card className="hero-wrapper">
+        <Card.Img src={pizzaHero} className="hero-img"/>
+        <Card.ImgOverlay className="hero-container">
+        <Card className="hero-text">
+          <Card.Title className="hero-title">
+            ONE click away to your Pizza!
+            <br/>Earn rewards as you go!
+          </Card.Title>
+        </Card>
 
-      </Jumbotron>
-      <Container>
+        </Card.ImgOverlay>
+      </Card>
+      <div className="pizza-wrapper d-flex">
+        <Card.Body>
+        <Card className="pizza-card left-card">
           <h1>Classic Cheese Pizza</h1>
           <p></p>
-          <img src={rating} alt="rating"/>
-      </Container>
+          <img src="" alt="rating"/>
+          <Button>Order Now!</Button>
+          </Card>
+          <Card className="pizza-card left-card">
+            <Card.Img src={pizzaPaddle} alt="pizza"/>
+          </Card>
+          </Card.Body>
+      </div>
       <Carousel>
         <Carousel.Item>
-          <h5>Welcome Bonuse</h5>
-           <Image />
+           <Image src={pizzaMonster} />
         </Carousel.Item>
         <Carousel.Item>
-          <h5>Get our Rewards</h5>
-          <Image />
+        <Jumbotron fluid>
+          <div> 
+            <p>Earn our</p>
+            <h3>Rewards</h3>
+            <p>today!</p>
+          </div>
+          <div>
+            <img src={pizzaMonster} alt="pizza with monster horns"/>
+          </div>
+            
+        </Jumbotron>  
         </Carousel.Item>
 
       </Carousel>
-      <Container>
+      <Card>
         <h1>
           Tag us #PIESANDFRIES
         </h1>
         <Instagram /> 
-      </Container>
+      </Card>
 
     </div>
 
