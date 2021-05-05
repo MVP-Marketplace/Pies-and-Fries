@@ -28,15 +28,17 @@
   align-items: center;
 }
 .profile-personal-info-data {
+  margin-left: 2rem;
+  display: none;
+}
+.profile-personal-info-data.show {
+  margin-left: 2rem;
+  display: none;
   height: 7rem;
   display: flex;
   margin-left: 2rem;
   flex-direction: column;
   justify-content: space-between;
-}
-.profile-personal-info-data.show {
-  margin-left: 2rem;
-  display: none;
 }
 .profile-info-list-container {
   width: 7rem;
