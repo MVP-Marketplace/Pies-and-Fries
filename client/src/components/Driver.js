@@ -3,7 +3,7 @@ import '../styles/Driver.css'
 import {AppContext} from '../context/AppContext'
 const Driver = () => {
   const {userState} = useContext(AppContext)
-  const[user,setUser] = userState
+  const[user] = userState
   const[readyOrders,setReadyOrders] = useState(null)
   const[currentOrder,setCurrentOrder] = useState(null)
   const[showSingleOrder,setShowSingleOrder] = useState(false)

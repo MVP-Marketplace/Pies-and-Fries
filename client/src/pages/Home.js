@@ -1,4 +1,3 @@
-
 import React from 'react';
 import pizzaHero from '../assets/pizzaHero2.png';
 import rating from '../assets/rating.svg';

@@ -1,4 +1,4 @@
-import react, { useState , useEffect, useContext } from 'react'
+import { useState , useContext } from 'react'
 import StripeCheckout from "react-stripe-checkout"
 import {AppContext} from '../context/AppContext'
 
@@ -7,14 +7,14 @@ import {AppContext} from '../context/AppContext'
 const Checkout = () => {
     let pub = 'pk_test_51ILvkgDnPJT2qYVZZ7fkC04pIsFAZhU8WPkJJpcCPmTQg3nmQo3zRIACXt4PlqkgoqPEe8361cGXp9x6FIz0EGvm004S91JfKU'
 
-const [product, setProduct] = useState({
+const [product] = useState({
     name: "pizza",
     price:12,
     productBy: "Pizza and fries"
 });
 
 const {userState} = useContext(AppContext)
-const[user,setUser] = userState
+const[user] = userState
 
 
 const makePayment = token => {
