@@ -1,19 +1,21 @@
 .hm-profile-card {
   margin-top: 1rem;
-  margin-left: 6.7rem;
+  margin-left: 1.7rem;
   display: flex;
+  margin-left: 45px;
+  justify-content: center;
+  width: 80%;
 }
 
 .hm-profile-image {
-
   margin-bottom: 1rem;
-  margin-left: -1.9rem;
- 
+  margin-left: -8.9rem;
 }
 .hm-profile-title {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold;
-  margin-left: 13px;
+  margin-top: 0.2rem;
+  margin-left: 1rem;
 }
 .profiledropdown-content {
   display: none;
@@ -21,18 +23,76 @@
 .profiledropdown-content.show {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  height: -moz-fit-content;
   height: fit-content;
-
+  align-items: center;
   margin-top: -1rem;
-  margin-left: 2.4rem;
+  margin-left: 1.7rem;
+  width: 80%;
+  border-bottom: 1px solid;
 }
-.profile-personal-info {
+.profile-personal-info-data {
+  margin-left: 2rem;
   display: none;
 }
-.profile-personal-info.show {
-  margin-top: -1rem;
+.profile-personal-info-data.show {
   margin-left: 2rem;
+  display: none;
+  height: 7rem;
+  display: flex;
+  margin-left: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile-info-list-container {
+  width: 7rem;
+  font-size: 14px;
+  margin-top: 0rem;
+  list-style: none;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin-left: -7rem;
+}
+
+.profile-personal-info {
+  list-style: none;
+  margin: 0.7rem;
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+}
+
+.profile-payment-info {
+  width: 7rem;
+  margin: 0.7rem;
+  font-weight: bold;
+}
+.profile-user-email {
+  font-weight: lighter;
+  font-size: 12px;
+}
+.p-u-email {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-user-number {
+  font-weight: lighter;
+  font-size: 12px;
+}
+.p-u-number {
+  font-size: 14px;
+  font-weight: 500;
+}
+.profile-user-address {
+  width: 7rem;
+  font-weight: lighter;
+  font-size: 12px;
+}
+.p-u-address {
+  font-size: 14px;
+  font-weight: 500;
 }

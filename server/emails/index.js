@@ -7,8 +7,8 @@ const sendWelcomeEmail = (email, name) => {
     sgMail.send({
         to: email,
         from: `${process.env.FROM_EMAIL}`,
-        subject: `It's working!!!!!!`,
-        text: `Oh my God, ${name}! I can't believe it works!`,
+        subject: `Pies and Fries Welcome`,
+        text: `Hello, ${name}! Welcome to Pies and Fries!`,
     });
 };
 

@@ -28,8 +28,9 @@ const CreateAccountForm = props => {
         },
       })
         .then(res => {
-          console.log(res)
-          console.log(res.json())})
+          console.log(res);
+          console.log(res.json());
+        })
         .catch(err => {
           console.log(err);
         });
@@ -45,17 +46,19 @@ const CreateAccountForm = props => {
           <p className='hm-user-name'>Shalom Guest!</p>
         </div>
       </div>
-      <div className='hm-profile-card'>
-        <div className='hm-profile-image'></div>
+      <div className='ac-profile-card'>
+        <div className='ac-profile-image'></div>
         <h3
-          className='hm-profile-title'
+          className='ac-profile-title'
           onClick={() => setDisplayModal(!displayModal)}
         >
           Profile
         </h3>
       </div>
-      <div className={`profiledropdown-content ${displayModal ? 'show' : ''}`}>
-        <ul>
+      <div
+        className={`ac-profiledropdown-content ${displayModal ? 'show' : ''}`}
+      >
+        <ul className='creation-form-list'>
           <li
             className='profile-creation-personal-i'
             onClick={() => setDisplayPersonalInfo(!displayPersonalInfo)}
@@ -63,7 +66,7 @@ const CreateAccountForm = props => {
             personal Info
           </li>
           <div
-            className={`profile-personal-info ${
+            className={`ac-profile-personal-info ${
               displayPersonalInfo ? 'show' : ''
             }`}
           >
@@ -125,6 +128,13 @@ const CreateAccountForm = props => {
                   onChange={e => setNumber(e.target.value)}
                 />
               </Form.Group>
+              <Button
+                variant='primary'
+                type='submit'
+                className='profile-creation-submit-btn'
+              >
+                Submit
+              </Button>
               <Form.Group controlId='formBasicAddress'>
                 <Form.Label className='formBasicAddress'>Address</Form.Label>
                 <Form.Control
@@ -134,15 +144,8 @@ const CreateAccountForm = props => {
                   onChange={e => setAddress(e.target.value)}
                 />
               </Form.Group>
-
-              <Button
-                variant='primary'
-                type='submit'
-                className='profile-creation-submit-btn'
-              >
-                Submit
-              </Button>
             </Form>
+
             <p
               className='already-have-an-account'
               onClick={() => props.setIsSignIn(true)}
@@ -152,7 +155,29 @@ const CreateAccountForm = props => {
           </div>
 
           <li className='profile-creation-payment-i'>Payment Info</li>
-          <li className='profile-creation-password-i'>Password</li>
+          <Form.Group controlId='forPaymentInfo'>
+            <Form.Label className='forPaymentInfo'>Card Number</Form.Label>
+            <Form.Control
+              type='number'
+              placeholder='4242 42424 42424 4424242'
+              value={address}
+              onChange={e => setAddress(e.target.value)}
+            />
+            <Form.Label className='forPaymentInfo'>Expiration</Form.Label>
+            <Form.Control
+              type='number'
+              placeholder='03/2025'
+              value={address}
+              onChange={e => setAddress(e.target.value)}
+            />
+            <Form.Label className='forPaymentInfo'>CVV</Form.Label>
+            <Form.Control
+              type='number'
+              placeholder='424'
+              value={address}
+              onChange={e => setAddress(e.target.value)}
+            />
+          </Form.Group>
         </ul>
       </div>
     </>

@@ -13,7 +13,6 @@ import './styles/NotficationPreferences.css';
 import './styles/Rewards.css';
 import './styles/Help.css';
 import './styles/Logout.css';
-import './styles/PaymentConfirmation.css';
 import './styles/CreateAccountForm.css';
 import { useState, useContext, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
@@ -27,13 +26,13 @@ import Profile from './pages/Profile';
 import Tracking from './pages/Tracking';
 import ShoppingCart from './components/ShoppingCart';
 import './styles/Admin.css';
-import PaymentConfirmation from './pages/PaymentConfirmation';
+
 import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
 
 function App() {
-  const { user, userCheck } = useContext(AppContext);
-  const [currentUser, setCurrentUser] = user;
+  const { userState, userCheck } = useContext(AppContext);
+  const [user, setUser] = userState;
   const checkUser = userCheck;
 
   useEffect(() => {
@@ -43,21 +42,27 @@ function App() {
   return (
     <>
       <Navbar />
+      <Route exact path = '/'>
+        {user && user.driver ? <Redirect to="/driver"/> : <Redirect to="/" />}
+      </Route>
+      <Route exact path = '/'>
+        {user && user.admin ? <Redirect to="/admin"/> : <Redirect to="/" />}
+      </Route>
       <Route exact path='/' component={Home} />
-      <Route
-        exact
-        path='/paymentconfirmation'
-        render={() => <PaymentConfirmation />}
-      />
-      {currentUser ? (
-        <Redirect to='/' />
-      ) : (
-        <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
-      )}
+      
+
+      <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
+
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
-      <Route exact path='/admin' render={() => <Admin />} />
-      <Route exact path='/driver' render={() => <Driver />} />
+      
+      <Route exact path='/admin' render={() => <Admin />} /> 
+      {/* {user && user.admin === true ?  <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />} */}
+    
+      {user && user.driver ? <Route exact path='/driver' render={() => <Driver />} /> : <Redirect to="/" />}
+      {user && user.admin ? <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />}
+
+    
       <Route exact path='/dashboard' render={() => <UserDashboard />} />
       <Route exact path='/store' render={() => <Store />} />
       <Route exact path='/profile' render={() => <Profile />} />

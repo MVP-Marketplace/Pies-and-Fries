@@ -1,13 +1,16 @@
-import React from 'react';
+import { useState, useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 
 const UserInfoCard = () => {
+  const { userState } = useContext(AppContext);
+  const [user, setUser] = userState;
   return (
     <>
       <div className='hm-user-info-card'>
         <div className='hm-user-image'></div>
         <div className='hm-user-info'>
-          <p className='hm-user-name'>Tracy Levine</p>
-          <p className='hm-user-email'>Tracy.levine@gmail.com</p>
+          <p className='hm-user-name'>{user && user.name}</p>
+          <p className='hm-user-email'>{user && user.email}</p>
         </div>
       </div>
     </>

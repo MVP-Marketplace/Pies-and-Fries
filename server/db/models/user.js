@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema(
         }
     }},
     admin: {type: Boolean, default: false},
+    driver: {type: Boolean, default: false},
     number: {type: Number},
     address: {type: String},
     order: [String],
@@ -84,6 +85,6 @@ userSchema.pre('save', async function (next) {
     };
 });
 
-const User = mongoose.model("User", userSchema)
+const User = mongoose.model("User", userSchema, 'users')
 
 module.exports = User

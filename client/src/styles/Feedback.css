@@ -7,13 +7,11 @@
   width: 80%;
 }
 .hm-feedback-image {
-
   margin-bottom: 1rem;
-  margin-left: -2.3rem;
-  
+  margin-left: -0.3rem;
 }
 .hm-feedback-title {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold;
   margin-left: 13px;
 }
@@ -25,7 +23,7 @@
   border-radius: 17px;
   margin-left: 1.5rem;
   top: -150vh;
-  background-color: #b9b9b9;
+  background: #04adbf;
   box-shadow: 0 0 4px 0px rgb(0 0 0 / 15%);
   transition: top 0.9s ease-in-out;
   z-index: 7;
@@ -39,6 +37,7 @@
 }
 
 .feedback-heading {
+  color: #eee;
   margin-left: -5rem;
 }
 
@@ -57,9 +56,11 @@
 .feedback-sad-face-logo {
 }
 .feedback-label {
+  color: #eee;
   font-size: 14px;
   margin-left: -7rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.55rem;
+  margin-top: 0rem;
 }
 .feedback-textarea {
   margin: 0px;

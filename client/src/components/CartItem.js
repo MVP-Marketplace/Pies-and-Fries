@@ -11,6 +11,7 @@ const CartItem = () => {
       </div>
       <div className='cart-card-right-section'>
         <p className='cart-card-product-price'>$16.00</p>
+        <p className='cart-card-remove-product'>Remove</p>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 
 const AppContext = createContext();
 
@@ -33,7 +33,7 @@ const AppContextProvider = ({ children }) => {
   //   }
   // },[]);
   const state = {
-    user: [currentUser,setCurrentUser],
+    userState: [currentUser,setCurrentUser],
     userCheck: userCheck
   }
 

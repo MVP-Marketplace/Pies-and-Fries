@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Happyface from '../assets/Happyface.svg';
 import Netural from '../assets/Neutral.svg';
 import SadFace from '../assets/SadFace.svg';
-import TextSMS  from '../assets/textsms.svg';
+import TextSMS from '../assets/textsms.svg';
 
 const FeedBack = () => {
   const [displayModal, setDisplayModal] = useState(false);
   return (
     <div className='hm-feedback-card'>
-      <img src={TextSMS} alt="text" className='hm-feedback-image'/>
+      <img src={TextSMS} alt='text' className='hm-feedback-image' />
       <h3
         className='hm-feedback-title'
         onClick={() => setDisplayModal(!displayModal)}
@@ -50,9 +50,8 @@ const FeedBack = () => {
           name='feedback'
           rows='4'
           cols='-6'
-        >
-          please leave your feedback here
-        </textarea>
+          placeholder='How can we improve your experience?'
+        ></textarea>
         <button className='feedback-submit-btn'>Submit</button>
       </div>
     </div>
