@@ -6,6 +6,7 @@ import HamburgerMenu from './HamburgerMenu';
 import logo from '../assets/logo.svg';
 
 const Navbar = props => {
+
   const { userState } = useContext(AppContext);
   const [user] = userState;
   
@@ -36,7 +37,19 @@ const Navbar = props => {
           )}
           {props.cartLength}
         </div>
-        {user ? <Cart /> : ''}
+
+        {/* {(() => {
+          if (user === true) {
+            return <Cart />;
+          } else if (user.admin === true) {
+            return null;
+          } else if (user.driver === true) {
+            return null;
+          } else {
+            return null;
+          }
+        })()} */}
+        {user && user.admin ? null : <Cart />}
       </div>
     </>
   );

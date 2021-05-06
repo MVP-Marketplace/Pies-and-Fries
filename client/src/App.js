@@ -13,6 +13,7 @@ import './styles/NotficationPreferences.css';
 import './styles/Rewards.css';
 import './styles/Help.css';
 import './styles/Logout.css';
+import './styles/Tracking.css';
 import './styles/CreateAccountForm.css';
 import { useContext, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
@@ -39,11 +40,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <Route exact path = '/'>
-        {user && user.driver ? <Redirect to="/driver"/> : <Redirect to="/" />}
+      <Route exact path='/'>
+        {user && user.driver ? <Redirect to='/driver' /> : <Redirect to='/' />}
       </Route>
-      <Route exact path = '/'>
-        {user && user.admin ? <Redirect to="/admin"/> : <Redirect to="/" />}
+      <Route exact path='/'>
+        {user && user.admin ? <Redirect to='/admin' /> : <Redirect to='/' />}
       </Route>
       <Route exact path='/' component={Home} />    
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
