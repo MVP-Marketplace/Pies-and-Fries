@@ -1,5 +1,5 @@
 import {useState, useContext} from 'react'
-import {Link, useHistory} from 'react-router-dom'
+import { useHistory} from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap';
 import {AppContext} from '../context/AppContext'
 const SignInForm = (props) => {
@@ -33,22 +33,7 @@ const handleFormSubmit = (e) => {
       console.log(err)
     })
   } 
-
-  const logoutUser = () => {
-    fetch('/api/users/logout', {
-      method: "POST"
-    })
-    .then((res) => {
-      console.log(res)
-      res.json()
-    }
-      )
-    .catch((err) => {
-      console.log(err)
-    })
-  }
-   
-
+  
     return (
         <div>
             <Form className="signInFormContainer"onSubmit={handleFormSubmit}>
@@ -73,10 +58,10 @@ const handleFormSubmit = (e) => {
               <p className="switch-login-signup"onClick={() => props.setIsSignIn(false)}>Create new account?</p>
               <div className="socials-login">
                 <div className="socials-button-container">
-                <img src={require('../assets/google-icon.svg').default}/>                
+                <img alt="google icon" src={require('../assets/google-icon.svg').default}/>                
                 </div>
                 <div className="socials-button-container">
-                  <img src={require('../assets/facebook-icon.svg').default}/>
+                  <img alt="facebook icon" src={require('../assets/facebook-icon.svg').default}/>
                 </div>
               </div>
        </div> 

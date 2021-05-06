@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
@@ -6,13 +6,10 @@ import HamburgerMenu from './HamburgerMenu';
 import logo from '../assets/logo.svg';
 
 const Navbar = props => {
-  const { userState, userCheck } = useContext(AppContext);
-  const [user, setUser] = userState;
-  const checkUser = userCheck;
 
-  useEffect(() => {
-    checkUser();
-  }, []);
+  const { userState } = useContext(AppContext);
+  const [user] = userState;
+  
   return (
     <>
       {user ? <HamburgerMenu /> : ''}
