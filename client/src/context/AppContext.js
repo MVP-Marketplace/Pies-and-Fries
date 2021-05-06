@@ -4,7 +4,6 @@ const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null)
-  const user = sessionStorage.getItem('user')
 
   const userCheck = async () => {
     fetch('./api/users/me', 
@@ -19,20 +18,7 @@ const AppContextProvider = ({ children }) => {
         // console.log(err)
       })
     }
- 
-  // useEffect(()=> {
-  //   if(user && !currentUser){
-  //     axios
-  //     //not sure if this is the correct route
-  //     .get(`/api/users/me` , {
-  //       withCredentials:true
-  //     }).then
-  //     (({ data })=> {
-  //       setCurrentUser(data);
-  //     }).catch
-  //     ((error)=> console.error(error))
-  //   }
-  // },[]);
+
   const state = {
     userState: [currentUser,setCurrentUser],
     userCheck: userCheck

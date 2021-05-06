@@ -6,7 +6,7 @@ import OrderPreview from './OrderPreview'
 import DriverOrderDetails from './DriverOrderDetails'
 const Driver = () => {
   const {userState} = useContext(AppContext)
-  const[user,setUser] = userState
+  const[user] = userState
   const[readyOrders,setReadyOrders] = useState(null)
   const[driverOrders,setDriverOrders] = useState(null)
   const[driverCompleted,setDriverCompleted] = useState(null)

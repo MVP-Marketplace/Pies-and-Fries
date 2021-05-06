@@ -15,30 +15,27 @@ import './styles/Help.css';
 import './styles/Logout.css';
 import './styles/Tracking.css';
 import './styles/CreateAccountForm.css';
-import { useState, useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import Admin from './components/Admin';
-import UserDashboard from './components/UserDashboard';
 import Navbar from './components/Navbar';
 import Store from './components/Store';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Tracking from './pages/Tracking';
-import ShoppingCart from './components/ShoppingCart';
 import './styles/Admin.css';
-
 import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
 
 function App() {
   const { userState, userCheck } = useContext(AppContext);
-  const [user, setUser] = userState;
-  const checkUser = userCheck;
+  const [user] = userState;
 
-  useEffect(() => {
-    checkUser();
-  }, []);
+// eslint-disable-next-line
+  useEffect( 
+    userCheck 
+  , []);
 
   return (
     <>
@@ -49,30 +46,18 @@ function App() {
       <Route exact path='/'>
         {user && user.admin ? <Redirect to='/admin' /> : <Redirect to='/' />}
       </Route>
-      <Route exact path='/' component={Home} />
-
+      <Route exact path='/' component={Home} />    
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
-
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
 
-      {/* {user && user.admin === true ?  <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />} */}
+      <Route exact path='/admin' render={() => <Admin />} /> 
+      {/* {user && user.admin === true ?  <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />} */} 
+      {user && user.driver ? <Route exact path='/driver' render={() => <Driver />} /> : <Redirect to="/" />}
+      {user && user.admin ? <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />}
 
-      {user && user.driver ? (
-        <Route exact path='/driver' render={() => <Driver />} />
-      ) : (
-        <Redirect to='/' />
-      )}
-      {user && user.admin ? (
-        <Route exact path='/admin' render={() => <Admin />} />
-      ) : (
-        <Redirect to='/' />
-      )}
-
-      <Route exact path='/dashboard' render={() => <UserDashboard />} />
       <Route exact path='/store' render={() => <Store />} />
       <Route exact path='/profile' render={() => <Profile />} />
-
       {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
     </>
   );
