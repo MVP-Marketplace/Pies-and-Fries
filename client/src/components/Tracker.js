@@ -6,7 +6,7 @@ export const Tracker = ({ now }) => {
   return (
     <>
       <Card>
-        <Card.Title className='mb-2'>Delivery Tracker</Card.Title>
+        <Card.Title className='mb-2'>Your Pizza is on it's Way!</Card.Title>
         <ProgressBar animated now={50} />
       </Card>
     </>

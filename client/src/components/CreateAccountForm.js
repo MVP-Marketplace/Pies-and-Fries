@@ -10,7 +10,8 @@ const CreateAccountForm = props => {
   const [passwordMatch, setPasswordMatch] = useState('');
   const [displayModal, setDisplayModal] = useState(false);
   const [displayPersonalInfo, setDisplayPersonalInfo] = useState(false);
-
+  const [displayPaymentInfo, setDisplayPaymentInfo] = useState(false);
+  const [displayAddressInfo, setDisplayAdressInfo] = useState(false);
   const handleSubmit = e => {
     if (passwordMatch === password) {
       e.preventDefault();
@@ -40,12 +41,6 @@ const CreateAccountForm = props => {
   };
   return (
     <>
-      <div className='hm-user-info-card'>
-        <div className='hm-user-image'></div>
-        <div className='hm-user-info'>
-          <p className='hm-user-name'>Shalom Guest!</p>
-        </div>
-      </div>
       <div className='ac-profile-card'>
         <div className='ac-profile-image'></div>
         <h3
@@ -135,6 +130,7 @@ const CreateAccountForm = props => {
               >
                 Submit
               </Button>
+
               <Form.Group controlId='formBasicAddress'>
                 <Form.Label className='formBasicAddress'>Address</Form.Label>
                 <Form.Control
@@ -154,30 +150,78 @@ const CreateAccountForm = props => {
             </p>
           </div>
 
-          <li className='profile-creation-payment-i'>Payment Info</li>
-          <Form.Group controlId='forPaymentInfo'>
-            <Form.Label className='forPaymentInfo'>Card Number</Form.Label>
-            <Form.Control
-              type='number'
-              placeholder='4242 42424 42424 4424242'
-              value={address}
-              onChange={e => setAddress(e.target.value)}
-            />
-            <Form.Label className='forPaymentInfo'>Expiration</Form.Label>
-            <Form.Control
-              type='number'
-              placeholder='03/2025'
-              value={address}
-              onChange={e => setAddress(e.target.value)}
-            />
-            <Form.Label className='forPaymentInfo'>CVV</Form.Label>
-            <Form.Control
-              type='number'
-              placeholder='424'
-              value={address}
-              onChange={e => setAddress(e.target.value)}
-            />
-          </Form.Group>
+          <li
+            onClick={() => setDisplayPaymentInfo(!displayPaymentInfo)}
+            className='profile-creation-payment-i'
+          >
+            Payment Info
+          </li>
+          <div
+            className={`ac-profile-payment-info${
+              displayPaymentInfo ? 'show' : ''
+            }`}
+          >
+            <Form.Group controlId='forPaymentInfo'>
+              <Form.Label className='forPaymentInfo'>Card Number</Form.Label>
+              <Form.Control
+                type='number'
+                placeholder='4242 42424 42424 4424242'
+                value={address}
+                onChange={e => setAddress(e.target.value)}
+              />
+              <Form.Label className='forPaymentInfo'>Expiration</Form.Label>
+              <Form.Control
+                type='number'
+                placeholder='03/2025'
+                value={address}
+                onChange={e => setAddress(e.target.value)}
+              />
+              <Form.Label className='forPaymentInfo'>CVV</Form.Label>
+              <Form.Control
+                type='number'
+                placeholder='424'
+                value={address}
+                onChange={e => setAddress(e.target.value)}
+              />
+            </Form.Group>{' '}
+            <Form.Group controlId='formBasicAddress'>
+              <Form.Label className='formBasicAddress'>Address</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='123 Main Street, New York, NY 10030'
+                value={address}
+                onChange={e => setAddress(e.target.value)}
+              />
+            </Form.Group>
+          </div>
+          <li
+            onClick={() => setDisplayAdressInfo(!displayAddressInfo)}
+            className='profile-creation-address-i'
+          >
+            Address
+          </li>
+          <div
+            className={`ac-profile-address-info${
+              displayAddressInfo ? 'show' : ''
+            }`}
+          >
+            <Form.Group controlId='formBasicAddress'>
+              <Form.Label className='formBasicAddress'>Address</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='123 Main Street, New York, NY 10030'
+                value={address}
+                onChange={e => setAddress(e.target.value)}
+              />
+            </Form.Group>
+          </div>
+          <Button
+            variant='primary'
+            type='submit'
+            className='profile-creation-submit-btn'
+          >
+            Submit
+          </Button>
         </ul>
       </div>
     </>
