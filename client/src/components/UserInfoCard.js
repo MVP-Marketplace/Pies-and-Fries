@@ -1,9 +1,9 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const UserInfoCard = () => {
   const { userState } = useContext(AppContext);
-  const [user, setUser] = userState;
+  const [user] = userState;
   return (
     <>
       <div className='hm-user-info-card'>

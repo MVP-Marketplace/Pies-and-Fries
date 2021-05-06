@@ -1,4 +1,3 @@
-import { Container } from 'react-bootstrap';
 import pizzaMonster from '../assets/pizzamonster.svg';
 import '../styles/Home.css';
 const home = () => {

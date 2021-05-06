@@ -6,7 +6,7 @@ const Profile = () => {
   const [displayModal, setDisplayModal] = useState(false);
   const [displayPersonalInfo, setDisplayPersonalInfo] = useState(false);
   const { userState } = useContext(AppContext);
-  const [user, setUser] = userState;
+  const [user] = userState;
   return (
     <>
       <div className='hm-profile-card'>

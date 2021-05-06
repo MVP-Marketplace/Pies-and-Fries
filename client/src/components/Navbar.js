@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
@@ -7,20 +7,8 @@ import logo from '../assets/logo.svg';
 
 const Navbar = props => {
   const { userState } = useContext(AppContext);
-  const [user, setUser] = userState;
-  const logoutUser = () => {
-    fetch('/api/users/logout', {
-      method: 'POST',
-    })
-      .then(res => {
-        console.log(res);
-        props.setUserLogginIn(false);
-        res.json();
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
+  const [user] = userState;
+  
   return (
     <>
       {user ? <HamburgerMenu /> : ''}

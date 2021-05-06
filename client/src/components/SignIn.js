@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import SignInForm from './SignInForm';
 import CreateAccountForm from './CreateAccountForm';
-import UserInfoCard from './UserInfoCard';
 import pizzaMonster from '../assets/pizzamonster.svg';
 import motorcycle from '../assets/drivers.svg';
 
