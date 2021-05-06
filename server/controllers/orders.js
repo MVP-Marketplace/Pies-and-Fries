@@ -1,5 +1,5 @@
 const Order = require('../db/models/orders')
-
+const User = require('../db/models/user')
 
 exports.createOrder = async (req, res) => {
   const newOrderPost = req.body
@@ -24,10 +24,19 @@ exports.getOrders = async (req, res) => {
     res.status(400).json({ error: e.toString() });
   }
 };
+exports.getSingleOrder = async (req, res) => {
+  try {
+    const order = await Order.findOne({"_id": req.body.order_id}).populate('users')
+    res.json(order);
+  } catch (e) {
+    res.status(400).json({ error: e.toString() });
+  }
+};
 exports.getActiveOrders = async (req, res) => {
     try {
       const allOrders = await Order.find({"delivered": "false",
-    "isReady": "false"})
+    "isReady": "false"}).populate('User')
+
       res.json(allOrders);
     } catch (e) {
       res.status(400).json({ error: e.toString() });

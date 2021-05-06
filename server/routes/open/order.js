@@ -7,4 +7,6 @@ router.get('/completed', orders.getCompletedOrders)
 router.post('/create', orders.createOrder )
 router.put('/update/:order_id', orders.updateOrder)
 router.delete('/delete', orders.deleteOrder)
+router.post('/single', orders.getSingleOrder)
+
 module.exports = router;
