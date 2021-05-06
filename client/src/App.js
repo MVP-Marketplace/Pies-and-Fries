@@ -15,6 +15,10 @@ import './styles/Help.css';
 import './styles/Logout.css';
 import './styles/Tracking.css';
 import './styles/CreateAccountForm.css';
+import './styles/CurrentOrderHm.css';
+import './styles/CustomerDetails.css';
+import './styles/OrderHistoryHm.css';
+import './styles/DriverDetails.css';
 import { useContext, useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import SignIn from './components/SignIn';
@@ -32,10 +36,8 @@ function App() {
   const { userState, userCheck } = useContext(AppContext);
   const [user] = userState;
 
-// eslint-disable-next-line
-  useEffect( 
-    userCheck 
-  , []);
+  // eslint-disable-next-line
+  useEffect(userCheck, []);
 
   return (
     <>
@@ -46,14 +48,22 @@ function App() {
       <Route exact path='/'>
         {user && user.admin ? <Redirect to='/admin' /> : <Redirect to='/' />}
       </Route>
-      <Route exact path='/' component={Home} />    
+      <Route exact path='/' component={Home} />
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
-      <Route exact path='/admin' render={() => <Admin />} /> 
-      {/* {user && user.admin === true ?  <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />} */} 
-      {user && user.driver ? <Route exact path='/driver' render={() => <Driver />} /> : <Redirect to="/" />}
-      {user && user.admin ? <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />}
+      <Route exact path='/admin' render={() => <Admin />} />
+      {/* {user && user.admin === true ?  <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />} */}
+      {user && user.driver ? (
+        <Route exact path='/driver' render={() => <Driver />} />
+      ) : (
+        <Redirect to='/' />
+      )}
+      {user && user.admin ? (
+        <Route exact path='/admin' render={() => <Admin />} />
+      ) : (
+        <Redirect to='/' />
+      )}
       <Route exact path='/store' render={() => <Store />} />
       <Route exact path='/profile' render={() => <Profile />} />
       {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
