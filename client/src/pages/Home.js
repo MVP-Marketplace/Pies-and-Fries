@@ -3,9 +3,8 @@ import pizzaHero from '../assets/pizzaHero2.png';
 import rating from '../assets/rating.svg';
 import pizzaPaddle from '../assets/pizzaPaddle.svg'
 import pizzaMonster from '../assets/pizzamonster.svg';
-import Instagram from '../components/Instagram';
-
-import { Carousel, Image, Card, Jumbotron } from 'react-bootstrap';
+import pizzaSlice from '../assets/pizzaSlice.svg';
+import { Carousel, Image, Card } from 'react-bootstrap';
 
 const home = () => {
   return (
@@ -36,31 +35,32 @@ const home = () => {
           </Card>
       
       </div>
-      <Carousel>
-        <Carousel.Item>
-           <Image src={pizzaMonster} />
+      <Carousel className="carousel-wrapper">
+        <Carousel.Item className="jumbotron first-carousel">
+          <Image src={pizzaSlice} />
+            <Carousel.Caption>
+              <p> Discounts up to</p>
+              <h3>10%</h3>
+              <p>for first time orders!</p>
+            </Carousel.Caption>
+         
+          
         </Carousel.Item>
-        <Carousel.Item>
-        <Jumbotron fluid>
-          <div> 
+        <Carousel.Item className="jumbotron second-carousel">
+        
+          <Carousel.Caption> 
             <p>Earn our</p>
             <h3>Rewards</h3>
             <p>today!</p>
-          </div>
-          <div>
-            <img src={pizzaMonster} alt="pizza with monster horns"/>
-          </div>
+          </Carousel.Caption>
+            <Image src={pizzaMonster} alt="pizza with monster horns"/>
+          
             
-        </Jumbotron>  
+   
         </Carousel.Item>
 
       </Carousel>
-      <Card>
-        <h1>
-          Tag us #PIESANDFRIES
-        </h1>
-        <Instagram /> 
-      </Card>
+    
 
     </div>
 
