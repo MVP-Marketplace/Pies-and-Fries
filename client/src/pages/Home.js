@@ -1,9 +1,11 @@
 import React from 'react';
 import pizzaHero from '../assets/pizzaHero2.png';
+import rating from '../assets/rating.svg';
 import pizzaPaddle from '../assets/pizzaPaddle.svg'
 import pizzaMonster from '../assets/pizzamonster.svg';
 import Instagram from '../components/Instagram';
-import { Carousel, Container,Image, Button, Card, Jumbotron } from 'react-bootstrap';
+
+import { Carousel, Image, Card, Jumbotron } from 'react-bootstrap';
 
 const home = () => {
   return (
@@ -20,18 +22,19 @@ const home = () => {
 
         </Card.ImgOverlay>
       </Card>
-      <div className="pizza-wrapper d-flex">
-        <Card.Body>
+      <div className="pizza-wrapper">
+       
         <Card className="pizza-card left-card">
-          <h1>Classic Cheese Pizza</h1>
-          <p></p>
-          <img src="" alt="rating"/>
-          <Button>Order Now!</Button>
+          <h3>Classic Plain Cheese Pie</h3>
+          <p>Estimated Delivery</p>
+          <p>30 minutes</p>
+          <img src={rating} alt="rating" id="rating-img"/>
+          <button className="btn-order">Order Now!</button>
           </Card>
-          <Card className="pizza-card left-card">
+          <Card className="pizza-card right-card">
             <Card.Img src={pizzaPaddle} alt="pizza"/>
           </Card>
-          </Card.Body>
+      
       </div>
       <Carousel>
         <Carousel.Item>
