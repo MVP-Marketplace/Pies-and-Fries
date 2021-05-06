@@ -41,18 +41,18 @@ const Navbar = props => {
           {props.cartLength}
         </div>
 
-        {/* {(() => {
-          if (user === true) {
+        {(() => {
+          if (user && user.driver === true) {
+            return null;
+          } else if (user && user.admin === true) {
+            return null;
+          } else if (user) {
             return <Cart />;
-          } else if (user.admin === true) {
-            return null;
-          } else if (user.driver === true) {
-            return null;
           } else {
             return null;
           }
-        })()} */}
-        {user && user.admin ? null : <Cart />}
+        })()}
+        {/* {user && user.admin ? null : <Cart />} */}
       </div>
     </>
   );

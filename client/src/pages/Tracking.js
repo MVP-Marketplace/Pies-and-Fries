@@ -27,7 +27,7 @@ const TrackingPage = () => {
         <div className='tracking-rewards-img-con'>
           <img
             className='rewards-pizza-logo'
-            src='Pizzagreyscale'
+            src={require('../assets/Pizzagreyscale.svg').default}
             alt='pizza-logo'
           />
           <p>Get your next pie on us!</p>
