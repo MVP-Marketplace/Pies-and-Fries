@@ -5,8 +5,8 @@ exports.createOrder = async (req, res) => {
   const newOrderPost = req.body
   const newOrder = new Order(newOrderPost)
   try {
-    console.log('HEYYYY')
-    console.log(req.body)
+    // console.log('HEYYYY')
+    // console.log(req.body)
     await newOrder.save()
     res.status(201).json(newOrder);
   } catch (e) {
@@ -51,6 +51,7 @@ exports.getReadyOrders = async (req, res) => {
     res.status(400).json({ error: e.toString() });
   }
 };
+
 exports.getCompletedOrders = async (req, res) => {
     try {
       const allOrders = await Order.find({"delivered": "true"})
@@ -59,19 +60,30 @@ exports.getCompletedOrders = async (req, res) => {
       res.status(400).json({ error: e.toString() });
     }
 };
+exports.driverGetReadyOrders = async (req, res) => {
+  try {
+    const allOrders = await Order.find({"delivered": "false",
+  "isReady": "true", "driver_id": null})
+    res.json(allOrders);
+  } catch (e) {
+    res.status(400).json({ error: e.toString() });
+  }
+};
 exports.getDriverActiveOrders = async (req, res) => {
-    const driver_id = {driver_id} = req.body
+    const driver_id = req.params.driver_id
+    console.log(driver_id)
     try {
       const allOrders = await Order.find({"driver_id": driver_id, "delivered": "false"} )
+      console.log(allOrders)
       res.json(allOrders);
     } catch (e) {
       res.status(400).json({ error: e.toString() });
     }
 };
 exports.getDriverCompletedOrders = async (req, res) => {
-    const driver_id = {driver_id} = req.body
+    const driver_id = req.params.driver_id
     try {
-      const allOrders = await Order.find({"driver_id": driver_id, "delivered": "true"} )
+      const allOrders = await Order.find({"driver_id": driver_id, "delivered": true} )
       res.json(allOrders);
     } catch (e) {
       res.status(400).json({ error: e.toString() });

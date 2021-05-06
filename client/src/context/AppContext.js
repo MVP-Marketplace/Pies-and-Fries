@@ -11,12 +11,13 @@ const AppContextProvider = ({ children }) => {
     {'credentials': 'include'})
     .then(res => res.json())
     .then(res => {
-      console.log(res)
+      // console.log(res)
       setCurrentUser(res)
     })
     .catch(err => {
        setCurrentUser(null)
-        console.log(err)})
+        // console.log(err)
+      })
     }
  
   // useEffect(()=> {

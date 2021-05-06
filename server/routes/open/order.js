@@ -8,5 +8,9 @@ router.post('/create', orders.createOrder )
 router.put('/update/:order_id', orders.updateOrder)
 router.delete('/delete', orders.deleteOrder)
 router.post('/single', orders.getSingleOrder)
+router.get('/getreadyorders', orders.driverGetReadyOrders)
+router.get('/:driver_id/getorders', orders.getDriverActiveOrders)
+router.get('/:driver_id/getcompleted', orders.getDriverCompletedOrders)
+
 
 module.exports = router;
