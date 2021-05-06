@@ -1,7 +1,36 @@
-.single-order {
+.driver-container {
+  border: none;
   display: flex;
-  border-bottom: none;
-  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  padding: 0 40px;
+}
+.driver-container * {
+  box-sizing: border-box;
+}
+
+.driverFilters {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.filterButton {
+  border-radius: 20px;
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  width: 100px;
+}
+.active {
+  background-color: #f1cf3d;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100px;
 }
 h1 {
   margin: 0;
