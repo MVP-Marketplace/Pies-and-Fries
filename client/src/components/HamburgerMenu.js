@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 import menu from '../assets/menu.svg';
 import UserInfoCard from './UserInfoCard';
 import Profile from './Profile';
@@ -11,9 +12,15 @@ import Help from './Help';
 import Logout from './Logout';
 import logo from '../assets/logo.svg';
 import Cart from '../components/Cart';
+import CurrentOrderHm from './CurrentOrderHm';
+import OrderHistoryHm from './OrderHistoryHm';
+import CustomerDetails from './CustomerDetails';
+import DriverDetails from './DriverDetails';
 
 const HamburgerMenu = () => {
   const [displayHamburgerMenu, setDisplayHamburgerMenu] = useState(false);
+  const { userState } = useContext(AppContext);
+  const [user] = userState;
   return (
     <>
       <img
@@ -31,11 +38,69 @@ const HamburgerMenu = () => {
             onClick={() => setDisplayHamburgerMenu(!displayHamburgerMenu)}
           />
           <img src={logo} alt='logo' className='hm-logo' />
-          <Cart />
+          {(() => {
+            if (user && user.driver === true) {
+              return null;
+            } else if (user && user.admin === true) {
+              return null;
+            } else if (user) {
+              return <Cart />;
+            } else {
+              return null;
+            }
+          })()}
         </div>
 
         <UserInfoCard />
         <Profile />
+
+        {(() => {
+          if (user && user.driver === true) {
+            return <CurrentOrderHm />;
+          } else if (user && user.admin === true) {
+            return null;
+          } else if (user) {
+            return null;
+          } else {
+            return null;
+          }
+        })()}
+
+        {(() => {
+          if (user && user.driver === true) {
+            return <OrderHistoryHm />;
+          } else if (user && user.admin === true) {
+            return <OrderHistoryHm />;
+          } else if (user) {
+            return null;
+          } else {
+            return null;
+          }
+        })()}
+
+        {(() => {
+          if (user && user.driver === true) {
+            return null;
+          } else if (user && user.admin === true) {
+            return <DriverDetails />;
+          } else if (user) {
+            return null;
+          } else {
+            return null;
+          }
+        })()}
+
+        {(() => {
+          if (user && user.driver === true) {
+            return null;
+          } else if (user && user.admin === true) {
+            return <CustomerDetails />;
+          } else if (user) {
+            return null;
+          } else {
+            return null;
+          }
+        })()}
         <NotificationPreferences />
         <Rewards />
         <InviteFriends />

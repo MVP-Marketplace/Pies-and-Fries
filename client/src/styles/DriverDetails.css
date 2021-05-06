@@ -1,0 +1,19 @@
+.hm-driver-details-card {
+  margin-top: 0rem;
+  margin-left: 2.7rem;
+  display: flex;
+
+  justify-content: center;
+  width: 80%;
+}
+
+.hm-driver-details-image {
+  margin-bottom: 1rem;
+  margin-left: -5rem;
+}
+
+.hm-driver-details-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 13px;
+}
