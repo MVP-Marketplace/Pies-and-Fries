@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import '../styles/Driver.css'
 import {AppContext} from '../context/AppContext'
-import Order from './Order'
 import OrderPreview from './OrderPreview'
 import DriverOrderDetails from './DriverOrderDetails'
 const Driver = () => {
@@ -58,6 +57,7 @@ const Driver = () => {
     }
     useEffect(() => {
       getAllOrders()
+      // eslint-disable-next-line 
     },[])
 
     const assignOrderToDriver = (orderId) => {

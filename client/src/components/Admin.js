@@ -45,10 +45,10 @@ const Admin = () => {
         getReadyOrders()
         getCompletedOrders()
       }
-
+     
     useEffect(() => {
       updateOrders()
-      
+      // eslint-disable-next-line 
     },[])
 
     
