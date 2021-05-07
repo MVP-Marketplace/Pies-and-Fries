@@ -1,71 +1,65 @@
 import React from 'react';
-import pizzaHero from '../assets/pizzaHero2.png';
 import rating from '../assets/rating.svg';
-import pizzaPaddle from '../assets/pizzaPaddle.svg'
+import pizzaPaddle from '../assets/pizzaPaddle.svg';
 import pizzaMonster from '../assets/pizzamonster.svg';
 import pizzaSlice from '../assets/pizzaSlice.svg';
-import { Carousel, Image, Card } from 'react-bootstrap';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
-const home = () => {
+import '../styles/Home.css';
+
+const Home = () => {
   return (
-    <div className="homepage-container">
-      <Card className="hero-wrapper">
-        <Card.Img src={pizzaHero} className="hero-img"/>
-        <Card.ImgOverlay className="hero-container">
-        <Card className="hero-text">
-          <Card.Title className="hero-title">
+    <div className='homepage-container'>
+      <div className='hero-wrapper'>
+        <div className='hero-container'>
+          <h1 className='hero-title hero-text'>
             ONE click away to your Pizza!
-            <br/>Earn rewards as you go!
-          </Card.Title>
-        </Card>
-
-        </Card.ImgOverlay>
-      </Card>
-      <div className="pizza-wrapper">
-       
-        <Card className="pizza-card left-card">
+            <br />
+            Earn rewards as you go!
+          </h1>
+        </div>
+      </div>
+      <div className='pizza-wrapper'>
+        <div className='pizza-card left-card'>
           <h3>Classic Plain Cheese Pie</h3>
           <p>Estimated Delivery</p>
           <p>30 minutes</p>
-          <img src={rating} alt="rating" id="rating-img"/>
-          <button className="btn-order">Order Now!</button>
-          </Card>
-          <Card className="pizza-card right-card">
-            <Card.Img src={pizzaPaddle} alt="pizza"/>
-          </Card>
-      
+          <img src={rating} alt='rating' id='rating-img' />
+          <button className='btn-order'>Order Now!</button>
+        </div>
+        <div className='pizza-card right-card'>
+          <img src={pizzaPaddle} alt='pizza' />
+        </div>
       </div>
-      <Carousel className="carousel-wrapper">
-        <Carousel.Item className="jumbotron first-carousel">
-          <Image src={pizzaSlice} />
-            <Carousel.Caption>
-              <p> Discounts up to</p>
-              <h3>10%</h3>
-              <p>for first time orders!</p>
-            </Carousel.Caption>
-         
-          
-        </Carousel.Item>
-        <Carousel.Item className="jumbotron second-carousel">
-        
-          <Carousel.Caption> 
+      <Carousel
+        className='carousel-wrapper'
+        autoPlay
+        showArrows={false}
+        showStatus={false}
+        showThumbs={false}
+        swipeable={true}
+        emulateTouch={true}
+      >
+        <div className='first-carousel'>
+          <div>
+            <p> Discounts up to</p>
+            <h3>10%</h3>
+            <p>for first time orders!</p>
+          </div>
+          <img src={pizzaSlice} alt='pizza slice' id='pizza-img' />
+        </div>
+        <div className='jumbotron second-carousel'>
+          <div>
             <p>Earn our</p>
             <h3>Rewards</h3>
             <p>today!</p>
-          </Carousel.Caption>
-            <Image src={pizzaMonster} alt="pizza with monster horns"/>
-          
-            
-   
-        </Carousel.Item>
-
+          </div>
+          <img src={pizzaMonster} alt='pizza monster' id='pizza-monster' />
+        </div>
       </Carousel>
-    
-
-
     </div>
-
   );
 };
 
-export default home;
+export default Home;

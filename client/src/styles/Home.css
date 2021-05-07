@@ -6,27 +6,33 @@
 }
 /* Hero Image */
 .hero-img {
-  height: 90vh;
-  width: 70vw;
+  height: 50vh;
+  width: 100%;
 }
 .hero-wrapper {
-  height: 50%;
-  width: 100%;
+  height: 80vh;
+  width: 90%;
   border-radius: 10px !important;
+  background-image: url(../assets/pizzaHero2.png);
+  background-size: 100% 80vh;
+  background-repeat: no-repeat;
+  display: flex; 
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .hero-container {
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-}
-.hero-text {
-  background: rgba(253, 242, 236, 0.6) !important;
+  background: rgba(253, 242, 236, 0.6) ;
   width: 80%;
   height: 20vh;
-  border-radius: 10px !important;
+  border-radius: 10px;
+  margin-bottom:20px;
 }
+
 .hero-title {
   color: rgba(102, 6, 80, 1);
   font-weight: 700 !important;
@@ -40,7 +46,7 @@
   display: flex !important;
   justify-content: space-evenly !important;
   align-items: center;
-  width: 95%;
+  width: 90%;
   height: 50vh;
   margin-top: 20px;
 
@@ -52,6 +58,8 @@
 .pizza-card {
   background: none !important;
   border: none !important;
+  display: flex; 
+  flex-direction: column;
 }
 .pizza-card h3 {
   font-style: normal;
@@ -62,6 +70,10 @@
 .left-card {
   margin-left: 10%;
   width: 60vw;
+}
+#rating-img{
+  width: 20vw;
+  height: 10vh;
 }
 
 .right-card img {
@@ -83,24 +95,38 @@
 
 /* Carousel */
 .carousel-wrapper{
-    width: 85%;
-}
-.jumbotron{
-    margin-top: 10px;
-    height: 30vh;
-    width: 27.8vw;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
+    width: 90%;
+    margin-top: 20px;
+    height: 50vh;
+    display: flex; 
+    justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    color: white;
+
 }
 .first-carousel{
-    background-color:rgba(102, 6, 80, 0.58) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 40vw;
+  border-radius: 25.0936px;
+  background-color:rgba(102, 6, 80, 0.58) !important;
+  
 }
 .second-carousel{
     background-color:rgba(197, 231, 235, 1) !important;
     color:rgba(102, 6, 80, 0.58) !important;
+    border-radius: 25.0936px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 40vw;
+}
+#pizza-monster{
+  height: 20vh;
+  width: 20vw;
 }
 
 /* Previous Order */
@@ -113,7 +139,7 @@
     border-radius: 10px;
     height: 20%;
     width: 20%;
-    background-image: url('../assets/pizzaBackground.svg');
+    background-image: "url(../assets/pizzaBackground.svg)";
 }
 
 .prev-order-text{
@@ -128,14 +154,15 @@
     width: 34vw;
   }
   .hero-wrapper {
-    width: 90%;
+    width: 100%;
   }
   .hero-text {
     width: 90%;
     height: 10vh;
   }
   .hero-title {
-    font-size: 1.1rem !important;
+    font-size: 1.5rem !important;
+    margin: auto;
   }
   .pizza-wrapper {
     height: 20%;
