@@ -28,6 +28,7 @@ const userSchema = new mongoose.Schema(
     city: {type: String, default: null},
     state: {type:String, default: null},
     zip_code: {type:String, default: null},
+    default_tip: {type: Number, default: 10},
     order: [String],
     tokens: [
         {
