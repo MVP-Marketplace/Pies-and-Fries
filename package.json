@@ -26,6 +26,7 @@
     "passport-jwt": "^4.0.0",
     "react-bootstrap": "^1.5.2",
     "react-bootstrap-icons": "^1.4.0",
+    "react-responsive-carousel": "^3.2.18",
     "react-router-dom": "^5.2.0",
     "react-stripe-checkout": "^2.6.3",
     "stripe": "^8.137.0",
