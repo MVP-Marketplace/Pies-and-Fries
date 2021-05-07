@@ -6,10 +6,9 @@ import HamburgerMenu from './HamburgerMenu';
 import logo from '../assets/logo.svg';
 
 const Navbar = props => {
-
   const { userState } = useContext(AppContext);
   const [user] = userState;
-  
+
   return (
     <>
       {user ? <HamburgerMenu /> : ''}
@@ -49,7 +48,6 @@ const Navbar = props => {
             return null;
           }
         })()}
-        {/* {user && user.admin ? null : <Cart />} */}
       </div>
     </>
   );
