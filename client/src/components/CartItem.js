@@ -4,7 +4,10 @@ const CartItem = props => {
   return (
     <div className='cart-card-container'>
       <div className='cart-card-left-section'>
-        <div className='img-place-holder'></div>
+        <img
+          src={require(`../assets/pizzaBackground.svg`).default}
+          className='pizza-pic-cart'
+        />
       </div>
       <div className='cart-card-right-section'>
         <p className='cart-card-product-name'>Large Plain Pie</p>
