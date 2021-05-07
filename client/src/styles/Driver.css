@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: flex-start;
   height: auto;
-  padding: 0 40px;
+  padding: 0 30px;
 }
 .driver-container * {
   box-sizing: border-box;
@@ -38,9 +38,4 @@ h1 {
 .driver-options {
   display: flex;
   flex-direction: column;
-}
-.delivering-to,
-.customer-info {
-  border-bottom: 1px solid black;
-  padding: 20px;
 }

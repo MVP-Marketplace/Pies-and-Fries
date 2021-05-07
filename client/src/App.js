@@ -52,7 +52,6 @@ function App() {
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
-      <Route exact path='/admin' render={() => <Admin />} />
       {/* {user && user.admin === true ?  <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />} */}
       {user && user.driver ? (
         <Route exact path='/driver' render={() => <Driver />} />

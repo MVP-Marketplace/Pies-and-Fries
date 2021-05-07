@@ -73,15 +73,14 @@ const Admin = () => {
   return (
     <div className='admin-container'>
       <h3 className='welcome-message'>Shalom Admin!</h3>
-      <div>
-        <button onClick={() => setOrderFilter('active')}>Current Orders</button>
-        <button  onClick={() => setOrderFilter('ready')}>Ready Orders</button>
-        <button  onClick={() => setOrderFilter('completed')}>Completed Orders</button>
+      <div className="adminFilters">
+        <button className={orderFilter === 'active' ? "active": "filterButton"} onClick={() => setOrderFilter('active')}>Current Orders</button>
+        <button className={orderFilter === 'ready' ? "active": "filterButton"} onClick={() => setOrderFilter('ready')}>Ready Orders</button>
+        <button className={orderFilter === 'completed' ? "active": "filterButton"} onClick={() => setOrderFilter('completed')}>Completed Orders</button>
       </div>
       
           {orderFilter === 'active' && (
             <div className="current-orders">
-            <h4 className="orders-header">Current Orders</h4>
             {activeOrders && (
                 activeOrders.map((order,i) => (
                   <Order order = {order} orderIsReady={orderIsReady} />            
@@ -91,7 +90,6 @@ const Admin = () => {
           )}
          {orderFilter === 'ready' && (
             <div className="current-orders">
-            <h4 className="orders-header">Ready Orders</h4>
             {readyOrders && (
                 readyOrders.map((order,i) => (
                   <Order order = {order}/>            
@@ -101,7 +99,6 @@ const Admin = () => {
           )}
           {orderFilter === 'completed' && (
             <div className="current-orders">
-            <h4 className="orders-header">Completed Orders</h4>
             {completedOrders && (
                 completedOrders.map((order,i) => (
                   <Order order = {order} />            

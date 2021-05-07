@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema(
     driver: {type: Boolean, default: false},
     number: {type: Number},
     address: {type: String},
+    line_2: {type: Boolean, default: null},
+    city: {type: String, default: null},
+    state: {type:String, default: null},
+    zip_code: {type:String, default: null},
     order: [String],
     tokens: [
         {

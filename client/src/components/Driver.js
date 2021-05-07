@@ -119,7 +119,7 @@ const Driver = () => {
         <>
       <h3 className='welcome-message'>Shalom Driver!</h3>
       <div className="driverFilters">
-        <button className={orderFilter === 'availible' ? "active": "filterButton"} onClick={() => setOrderFilter('availible')}>Availible</button>
+        <button className={orderFilter === 'availible' ? "active": "filterButton"} onClick={() => setOrderFilter('availible')}>Available</button>
         <button className={orderFilter === 'mydeliveries' ? "active": "filterButton"} onClick={() => setOrderFilter('mydeliveries')}>Picked Up</button>
         <button className={orderFilter === 'mycompleted' ? "active": "filterButton"} onClick={() => setOrderFilter('mycompleted')}>Completed</button>
       </div>
