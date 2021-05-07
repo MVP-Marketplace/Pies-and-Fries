@@ -11,7 +11,7 @@ const Order = (props) => {
             <h4 className="order-details">Order Details: Order # {props.order._id}</h4>
             <div className="order-pic-items">
             <div className="order-picture">
-                <img src={require(`../assets/pizzaBackground.svg`).default} className="pizza-pic" />
+                <img src={require(`../assets/pizzaBackground.svg`).default} alt='pizza' className="pizza-pic" />
             </div>
             <p className="order-items"> {props.order.foodItems[0].quantity} {props.order.foodItems[0].item}</p>
             </div>

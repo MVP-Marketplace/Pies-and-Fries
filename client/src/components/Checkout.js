@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import { AppContext } from '../context/AppContext';
 

@@ -3,17 +3,16 @@ import CartIcon from '../assets/CartIcon.svg';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import Checkout from '../components/Checkout';
-import { set } from 'mongoose';
 
 export const Cart = () => {
   const [displayModal, setDisplayModal] = useState(false);
-  const [name, setName] = useState('Pizza');
-  const [price, setPrice] = useState(12.0);
+  const [name] = useState('Pizza');
+  const [price] = useState(12.0);
   const [quantity, setQuantity] = useState(1);
-  const [size, setSize] = useState(1);
-  const [cart, setCart] = useState([]);
+  const [size] = useState(1);
+  // const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(null);
-  const [contactFree, setContactFree] = useState(false);
+  const [contactFree] = useState(false);
 
   const getTotal = () => {
     setTotal(price * quantity);

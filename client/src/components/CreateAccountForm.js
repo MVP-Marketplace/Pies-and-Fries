@@ -44,6 +44,7 @@ const CreateAccountForm = props => {
       <div className='ac-profile-card'>
         <div className='ac-profile-image'>
           <img
+            alt='pizza'
             src={require(`../assets/profilepic.svg`).default}
             className='pizza-pic-cart'
           />
