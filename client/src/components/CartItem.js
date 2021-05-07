@@ -23,7 +23,7 @@ const CartItem = props => {
           </p>
           <p className='quanity-number'>{props.quantity}</p>
           <p
-            className='quanity--'
+            className='quanity-'
             onClick={() => {
               props.setQuantity(props.quantity + 1);
               props.getTotal();
