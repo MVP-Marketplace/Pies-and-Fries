@@ -12,4 +12,4 @@ const PreviousOrder = () => {
     )
 }
 
-export default PreviousOrder
+export default PreviousOrder;

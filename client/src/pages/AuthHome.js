@@ -20,7 +20,7 @@ const AuthHome = () => {
           </h1>
         </div>
       </div>
-      <PreviousOrder/>
+      <PreviousOrder />
       <div className='pizza-wrapper'>
         <div className='pizza-card left-card'>
           <h3>Classic Plain Cheese Pie</h3>

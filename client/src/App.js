@@ -28,6 +28,7 @@ import Store from './components/Store';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Tracking from './pages/Tracking';
+import AuthHome from './pages/AuthHome';
 import './styles/Admin.css';
 import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
@@ -50,6 +51,7 @@ function App() {
         {user && user.admin ? <Redirect to='/admin' /> : <Redirect to='/' />}
       </Route>
       <Route exact path='/' component={Home} />
+      
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
