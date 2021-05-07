@@ -20,7 +20,18 @@ const AuthHome = () => {
           </h1>
         </div>
       </div>
+      <div className="previous-order-wrapper">
+      <div className="previous-order-header">
+      <h3>
+        Reordering?
+      </h3>
+      <p>One Click away from Express Reorder</p>
+      </div>
+      <div id='test'>
       <PreviousOrder />
+      <PreviousOrder />
+      </div>
+      </div>
       <div className='pizza-wrapper'>
         <div className='pizza-card left-card'>
           <h3>Classic Plain Cheese Pie</h3>
