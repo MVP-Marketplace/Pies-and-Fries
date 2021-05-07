@@ -6,12 +6,14 @@ const CartItem = () => {
       <div className='cart-card-left-section'>
         <div className='img-place-holder'></div>
       </div>
-      <div className='cart-card-middle-section'>
-        <p className='cart-card-product-name'>Chesse Pizza</p>
-      </div>
       <div className='cart-card-right-section'>
-        <p className='cart-card-product-price'>$16.00</p>
-        <p className='cart-card-remove-product'>Remove</p>
+        <p className='cart-card-product-name'>Large Plain Pie</p>
+        <div className='quanity-container'>
+          <p className='quanity--'>-</p>
+          <p className='quanity-number'>2</p>
+          <p className='quanity--'>+</p>
+        </div>
+        <p className='cart-card-remove-product'>$16.00</p>
       </div>
     </div>
   );
