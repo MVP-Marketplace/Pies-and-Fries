@@ -29,7 +29,7 @@
   margin-top: -1rem;
   margin-left: 1.7rem;
   width: 80%;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
 }
 .profile-personal-info-data {
   margin-left: 2rem;

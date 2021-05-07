@@ -13,6 +13,8 @@ const ordersSchema = new mongoose.Schema({
         default: new Date()
     },
     foodItems: [Object],
+    contactFree: {type: Boolean, default: false},
+    total: {type: Number, default: null},
     notes: {type: String}
 })
 

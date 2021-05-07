@@ -9,7 +9,11 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-
+.pizza-pic-cart {
+  height: 100%;
+  width: 100%;
+  margin-left: 0.2rem;
+}
 .Button {
   cursor: pointer;
   margin: 0 0 12px;
@@ -109,7 +113,7 @@ body {
   margin-top: -0.1rem;
 }
 .pc-address-edit-btn {
-  background: #eee;
+  background: white;
   color: #0e0e0e;
   border: none;
 
@@ -123,13 +127,16 @@ body {
 .cart-heading {
   font-size: 20px;
   margin-left: 12px;
-  color: #04adbf;
+  color: #111111;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 .cart-card-container {
   display: flex;
   justify-content: space-between;
   width: 91%;
-  height: 4.5rem;
+  height: 5rem;
   border: 1px solid #fbbc05;
   margin-left: 12px;
   margin-top: -11px;
@@ -158,8 +165,33 @@ body {
 }
 
 .quanity-- {
+  background: white;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  width: 15px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+.quanity- {
+  background: white;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 15px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
 }
 .quanity-number {
+  background: white;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .cart-card-middle-section {
@@ -203,7 +235,9 @@ body {
 
 .pc-contact-free-delivery-container {
   display: flex;
+  width: 90%;
   justify-content: space-between;
+  margin-left: 9px;
 }
 .pc-contact-delivery-des {
 }
@@ -221,7 +255,9 @@ body {
 }
 .pc-door-delivery-container {
   display: flex;
+  width: 90%;
   justify-content: space-between;
+  margin-left: 9px;
 }
 .StripeCheckout {
   margin-top: 2rem;
@@ -247,10 +283,10 @@ body {
 
 .subtotal-container {
   display: flex;
-  width: 89%;
+  width: 81%;
   justify-content: space-between;
   margin-top: 1rem;
-  margin-left: 12px;
+  margin-left: 24px;
 }
 .subtotal-heading {
   font-size: 14px;
@@ -263,10 +299,10 @@ body {
 
 .tax-container {
   display: flex;
-  width: 89%;
+  width: 81%;
   justify-content: space-between;
   margin-top: 1rem;
-  margin-left: 12px;
+  margin-left: 24px;
 }
 .tax-heading {
   font-size: 14px;
@@ -279,10 +315,10 @@ body {
 
 .tip-container {
   display: flex;
-  width: 89%;
+  width: 81%;
   justify-content: space-between;
   margin-top: 1rem;
-  margin-left: 12px;
+  margin-left: 24px;
 }
 .tip-heading {
   font-size: 14px;
@@ -295,10 +331,10 @@ body {
 
 .total-container {
   display: flex;
-  width: 89%;
+  width: 81%;
   justify-content: space-between;
   margin-top: 1rem;
-  margin-left: 12px;
+  margin-left: 24px;
 }
 .total-heading {
   font-size: 14px;

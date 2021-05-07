@@ -42,7 +42,12 @@ const CreateAccountForm = props => {
   return (
     <>
       <div className='ac-profile-card'>
-        <div className='ac-profile-image'></div>
+        <div className='ac-profile-image'>
+          <img
+            src={require(`../assets/profilepic.svg`).default}
+            className='pizza-pic-cart'
+          />
+        </div>
         <h3
           className='ac-profile-title'
           onClick={() => setDisplayModal(!displayModal)}
