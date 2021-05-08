@@ -5,8 +5,15 @@
   display: flex;
   flex-direction: column;
 }
+.section-header {
+  margin: 0;
+}
+.contact-free {
+  font-weight: bold;
+}
 .customerName {
   margin-top: 20px;
+  font-weight: bold;
 }
 .contactClient {
   display: flex;
@@ -14,7 +21,14 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
+.order-pic-items {
+  display: flex;
+}
+.order-number-items {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
 .driverOptions {
   display: flex;
   flex-direction: column;
@@ -25,6 +39,9 @@
   align-items: center;
   width: 100%;
   margin-top: 30px;
+}
+.clientNumber {
+  font-weight: bold;
 }
 .callButton {
   width: 50px;
@@ -62,7 +79,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 250px;
+  height: 150px;
 }
 
 .marker-icon {

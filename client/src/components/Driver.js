@@ -62,7 +62,7 @@ const Driver = () => {
 
     const assignOrderToDriver = (orderId) => {
       // console.log(orderId)
-      fetch(`/api/orders/update/${orderId}`,  {
+      fetch(`/api/orders/driver/assign/${orderId}`,  {
         method: 'PUT',
         body: JSON.stringify({driver_id: user._id, driver_name: user.name}),
         headers: {
@@ -160,7 +160,7 @@ const Driver = () => {
       </>
     ):
     <>
-    <button onClick={() => setShowSingleOrder(false)}>Back</button>
+    <button className="back-button"onClick={() => setShowSingleOrder(false)}>Back</button>
        <DriverOrderDetails order = {currentOrder} viewSingleOrder={viewSingleOrder} completeDelivery={completeDelivery}/>
     </>
    }
