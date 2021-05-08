@@ -1,4 +1,5 @@
 .form-group {
+  margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
@@ -78,10 +79,12 @@
 }
 
 #formBasicUserName {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
   width: 60%;
   border: none;
   background: white;
@@ -91,10 +94,13 @@
 }
 
 #formBasicEmail-creation {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
+
   width: 60%;
   border: none;
   background: white;
@@ -107,10 +113,13 @@
   font-size: 12px;
 }
 #formBasicPassword-creation {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
+
   width: 60%;
   border: none;
   background: white;
@@ -120,10 +129,13 @@
 }
 
 #formBasicPhoneNumber {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
+
   width: 60%;
   border: none;
   background: white;
@@ -132,10 +144,13 @@
   font-size: 14px;
 }
 #formBasicAddress {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
+
   width: 60%;
   border: none;
   background: white;
@@ -174,10 +189,14 @@
   margin-top: 1rem;
 }
 #forPaymentInfo {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 1px solid;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
   margin-left: 1rem;
   width: 77%;
   background: white;
@@ -214,11 +233,14 @@
 }
 .profile-creation-submit-btn {
   margin-top: 1px;
-  margin-left: -0.5rem;
+  /* margin-left: -0.5rem; */
   width: 100%;
+  height: 3rem;
   margin-bottom: 2.3rem;
   background-color: #04adbf;
   border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
 }
 .ac-card-container {
   margin-top: 2rem;
@@ -235,10 +257,14 @@
   margin-top: 2rem;
 }
 #forExpirationInfo {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 1px solid;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
   width: 60%;
   margin-left: 1rem;
 
@@ -250,10 +276,14 @@
   margin-left: 1rem;
 }
 #forcvvInfo {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 1px solid;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
   width: 60%;
 
   background: white;
@@ -268,10 +298,12 @@
   font-weight: bold;
 }
 #formBasicAddress-line2 {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
   width: 60%;
   border: none;
   background: white;
@@ -286,10 +318,12 @@
 }
 
 #formBasicAddress-city {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
   width: 95%;
   border: none;
   background: white;
@@ -299,10 +333,12 @@
 }
 
 #formBasicAddress-state {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
   width: 85%;
   border: none;
   background: white;
@@ -311,10 +347,12 @@
   font-size: 14px;
 }
 #formBasicAddress-zip {
+  height: 1.5rem;
+  margin-top: 0.2rem;
+  border-radius: 4px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
   width: 80%;
   border: none;
   background: white;

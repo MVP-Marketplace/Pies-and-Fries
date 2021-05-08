@@ -49,9 +49,16 @@ function App() {
       <Route exact path='/'>
         {user && user.admin ? <Redirect to='/admin' /> : <Redirect to='/' />}
       </Route>
-      <Route exact path='/' component={Home}>
-        {user ? <Redirect to='/AuthHome' /> : <Redirect to='/' />}
-      </Route>
+
+      {/* <Route
+        exact
+        path='/'
+        render={() => {
+          <Home />;
+        }}
+      /> */}
+      {user ? <Redirect to='/AuthHome' /> : <Redirect to='/' />}
+
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
