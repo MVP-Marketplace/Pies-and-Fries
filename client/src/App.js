@@ -50,19 +50,16 @@ function App() {
         {user && user.admin ? <Redirect to='/admin' /> : <Redirect to='/' />}
       </Route>
 
-      {/* <Route
+      <Route
         exact
-        path='/'
-        render={() => {
-          <Home />;
-        }}
-      /> */}
-      {user ? <Redirect to='/AuthHome' /> : <Redirect to='/' />}
+        path='/'>
+          {user ?  <AuthHome/>: <Home />
+           }
+        </Route>
 
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
       <Route exact path='/tracking' render={() => <Tracking />} />
       <Route exact path='/signup' render={() => <SignIn signIn={false} />} />
-      {/* {user && user.admin === true ?  <Route exact path='/admin' render={() => <Admin />} /> : <Redirect to="/" />} */}
       {user && user.driver ? (
         <Route exact path='/driver' render={() => <Driver />} />
       ) : (
@@ -73,15 +70,8 @@ function App() {
       ) : (
         <Redirect to='/' />
       )}
-      {user ? (
-        <Route exact path='/AuthHome' render={() => <AuthHome />} />
-      ) : (
-        <Redirect to='/' />
-      )}
-
       <Route exact path='/store' render={() => <Store />} />
       <Route exact path='/profile' render={() => <Profile />} />
-      {/* <Route exact path="/checkout" render={() => <ShoppingCart setUserLogginIn ={setUserLogginIn} cart = {cart} counter={counter} setCart={setCart}/>} /> */}
     </>
   );
 }
