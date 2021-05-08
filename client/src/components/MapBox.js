@@ -1,7 +1,6 @@
 import ReactMapboxGl, { Marker, ZoomControl } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import'../styles/DriverOrderDetails.css'
-// import bottle from '../Photos/bottle.png';
 
 const MapBox = ReactMapboxGl({
     accessToken: process.env.REACT_APP_MAPBOX_TOKEN

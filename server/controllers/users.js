@@ -3,15 +3,24 @@ const User = require('../db/models/user'),
   { sendWelcomeEmail, sendCancellationEmail, forgotPasswordEmail } = require('../emails/');
 
 exports.createUser = async (req, res) => {
-  const { name, email, password, address, number } = req.body;
+  const { name, email, password, number, billing_address, billing_line_2, billing_state, billing_zip_code, card_number, card_exp,cvv,delivery_address,delivery_line2,delivery_state,delivery_zip_code } = req.body;
   try {
     const user = await new User({
-      name,
-      email,
-      password,
-      address,
-      number
-      
+      name: name, 
+      email:email, 
+      password:password, 
+      number:number,
+      billing_address: billing_address,
+      billing_line_2: billing_line_2,
+      billing_state:billing_state,
+      billing_zip_code: billing_zip_code,
+      card_number: card_number,
+      card_exp: card_exp,
+      cvv: cvv,
+      delivery_address: delivery_address,
+      delivery_line2: delivery_line2,
+      delivery_state: delivery_state,
+      delivery_zip_code: delivery_zip_code
     });
     sendWelcomeEmail(user.email, user.name);
     const token = await user.generateAuthToken();

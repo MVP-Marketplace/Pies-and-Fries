@@ -130,19 +130,7 @@ const Driver = () => {
             {readyOrders && (
                 readyOrders.map((order,i) => (
                   <OrderPreview order={order} preview={true} viewSingleOrder={viewSingleOrder} assignOrderToDriver={assignOrderToDriver}/>
-                  // <div className="single-order" key={i} onClick={() => viewSingleOrder(order)}>  
-                  //   <h4 className="order-details">Order Details: Order # {order._id}</h4>
-                  //   <div className="order-pic-items">
-                  //     <div className="order-picture">
-                  //     </div>
-                  //     <div>
-                  //         <p className="order-items"> {order.foodItems[0].quantity} {order.foodItems[0].item}</p>
-                  //         <button className="pickup-button" onClick={() => assignOrderToDriver(order._id)}>Pick Up</button>
-                  //     </div>
-                    
-                  //     </div>
-                  // </div>
-                  
+
                 ))
               )}
           
@@ -153,19 +141,7 @@ const Driver = () => {
             {driverOrders && (
                 driverOrders.map((order,i) => (
                   <OrderPreview order={order} preview={true} viewSingleOrder={viewSingleOrder}/>
-                  // <div className="single-order" key={i} onClick={() => viewSingleOrder(order)}>  
-                  //   <h4 className="order-details">Order Details: Order # {order._id}</h4>
-                  //   <div className="order-pic-items">
-                  //     <div className="order-picture">
-                  //     </div>
-                  //     <div>
-                  //         <p className="order-items"> {order.foodItems[0].quantity} {order.foodItems[0].item}</p>
-                  //         <button className="pickup-button" onClick={() => assignOrderToDriver(order._id)}>Pick Up</button>
-                  //     </div>
-                    
-                  //     </div>
-                  // </div>
-                  
+
                 ))
               )}
           
@@ -176,19 +152,6 @@ const Driver = () => {
             {driverCompleted && (
                 driverCompleted.map((order,i) => (
                   <OrderPreview order={order} preview={true} viewSingleOrder={viewSingleOrder}/>
-                  // <div className="single-order" key={i} onClick={() => viewSingleOrder(order)}>  
-                  //   <h4 className="order-details">Order Details: Order # {order._id}</h4>
-                  //   <div className="order-pic-items">
-                  //     <div className="order-picture">
-                  //     </div>
-                  //     <div>
-                  //         <p className="order-items"> {order.foodItems[0].quantity} {order.foodItems[0].item}</p>
-                  //         <button className="pickup-button" onClick={() => assignOrderToDriver(order._id)}>Pick Up</button>
-                  //     </div>
-                    
-                  //     </div>
-                  // </div>
-                  
                 ))
               )}
           
