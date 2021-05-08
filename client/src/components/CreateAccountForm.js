@@ -6,12 +6,24 @@ const CreateAccountForm = props => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [number, setNumber] = useState('');
-  const [address, setAddress] = useState('');
+  const [billingAddress, setBillingAddress] = useState('');
+  const [billingLine2, setBillingLine2] = useState('');
+  const [billingState, setBillingState] = useState('');
+  const [billingCity, setBillingCity] = useState('');
+  const [billingZipCode, setBillingZipCode] = useState('');
   const [passwordMatch, setPasswordMatch] = useState('');
   const [displayModal, setDisplayModal] = useState(false);
   const [displayPersonalInfo, setDisplayPersonalInfo] = useState(false);
   const [displayPaymentInfo, setDisplayPaymentInfo] = useState(false);
   const [displayAddressInfo, setDisplayAdressInfo] = useState(false);
+  const [cardnumber, setCardNumber] = useState('');
+  const [expiration, setExpiration] = useState('');
+  const [cvv, setCvv] = useState('');
+  const [deliveryAddress, setDeliveryAddress] = useState('');
+  const [deliveryLine2, setDeliveryLine2] = useState('');
+  const [deliveryState, setDeliveryState] = useState('');
+  const [deliveryCity, setDeliveryCity] = useState('');
+  const [deliveryZipCode, setDeliveryZipCode] = useState('');
   const handleSubmit = e => {
     if (passwordMatch === password) {
       e.preventDefault();
@@ -22,7 +34,18 @@ const CreateAccountForm = props => {
           email: email,
           password: password,
           number: number,
-          address: address,
+          billing_address: billingAddress,
+          billing_line2: billingLine2,
+          billing_state: billingState,
+          billing_zipcode: billingZipCode,
+          cardnumber: cardnumber,
+          expiration: expiration,
+          cvv: cvv,
+          delivery_address: deliveryAddress,
+          delivery_line2: deliveryLine2,
+          delivery_state: deliveryState,
+          delivery_zipcode: deliveryZipCode,
+          cardnumber: cardnumber,
         }),
         headers: {
           'Content-Type': 'application/json',
@@ -45,7 +68,8 @@ const CreateAccountForm = props => {
         <div className='ac-profile-image'>
           <img
             src={require(`../assets/profilepic.svg`).default}
-            className='pizza-pic-cart'
+            className='profile-pic-cart'
+            alt='pizza-img'
           />
         </div>
         <h3
@@ -54,6 +78,12 @@ const CreateAccountForm = props => {
         >
           Profile
         </h3>
+        <p
+          className='already-have-an-account'
+          onClick={() => props.setIsSignIn(true)}
+        >
+          Already Have an Account?
+        </p>
       </div>
       <div
         className={`ac-profiledropdown-content ${displayModal ? 'show' : ''}`}
@@ -128,6 +158,181 @@ const CreateAccountForm = props => {
                   onChange={e => setNumber(e.target.value)}
                 />
               </Form.Group>
+
+              <li
+                onClick={() => setDisplayPaymentInfo(!displayPaymentInfo)}
+                className='profile-creation-payment-i'
+              >
+                Payment Info
+              </li>
+              <div
+                className={`ac-profile-payment-info ${
+                  displayPaymentInfo ? 'show' : ''
+                }`}
+              >
+                <div className='ac-card-container'>
+                  <Form.Group controlId='forPaymentInfo'>
+                    <Form.Label className='forPaymentInfo'>
+                      Card Number
+                    </Form.Label>
+                    <Form.Control
+                      type='number'
+                      placeholder='4242 42424 42424 4424242'
+                      value={cardnumber}
+                      onChange={e => setCardNumber(e.target.value)}
+                    />
+                  </Form.Group>
+                  <div className='ac-card-info-bottom'>
+                    <Form.Group controlId='forExpirationInfo'>
+                      <Form.Label className='forExpirationInfo'>
+                        Expiration
+                      </Form.Label>
+                      <Form.Control
+                        type='number'
+                        placeholder='03/2025'
+                        value={expiration}
+                        onChange={e => setExpiration(e.target.value)}
+                      />
+                    </Form.Group>
+
+                    <Form.Group controlId='forcvvInfo'>
+                      <Form.Label className='forcvvInfo'>CVV</Form.Label>
+                      <Form.Control
+                        type='number'
+                        placeholder='424'
+                        value={cvv}
+                        onChange={e => setCvv(e.target.value)}
+                      />
+                    </Form.Group>
+                  </div>
+                </div>
+                <div className='line'></div>
+                <h3 className='billing-address'>Billing Address</h3>
+
+                <Form.Group controlId='formBasicAddress'>
+                  <Form.Label className='formBasicAddress'>Address</Form.Label>
+                  <Form.Control
+                    type='text'
+                    placeholder='123 Main Street, New York, NY 10030'
+                    value={billingAddress}
+                    onChange={e => setBillingAddress(e.target.value)}
+                  />
+                </Form.Group>
+                <Form.Group controlId='formBasicAddress-line2'>
+                  <Form.Label className='formBasicAddress-line2'>
+                    Line 2
+                  </Form.Label>
+                  <Form.Control
+                    type='text'
+                    placeholder='Apt #101'
+                    value={billingLine2}
+                    onChange={e => setBillingLine2(e.target.value)}
+                  />
+                </Form.Group>
+                <div className='ac-address-container'>
+                  <Form.Group controlId='formBasicAddress-city'>
+                    <Form.Label className='formBasicAddress-city'>
+                      City
+                    </Form.Label>
+                    <Form.Control
+                      type='text'
+                      placeholder=' New York'
+                      value={billingCity}
+                      onChange={e => setBillingCity(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form.Group controlId='formBasicAddress-state'>
+                    <Form.Label className='formBasicAddress-state'>
+                      State
+                    </Form.Label>
+                    <Form.Control
+                      type='text'
+                      placeholder='NY'
+                      value={billingState}
+                      onChange={e => setBillingState(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form.Group controlId='formBasicAddress-zip'>
+                    <Form.Label className='formBasicAddress-zip'>
+                      ZipCode
+                    </Form.Label>
+                    <Form.Control
+                      type='text'
+                      placeholder='10030'
+                      value={billingZipCode}
+                      onChange={e => setBillingZipCode(e.target.value)}
+                    />
+                  </Form.Group>
+                </div>
+                <div className='line'></div>
+              </div>
+              <li
+                onClick={() => setDisplayAdressInfo(!displayAddressInfo)}
+                className='profile-creation-address-i'
+              >
+                Delivery Address
+              </li>
+              <div
+                className={`ac-profile-address-info${
+                  displayAddressInfo ? 'show' : ''
+                }`}
+              >
+                <Form.Group controlId='formBasicAddress'>
+                  <Form.Label className='formBasicAddress'>Address</Form.Label>
+                  <Form.Control
+                    type='text'
+                    placeholder='123 Main Street, New York, NY 10030'
+                    value={deliveryAddress}
+                    onChange={e => setDeliveryAddress(e.target.value)}
+                  />
+                </Form.Group>
+                <Form.Group controlId='formBasicAddress-line2'>
+                  <Form.Label className='formBasicAddress-line2'>
+                    Line 2
+                  </Form.Label>
+                  <Form.Control
+                    type='text'
+                    placeholder='Apt #101'
+                    value={deliveryLine2}
+                    onChange={e => setDeliveryLine2(e.target.value)}
+                  />
+                </Form.Group>
+                <div className='ac-address-container'>
+                  <Form.Group controlId='formBasicAddress-city'>
+                    <Form.Label className='formBasicAddress-city'>
+                      City
+                    </Form.Label>
+                    <Form.Control
+                      type='text'
+                      placeholder=' New York'
+                      value={deliveryCity}
+                      onChange={e => setDeliveryCity(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form.Group controlId='formBasicAddress-state'>
+                    <Form.Label className='formBasicAddress-state'>
+                      State
+                    </Form.Label>
+                    <Form.Control
+                      type='text'
+                      placeholder='NY'
+                      value={deliveryState}
+                      onChange={e => setDeliveryState(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form.Group controlId='formBasicAddress-zip'>
+                    <Form.Label className='formBasicAddress-zip'>
+                      ZipCode
+                    </Form.Label>
+                    <Form.Control
+                      type='text'
+                      placeholder='10030'
+                      value={deliveryZipCode}
+                      onChange={e => setDeliveryZipCode(e.target.value)}
+                    />
+                  </Form.Group>
+                </div>
+              </div>
               <Button
                 variant='primary'
                 type='submit'
@@ -135,98 +340,8 @@ const CreateAccountForm = props => {
               >
                 Submit
               </Button>
-
-              <Form.Group controlId='formBasicAddress'>
-                <Form.Label className='formBasicAddress'>Address</Form.Label>
-                <Form.Control
-                  type='text'
-                  placeholder='123 Main Street, New York, NY 10030'
-                  value={address}
-                  onChange={e => setAddress(e.target.value)}
-                />
-              </Form.Group>
             </Form>
-
-            <p
-              className='already-have-an-account'
-              onClick={() => props.setIsSignIn(true)}
-            >
-              Already Have an Account?
-            </p>
           </div>
-
-          <li
-            onClick={() => setDisplayPaymentInfo(!displayPaymentInfo)}
-            className='profile-creation-payment-i'
-          >
-            Payment Info
-          </li>
-          <div
-            className={`ac-profile-payment-info${
-              displayPaymentInfo ? 'show' : ''
-            }`}
-          >
-            <Form.Group controlId='forPaymentInfo'>
-              <Form.Label className='forPaymentInfo'>Card Number</Form.Label>
-              <Form.Control
-                type='number'
-                placeholder='4242 42424 42424 4424242'
-                value={address}
-                onChange={e => setAddress(e.target.value)}
-              />
-              <Form.Label className='forPaymentInfo'>Expiration</Form.Label>
-              <Form.Control
-                type='number'
-                placeholder='03/2025'
-                value={address}
-                onChange={e => setAddress(e.target.value)}
-              />
-              <Form.Label className='forPaymentInfo'>CVV</Form.Label>
-              <Form.Control
-                type='number'
-                placeholder='424'
-                value={address}
-                onChange={e => setAddress(e.target.value)}
-              />
-            </Form.Group>{' '}
-            <Form.Group controlId='formBasicAddress'>
-              <Form.Label className='formBasicAddress'>Address</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='123 Main Street, New York, NY 10030'
-                value={address}
-                onChange={e => setAddress(e.target.value)}
-              />
-            </Form.Group>
-          </div>
-          <li
-            onClick={() => setDisplayAdressInfo(!displayAddressInfo)}
-            className='profile-creation-address-i'
-          >
-            Address
-          </li>
-          <div
-            className={`ac-profile-address-info${
-              displayAddressInfo ? 'show' : ''
-            }`}
-          >
-            <Form.Group controlId='formBasicAddress'>
-              <Form.Label className='formBasicAddress'>Address</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='123 Main Street, New York, NY 10030'
-                value={address}
-                onChange={e => setAddress(e.target.value)}
-              />
-            </Form.Group>
-          </div>
-          <Button
-            variant='primary'
-            type='submit'
-            className='profile-creation-submit-btn'
-          >
-            Submit
-          </Button>
         </ul>
       </div>
     </>

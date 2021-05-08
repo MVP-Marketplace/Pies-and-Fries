@@ -1,9 +1,19 @@
-.ac-profile-card {
-  margin-top: 1rem;
-  margin-left: 6.7rem;
-  display: flex;
+.form-group {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
-
+.ac-profile-card {
+  margin-top: -1rem;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+  width: 90%;
+  margin-bottom: 1rem;
+}
+.profile-pic-cart {
+  height: 4rem;
+  width: 100%;
+  margin-left: 1.2rem;
+}
 .ac-profile-image {
   margin-bottom: 1rem;
   margin-left: -1.9rem;
@@ -11,22 +21,21 @@
 .ac-profile-title {
   font-size: 17px;
   font-weight: bold;
-  margin-top: 0rem;
-  margin-left: -11rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 0.3rem;
 }
 .ac-profiledropdown-content {
   margin-top: -1rem;
   margin-bottom: 1rem;
-  margin-left: 1.7rem;
-  display: flex;
+  margin-left: -1.3rem;
   justify-content: space-evenly;
-  width: 80%;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
   align-items: center;
 }
 .ac-profiledropdown-content.show {
@@ -34,10 +43,12 @@
 }
 .ac-profile-personal-info {
   margin-top: -1rem;
-  margin-right: -3rem;
-  margin-left: 1rem;
+  margin-right: -4rem;
+  margin-left: -2rem;
   display: flex;
   flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .ac-profile-personal-info.show {
   display: none;
@@ -60,94 +71,95 @@
   margin: 1rem;
 }
 .profile-creation-personal-i {
-  margin-top: -1.5rem;
+  margin-top: -0.5rem;
   margin-left: 0rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 #formBasicUserName {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: 6px;
-  margin-bottom: 0.3rem;
-  margin-left: -4rem;
-  width: 72%;
+  margin-top: -6px;
+  width: 60%;
+  border: none;
+  background: white;
 }
 .formBasicUserName {
   font-size: 14px;
-  margin-left: -4rem;
 }
 
 #formBasicEmail-creation {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: 6px;
-  margin-left: -4rem;
-  margin-bottom: 0.3rem;
-  width: 72%;
+  margin-top: -6px;
+  width: 60%;
+  border: none;
+  background: white;
 }
 .formBasicEmail-creation {
   font-size: 14px;
-  margin-left: -4rem;
 }
 
 .text-muted {
   font-size: 12px;
-  margin-left: -4rem;
 }
 #formBasicPassword-creation {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: 6px;
-  margin-bottom: 0.3rem;
-  margin-left: -4rem;
-  width: 72%;
+  margin-top: -6px;
+  width: 60%;
+  border: none;
+  background: white;
 }
 .formBasicPassword-creation {
   font-size: 14px;
-  margin-left: -4rem;
 }
 
 #formBasicPhoneNumber {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: 6px;
-  margin-bottom: 0.3rem;
-  margin-left: -4rem;
-  width: 72%;
+  margin-top: -6px;
+  width: 60%;
+  border: none;
+  background: white;
 }
 .formBasicPhoneNumber {
   font-size: 14px;
-  margin-left: -4rem;
 }
 #formBasicAddress {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: 6px;
-  margin-left: -2rem;
-  margin-bottom: 0.3rem;
-  width: 72%;
+  margin-top: -6px;
+  width: 60%;
+  border: none;
+  background: white;
 }
 .formBasicAddress {
   margin-top: 1rem;
   font-size: 14px;
-  margin-left: -2rem;
 }
 
 .already-have-an-account {
+  color: #660650;
   font-size: 12px;
-  margin-left: -3rem;
-  margin-top: -0.7rem;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  margin-left: 5rem;
+  /* margin-top: -0.7rem; */
+  margin-bottom: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .profile-creation-payment-i {
-  margin-top: -0.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
   margin-left: 0rem;
   margin-bottom: 0.5rem;
 }
@@ -157,38 +169,37 @@
   margin-bottom: 0.5rem;
 }
 .forPaymentInfo {
-  margin-top: 1rem;
   font-size: 14px;
-  margin-left: -2rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 #forPaymentInfo {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  margin-top: 6px;
-  margin-left: -2rem;
-  margin-bottom: 0.3rem;
-  width: 72%;
+  margin-top: -6px;
+  margin-left: 1rem;
+  width: 77%;
+  background: white;
 }
 
 .ac-profile-payment-info {
   display: none;
-  margin-bottom: 12em;
 }
 
-.ac-profile-payment-info .show {
+.ac-profile-payment-info.show {
   margin-top: -1rem;
-  margin-right: -3rem;
-  margin-left: 1rem;
-  margin-bottom: 12rem;
+  margin-left: 0rem;
+
   display: flex;
   flex-direction: column;
 }
 
 .profile-creation-address-i {
-  margin-top: -0.5rem;
+  margin-top: 1.5rem;
   margin-left: 0rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .ac-profile-address-info {
@@ -206,4 +217,109 @@
   margin-left: -0.5rem;
   width: 100%;
   margin-bottom: 2.3rem;
+  background-color: #04adbf;
+  border: none;
+}
+.ac-card-container {
+  margin-top: 2rem;
+  height: fit-content;
+  background: WHITE;
+  border-radius: 20px;
+}
+.ac-card-info-bottom {
+  display: flex;
+}
+.line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+  width: 100%;
+  margin-top: 2rem;
+}
+#forExpirationInfo {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+  width: 60%;
+  margin-left: 1rem;
+
+  background: white;
+}
+
+.forExpirationInfo {
+  font-size: 14px;
+  margin-left: 1rem;
+}
+#forcvvInfo {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+  width: 60%;
+
+  background: white;
+}
+.forcvvInfo {
+  font-size: 14px;
+}
+
+.billing-address {
+  font-size: 14px;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+#formBasicAddress-line2 {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+  width: 60%;
+  border: none;
+  background: white;
+}
+
+.formBasicAddress-line2 {
+  font-size: 14px;
+}
+
+.ac-address-container {
+  display: flex;
+}
+
+#formBasicAddress-city {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+  width: 95%;
+  border: none;
+  background: white;
+}
+.formBasicAddress-city {
+  font-size: 14px;
+}
+
+#formBasicAddress-state {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+  width: 85%;
+  border: none;
+  background: white;
+}
+.formBasicAddress-state {
+  font-size: 14px;
+}
+#formBasicAddress-zip {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+  width: 80%;
+  border: none;
+  background: white;
+}
+
+.formBasicAddress-zip {
+  font-size: 14px;
 }
