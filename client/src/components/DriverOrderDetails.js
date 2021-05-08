@@ -1,8 +1,13 @@
 import '../styles/DriverOrderDetails.css'
 
+import Map from './MapBox'
+
 const DriverOrderDetails = (props) => {
     return (
         <>
+        <div className="mapBoxContainer">
+            <Map lat = {40.881340} lng ={-74.043800}/>
+        </div>
         <div className="section">
             <p>Delivering to</p>
             <p>Address</p>
