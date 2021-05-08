@@ -9,7 +9,9 @@
 .driver-container * {
   box-sizing: border-box;
 }
-
+.back-button {
+  margin-left: 30px;
+}
 .driverFilters {
   width: 100%;
   display: flex;

@@ -3,25 +3,30 @@ const User = require('../db/models/user'),
   { sendWelcomeEmail, sendCancellationEmail, forgotPasswordEmail } = require('../emails/');
 
 exports.createUser = async (req, res) => {
-  const { name, email, password, number, billing_address, billing_line_2, billing_state, billing_zip_code, card_number, card_exp,cvv,delivery_address,delivery_line2,delivery_state,delivery_zip_code } = req.body;
+  const { name, email, password, number, billing_address, billing_line_2, billing_city,billing_state, billing_zip_code, card_number, card_exp,cvv,delivery_address, delivery_city,delivery_line_2,delivery_state,delivery_zip_code } = req.body;
+  console.log(req.body)
   try {
     const user = await new User({
       name: name, 
       email:email, 
       password:password, 
       number:number,
+      delivery_address: delivery_address,
+      delivery_line_2: delivery_line_2,
+      delivery_city: delivery_city,
+      delivery_state: delivery_state,
+      delivery_zip_code: delivery_zip_code,
       billing_address: billing_address,
       billing_line_2: billing_line_2,
+      billing_city: billing_city,
       billing_state:billing_state,
       billing_zip_code: billing_zip_code,
       card_number: card_number,
       card_exp: card_exp,
-      cvv: cvv,
-      delivery_address: delivery_address,
-      delivery_line2: delivery_line2,
-      delivery_state: delivery_state,
-      delivery_zip_code: delivery_zip_code
+      cvv: cvv
+      
     });
+    console.log('user', user)
     sendWelcomeEmail(user.email, user.name);
     const token = await user.generateAuthToken();
     res.cookie('jwt', token, {
@@ -67,8 +72,12 @@ exports.loginUser = async (req, res) => {
 
 exports.getCurrentUser = async (req, res) => {
   try {
-    console.log(req.user)
-    res.json(req.user);
+    // console.log('user', req.user)
+    // console.log(req.user._id)
+    const user =await User.findById(req.user._id).populate('order').exec()
+
+    // console.log('user', user)
+    res.json(user);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
   }

@@ -24,19 +24,20 @@ const userSchema = new mongoose.Schema(
     driver: {type: Boolean, default: false},
     number: {type: Number, default: null},
     delivery_address: {type: String, default:null},
-    delivery_line_2: {type: Boolean, default: null},
+    delivery_line_2: {type: String, default: null},
     delivery_city: {type: String, default: null},
     delivery_state: {type:String, default: null},
     delivery_zip_code: {type:String, default: null},
     billing_address:{type:String, default: null},
     billing_line_2:{type:String, default: null},
+    billing_city:{type:String, default: null},
     billing_zip_code:{type:Number, default: null},
     billing_state:{type:String, default: null},
     default_tip: {type: Number, default: 10},
     card_number:{type:Number, default: null},
     card_exp:{type:String, default: null},
     cvv:{type:Number, default: null},
-    order: [String],
+    order: [{type: mongoose.Schema.Types.ObjectId, ref: 'Order'}],
     tokens: [
         {
             token: {
