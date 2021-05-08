@@ -10,15 +10,18 @@ const Checkout = props => {
 
   const { userState } = useContext(AppContext);
   const [user] = userState;
-
-  const makePayment = token => {
-    const body = {
-      token,
+  const [product] = useState({
       name: props.name,
       price: props.price,
       quantity: props.quantity,
       size: props.size,
       total: props.total,
+  })
+
+  const makePayment = token => {
+    const body = {
+      token,
+      product
     };
     const headers = {
       'content-Type': 'application/json',

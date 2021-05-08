@@ -1,5 +1,4 @@
 const Order = require('../db/models/orders')
-const User = require('../db/models/user')
 
 exports.createOrder = async (req, res) => {
   const newOrderPost = req.body
@@ -18,7 +17,7 @@ exports.createOrder = async (req, res) => {
 
 exports.getOrders = async (req, res) => {
   try {
-    const allOrders = await Order.find()
+    const allOrders = await Order.find().populate("user_id")
     res.json(allOrders);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
@@ -26,7 +25,7 @@ exports.getOrders = async (req, res) => {
 };
 exports.getSingleOrder = async (req, res) => {
   try {
-    const order = await Order.findOne({"_id": req.body.order_id}).populate('users')
+    const order = await Order.findOne({"_id": req.body.order_id}).populate("user_id")
     res.json(order);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
@@ -35,9 +34,9 @@ exports.getSingleOrder = async (req, res) => {
 exports.getActiveOrders = async (req, res) => {
     try {
       const allOrders = await Order.find({"delivered": "false",
-    "isReady": "false"}).populate('User')
+    "isReady": "false"}).populate("user_id")
 
-      res.json(allOrders);
+    res.json(allOrders);
     } catch (e) {
       res.status(400).json({ error: e.toString() });
     }
@@ -45,7 +44,8 @@ exports.getActiveOrders = async (req, res) => {
 exports.getReadyOrders = async (req, res) => {
   try {
     const allOrders = await Order.find({"delivered": "false",
-  "isReady": "true"})
+  "isReady": "true"}).populate("user_id")
+ 
     res.json(allOrders);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
@@ -54,7 +54,7 @@ exports.getReadyOrders = async (req, res) => {
 
 exports.getCompletedOrders = async (req, res) => {
     try {
-      const allOrders = await Order.find({"delivered": "true"})
+      const allOrders = await Order.find({"delivered": "true"}).populate("user_id")
       res.json(allOrders);
     } catch (e) {
       res.status(400).json({ error: e.toString() });
@@ -63,7 +63,7 @@ exports.getCompletedOrders = async (req, res) => {
 exports.driverGetReadyOrders = async (req, res) => {
   try {
     const allOrders = await Order.find({"delivered": "false",
-  "isReady": "true", "driver_id": null})
+  "isReady": "true", "driver_id": null}).populate("user_id")
     res.json(allOrders);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
@@ -73,8 +73,7 @@ exports.getDriverActiveOrders = async (req, res) => {
     const driver_id = req.params.driver_id
     console.log(driver_id)
     try {
-      const allOrders = await Order.find({"driver_id": driver_id, "delivered": "false"} )
-      console.log(allOrders)
+      const allOrders = await Order.find({"driver_id": driver_id, "delivered": "false"} ).populate("user_id")
       res.json(allOrders);
     } catch (e) {
       res.status(400).json({ error: e.toString() });
@@ -83,7 +82,7 @@ exports.getDriverActiveOrders = async (req, res) => {
 exports.getDriverCompletedOrders = async (req, res) => {
     const driver_id = req.params.driver_id
     try {
-      const allOrders = await Order.find({"driver_id": driver_id, "delivered": true} )
+      const allOrders = await Order.find({"driver_id": driver_id, "delivered": true} ).populate("user_id")
       res.json(allOrders);
     } catch (e) {
       res.status(400).json({ error: e.toString() });

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
-const ordersSchema = new mongoose.Schema({
-    user_id: {type: String, default: null,ref: 'User'},
+const orderSchema = new mongoose.Schema({
+    user_id: {type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
     customer_name: {type: String, default: null},
     driver_id: {type:String, default: null},
     driver_name:{type:String, default:null},
@@ -18,6 +18,6 @@ const ordersSchema = new mongoose.Schema({
     notes: {type: String}
 })
 
-const orders = mongoose.model("Orders", ordersSchema, 'orders')
+const Order = mongoose.model("Order", orderSchema)
 
-module.exports = orders
+module.exports = Order
