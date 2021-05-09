@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, ProgressBar } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Tracker = ({ now }) => {
   return (

@@ -7,10 +7,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import PreviousOrder from '../components/PreviousOrder';
 
-
 const AuthHome = () => {
   return (
     <div className='homepage-container'>
+      <h1 className='home-greeting'>Shalom, Friend!</h1>
       <div className='hero-wrapper'>
         <div className='hero-container'>
           <h1 className='hero-title hero-text'>
@@ -20,17 +20,17 @@ const AuthHome = () => {
           </h1>
         </div>
       </div>
-      <div className="previous-order-wrapper">
-      <div className="previous-order-header">
+      <div className='previous-order-wrapper'>
+        {/* <div className="previous-order-header">
       <h3>
         Reordering?
       </h3>
       <p>One Click away from Express Reorder</p>
-      </div>
-      <div id='test'>
-      <PreviousOrder />
-      <PreviousOrder />
-      </div>
+      </div> */}
+        {/* <div id='test'>
+          <PreviousOrder />
+          <PreviousOrder />
+        </div> */}
       </div>
       <div className='pizza-wrapper'>
         <div className='pizza-card left-card'>
@@ -75,4 +75,3 @@ const AuthHome = () => {
 };
 
 export default AuthHome;
-
