@@ -1,3 +1,10 @@
-body{
-    background-color: #FDF2EC !important;
+body {
+  background-color: #fdf2ec !important;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.hm-order-history-card h3 {
+  color: black;
 }

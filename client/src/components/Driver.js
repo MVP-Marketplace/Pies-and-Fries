@@ -3,6 +3,7 @@ import '../styles/Driver.css'
 import {AppContext} from '../context/AppContext'
 import OrderPreview from './OrderPreview'
 import DriverOrderDetails from './DriverOrderDetails'
+import MapboxDirections from './MapboxDirections'
 const Driver = () => {
   const {userState} = useContext(AppContext)
   const[user] = userState
@@ -117,6 +118,7 @@ const Driver = () => {
     <div className='driver-container'>
       {!showSingleOrder ? (
         <>
+        {/* <MapboxDirections /> */}
       <h3 className='welcome-message'>Shalom Driver!</h3>
       <div className="driverFilters">
         <button className={orderFilter === 'availible' ? "active": "filterButton"} onClick={() => setOrderFilter('availible')}>Available</button>
