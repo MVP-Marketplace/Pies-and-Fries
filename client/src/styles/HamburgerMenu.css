@@ -29,9 +29,10 @@
   width: 95%;
   justify-content: space-between;
   margin-top: 1rem;
+  align-items: end;
 }
+
 .hm-cart {
-  position: absolute;
   left: 20rem;
 }
 
