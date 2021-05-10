@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import PizzaPieRewards from '../assets/PizzaPieRewards.svg';
+import PizzaPieRewards from '../assets/Pizzacolor.svg';
 import Reward from '../assets/Rewards.svg';
 
 const Rewards = () => {
   const [displayModal, setDisplayModal] = useState(false);
   return (
     <div className='hm-rewards-card'>
-      <img className='hm-rewards-image' src={Reward} alt="present"/>
+      <img className='hm-rewards-image' src={Reward} alt='present' />
       <h3
         className='hm-rewards-title'
         onClick={() => setDisplayModal(!displayModal)}

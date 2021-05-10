@@ -26,7 +26,7 @@
   border-radius: 17px;
   margin-left: 1.5rem;
   top: -150vh;
-  background: #04adbf;
+  background: #660650;
   box-shadow: 0 0 4px 0px rgb(0 0 0 / 15%);
   transition: top 0.9s ease-in-out;
   z-index: 7;
@@ -40,7 +40,7 @@
 }
 
 .feedback-heading {
-  color: #eee;
+  color: #fbbc05;
   margin-left: -1rem;
   margin-top: 1rem;
 }
@@ -53,15 +53,21 @@
 }
 
 .feedback-happy-face-logo {
+  height: 1.5rem;
+  width: auto;
 }
 
 .feedback-netural-face-logo {
+  height: 1.5rem;
+  width: auto;
 }
 .feedback-sad-face-logo {
+  height: 1.5rem;
+  width: auto;
 }
 .feedback-label {
-  color: #eee;
-  font-size: 14px;
+  color: #fbbc05;
+  font-size: 16px;
   margin-left: -7rem;
   margin-bottom: 0.55rem;
   margin-top: 0rem;
@@ -81,4 +87,7 @@
   margin-left: 14rem;
   border: none;
   border-radius: 2px;
+  background-color: #fbbc05;
+  color: #660650;
+  font-weight: 700;
 }
