@@ -19,7 +19,7 @@ import './styles/CurrentOrderHm.css';
 import './styles/CustomerDetails.css';
 import './styles/OrderHistoryHm.css';
 import './styles/DriverDetails.css';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import Admin from './components/Admin';
@@ -32,10 +32,11 @@ import Tracking from './pages/Tracking';
 import './styles/Admin.css';
 import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
-import OrderHistory from './pages/OrderHistory'
+import OrderHistory from './pages/OrderHistory';
 
 function App() {
   const { userState, userCheck } = useContext(AppContext);
+  const [displayModal, setDisplayModal] = useState(false);
   const [user] = userState;
 
   // eslint-disable-next-line
@@ -43,7 +44,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar displayModal={displayModal} setDisplayModal={setDisplayModal} />
       <Route exact path='/'>
         {user && user.driver ? <Redirect to='/driver' /> : <Redirect to='/' />}
       </Route>
@@ -51,12 +52,16 @@ function App() {
         {user && user.admin ? <Redirect to='/admin' /> : <Redirect to='/' />}
       </Route>
 
-      <Route
-        exact
-        path='/'>
-          {user ?  <AuthHome/>: <Home />
-           }
-        </Route>
+      <Route exact path='/'>
+        {user ? (
+          <AuthHome
+            displayModal={displayModal}
+            setDisplayModal={setDisplayModal}
+          />
+        ) : (
+          <Home />
+        )}
+      </Route>
 
       <Route exact path='/signin' render={() => <SignIn signIn={true} />} />
       <Route exact path='/tracking' render={() => <Tracking />} />
@@ -73,8 +78,7 @@ function App() {
       )}
       {/* <Route exact path='/store' render={() => <Store />} />
       <Route exact path='/profile' render={() => <Profile />} /> */}
-      <Route exact path='/orderhistory' render={() => <OrderHistory/>} />
-
+      <Route exact path='/orderhistory' render={() => <OrderHistory />} />
     </>
   );
 }
