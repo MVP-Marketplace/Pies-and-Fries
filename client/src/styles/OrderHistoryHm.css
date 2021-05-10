@@ -9,9 +9,14 @@
 .hm-order-history-image {
   margin-bottom: 1rem;
   margin-left: -5rem;
+  margin-bottom: 1rem;
+  margin-left: -5rem;
+  height: 1.5rem;
+  width: auto;
 }
 
 .hm-order-history-title {
+  color: #660650;
   font-size: 17px;
   font-weight: bold;
   margin-left: 13px;

@@ -8,10 +8,13 @@
 }
 
 .hm-profile-image {
+  height: 1.5rem;
+  width: auto;
   margin-bottom: 1rem;
   margin-left: -8.9rem;
 }
 .hm-profile-title {
+  color: #660650;
   font-size: 17px;
   font-weight: bold;
   margin-top: 0.2rem;

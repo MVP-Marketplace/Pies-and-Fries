@@ -7,11 +7,14 @@
 }
 
 .hm-Current-order-image {
+  height: 1.5rem;
+  width: auto;
   margin-bottom: 1rem;
   margin-left: -5rem;
 }
 
 .hm-Current-order-title {
+  color: #660650;
   font-size: 17px;
   font-weight: bold;
   margin-left: 13px;

@@ -310,7 +310,7 @@ body {
   display: flex;
   width: 81%;
   justify-content: space-between;
-  margin-top: 1rem;
+
   margin-left: 24px;
 }
 .tax-heading {
@@ -326,7 +326,7 @@ body {
   display: flex;
   width: 81%;
   justify-content: space-between;
-  margin-top: 1rem;
+
   margin-left: 24px;
 }
 .tip-heading {
@@ -342,7 +342,7 @@ body {
   display: flex;
   width: 81%;
   justify-content: space-between;
-  margin-top: 1rem;
+
   margin-left: 24px;
 }
 .total-heading {

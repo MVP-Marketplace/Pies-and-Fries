@@ -7,10 +7,13 @@
   width: 80%;
 }
 .hm-feedback-image {
+  height: 1.5rem;
+  width: auto;
   margin-bottom: 1rem;
   margin-left: -0.3rem;
 }
 .hm-feedback-title {
+  color: #660650;
   font-size: 17px;
   font-weight: bold;
   margin-left: 13px;
@@ -38,7 +41,8 @@
 
 .feedback-heading {
   color: #eee;
-  margin-left: -5rem;
+  margin-left: -1rem;
+  margin-top: 1rem;
 }
 
 .feedback-img-container {
