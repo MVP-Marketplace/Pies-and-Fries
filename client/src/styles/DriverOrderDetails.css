@@ -39,6 +39,7 @@
   align-items: center;
   width: 100%;
   margin-top: 30px;
+  padding-bottom: 30px;
 }
 .clientNumber {
   font-weight: bold;

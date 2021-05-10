@@ -44,11 +44,7 @@ const handleFormSubmit = (e) => {
 
                         <Form.Control className="password-input" type="password" placeholder="Password"  value = {password} onChange={(e) => setPassword(e.target.value)}/>
                       </Form.Group>
-                      <div className="submitButtonContainer">
-                      <Button className="submitButton" variant="primary" type="submit">
-                        Start!
-                      </Button>
-                      </div>
+                      
               </Form>
               <div className="remember-me-checkbox">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
@@ -56,7 +52,13 @@ const handleFormSubmit = (e) => {
               </div>
               
               <p className="switch-login-signup"onClick={() => props.setIsSignIn(false)}>Create new account?</p>
+              <div className="submitButtonContainer">
+                      <Button className="submitButton" variant="primary" type="submit">
+                        Start!
+                      </Button>
+              </div>
               <div className="socials-login">
+                
                 <div className="socials-button-container">
                 <img alt="google icon" src={require('../assets/google-icon.svg').default}/>                
                 </div>

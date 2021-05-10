@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import axios from 'axios'
 import {AppContext} from '../context/AppContext'
 import LogoutIcon from '../assets/logout.svg';
+import {Link} from 'react-router-dom'
 
 const Logout = () => {
   const {userCheck} = useContext(AppContext)
@@ -19,7 +20,10 @@ const Logout = () => {
   return (
     <div className='hm-logout-card' onClick={() => logoutFunc()}>
       <img src={LogoutIcon} alt="open door arrow"className='hm-logout-image'/>
+      <Link to ="/">
       <h3 className='hm-out-title'>LogOut</h3>
+
+      </Link>
     </div>
   );
 };

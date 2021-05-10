@@ -24,14 +24,14 @@ const TrackingPage = () => {
       </div>
       <div className='rewards-tracking-cn'>
         <p className='reward-earned-tracking'>Rewards Earned!</p>
-        <div className='tracking-rewards-img-con'>
+        {/* <div className='tracking-rewards-img-con'>
           <img
             className='rewards-pizza-logo'
             src={require('../assets/Pizzagreyscale.svg').default}
             alt='pizza-logo'
           />
           <p>Get your next pie on us!</p>
-        </div>
+        </div> */}
       </div>
       <div className='tracking-questions-cn'>
         <button className='call-restaurtant-btn'>

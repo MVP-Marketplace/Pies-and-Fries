@@ -1,50 +1,56 @@
 .container {
   border: 1px solid black;
-  height: 70px;
+  height: 100px;
   display: flex;
   align-items: center;
   padding: 0 40px;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .navLogo h1 {
   margin: 0;
 }
-.navOptions {
-  margin-left: 6rem;
-  margin-right: -2rem;
-}
+
 .Navbar {
   padding-top: 4px;
-  height: 50px;
+  height: 100px;
   display: flex;
   margin-bottom: 1.7rem;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
 }
 .logo {
-  height: 4rem;
-  width: 5rem;
-  margin-top: 0.7rem;
-  margin-left: 22px;
+  height: 100px;
+  width: 8rem;
+}
+.navLogo {
+  width: 100%;
+  display: flex;
+}
+.logo2 {
+  height: 80px;
+  width: 8rem;
+}
+.navLogo2 {
+  justify-content: center;
+  width: 100%;
+  display: flex;
 }
 .navItem-sigin {
   display: flex;
   justify-content: center;
   align-self: center;
-  margin-top: -6px;
   text-decoration: none;
-  color: #eee;
   font-size: 13px;
+  width: 70px;
   font-weight: 700;
-  height: 17px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  width: 56px;
-
-  margin-left: -6rem;
-  margin-top: 1px;
-  background: slategray;
-  border-radius: 80px;
+  padding: 5px;
+  color: #660650;
+  background: #fbbc05;
+  border-radius: 5px;
   cursor: pointer;
 }
 
