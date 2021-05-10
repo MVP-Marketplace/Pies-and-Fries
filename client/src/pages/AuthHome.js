@@ -9,7 +9,7 @@ import { Carousel } from 'react-responsive-carousel';
 import PreviousOrder from '../components/PreviousOrder';
 import Cart from '../components/Cart';
 
-const AuthHome = () => {
+const AuthHome = props => {
   const { userState } = useContext(AppContext);
   const [user] = userState;
   return (
@@ -42,7 +42,10 @@ const AuthHome = () => {
           <p>Estimated Delivery</p>
           <p>30 minutes</p>
           <img src={rating} alt='rating' id='rating-img' />
-          <button className='btn-order' onClick={() => <Cart />}>
+          <button
+            className='btn-order'
+            onClick={() => props.setDisplayModal(!props.displayModal)}
+          >
             Order Now!
           </button>
         </div>
