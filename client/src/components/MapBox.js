@@ -1,22 +1,24 @@
-import ReactMapboxGl, { Marker, ZoomControl } from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker, ZoomControl, Popup } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import'../styles/DriverOrderDetails.css'
 
-const MapBox = ReactMapboxGl({
+
+const MapBox = new ReactMapboxGl({
     accessToken: process.env.REACT_APP_MAPBOX_TOKEN
   });
-  
-const Map = ({ lat, lng }) => {
-    
+
+
+const Map = ({lng,lat}) => {
+
   return (
-        <div className="mapBox">
+        <div className="mapBox" id="map">
             <MapBox
                 style="mapbox://styles/mapbox/streets-v9"
                 center={[lng, lat]}
                 container="map"
                 containerStyle={{
                     width: '100vw',
-                    zoom: 1
+                    zoom: 15
                   }}
                 
                 >
@@ -31,7 +33,9 @@ const Map = ({ lat, lng }) => {
                 <ZoomControl />
             </MapBox>
         </div>
-        
+        // <div>
+        //   <div ref={mapContainer} className="map-container" />
+        // </div>
     
   );
 };

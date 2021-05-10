@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import {Link} from 'react-router-dom'
 import menu from '../assets/menu.svg';
 import UserInfoCard from './UserInfoCard';
 import Profile from './Profile';
@@ -66,7 +67,7 @@ const HamburgerMenu = () => {
           }
         })()}
 
-        {(() => {
+        {/* {(() => {
           if (user && user.driver === true) {
             return <OrderHistoryHm />;
           } else if (user && user.admin === true) {
@@ -76,7 +77,7 @@ const HamburgerMenu = () => {
           } else {
             return null;
           }
-        })()}
+        })()} */}
 
         {(() => {
           if (user && user.driver === true) {
@@ -101,6 +102,10 @@ const HamburgerMenu = () => {
             return null;
           }
         })()}
+        <Link to="/orderhistory"  onClick={() => setDisplayHamburgerMenu(!displayHamburgerMenu)}>
+          <OrderHistoryHm 
+          />
+        </Link>
         <NotificationPreferences />
         <Rewards />
         <InviteFriends />
