@@ -131,6 +131,9 @@
   display: flex;
   flex-direction: column;
 }
+.previewTopRow p {
+  margin: 0;
+}
 .pizza-pic {
   height: 100%;
   width: 100%;

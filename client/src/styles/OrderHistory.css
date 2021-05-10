@@ -1,0 +1,6 @@
+.order-history-container * {
+  box-sizing: border-box;
+}
+.order-history-container {
+  padding: 20px;
+}

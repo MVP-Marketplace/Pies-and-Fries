@@ -74,7 +74,7 @@ exports.getCurrentUser = async (req, res) => {
   try {
     // console.log('user', req.user)
     // console.log(req.user._id)
-    const user =await User.findById(req.user._id).populate('order').exec()
+    const user =await User.findById(req.user._id).populate({path: 'order', options:{sort:{'createdAt': -1}}}).exec()
 
     // console.log('user', user)
     res.json(user);

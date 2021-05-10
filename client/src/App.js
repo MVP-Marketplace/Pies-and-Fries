@@ -32,6 +32,7 @@ import Tracking from './pages/Tracking';
 import './styles/Admin.css';
 import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
+import OrderHistory from './pages/OrderHistory'
 
 function App() {
   const { userState, userCheck } = useContext(AppContext);
@@ -70,8 +71,10 @@ function App() {
       ) : (
         <Redirect to='/' />
       )}
-      <Route exact path='/store' render={() => <Store />} />
-      <Route exact path='/profile' render={() => <Profile />} />
+      {/* <Route exact path='/store' render={() => <Store />} />
+      <Route exact path='/profile' render={() => <Profile />} /> */}
+      <Route exact path='/orderhistory' render={() => <OrderHistory/>} />
+
     </>
   );
 }
