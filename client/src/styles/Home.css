@@ -24,8 +24,9 @@
   border-radius: 10px !important;
   background-image: url(../assets/pizzaHero2.png);
   background-size: cover;
-  background-size: 100% 80vh;
+  /* background-size: 100% 80vh; */
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: flex-end;

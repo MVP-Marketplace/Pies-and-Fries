@@ -13,9 +13,9 @@ const Navbar = props => {
     <>
       {user ? <HamburgerMenu /> : ''}
       <div className='Navbar'>
-        <div className='navLogo'>
+        <div className={user ? 'navLogo2': 'navLogo'}>
           <Link to='/'>
-            <img src={logo} alt='logo' className='logo' />
+            <img src={logo} alt='logo' className={user ? 'logo2': 'logo'} />
           </Link>
         </div>
         <div className='navOptions'>
@@ -36,7 +36,7 @@ const Navbar = props => {
           )}
           {props.cartLength}
         </div>
-
+            
         {(() => {
           if (user && user.driver === true) {
             return null;

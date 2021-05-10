@@ -1,9 +1,12 @@
 .hamburger-menu-icon {
-  margin-left: -7px;
-  padding-top: 4px;
+  margin-left: -5px;
+  padding-top: 25px;
   position: absolute;
-  top: 19px;
+  top: 15px;
   left: 32px;
+  height: 45px;
+  justify-self: center;
+  align-self: center;
 }
 
 .HamburgerMenu {
@@ -33,7 +36,10 @@
 }
 
 .hm-cart {
-  left: 20rem;
+  position: absolute;
+  /* left: 20rem; */
+  right: 25px;
+  height: 40px;
 }
 
 .hm-logo {
