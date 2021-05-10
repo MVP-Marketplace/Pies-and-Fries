@@ -45,7 +45,7 @@ const handleFormSubmit = (e) => {
                         <Form.Control className="password-input" type="password" placeholder="Password"  value = {password} onChange={(e) => setPassword(e.target.value)}/>
                       </Form.Group>
                       
-              </Form>
+              
               <div className="remember-me-checkbox">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
                 <label class="form-check-label" for="flexCheckDefault"> Remember Me</label>
@@ -66,6 +66,7 @@ const handleFormSubmit = (e) => {
                   <img alt="facebook icon" src={require('../assets/facebook-icon.svg').default}/>
                 </div>
               </div>
+              </Form>
        </div> 
     )
 }
