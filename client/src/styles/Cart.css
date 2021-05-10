@@ -76,7 +76,7 @@ body {
 }
 
 .Modal.Show {
-  top: 80px;
+  top: 0px;
 }
 
 .Close {
@@ -132,7 +132,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 91%;
-  height: 5rem;
+  height: 8rem;
   border: 1px solid #fbbc05;
   margin-left: 12px;
   margin-top: -11px;
@@ -150,6 +150,10 @@ body {
   border-radius: 0px 6px 3px 3px;
   margin-top: 6px;
   margin-left: 6px;
+}
+.pizza-pic-cart {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
 }
 .quanity-container {
   display: flex;
@@ -205,6 +209,7 @@ body {
   margin-left: -1rem;
 }
 .cart-card-right-section {
+  margin-right: 1rem;
   display: flex;
   width: 30%;
   flex-direction: column;

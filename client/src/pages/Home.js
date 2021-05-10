@@ -11,6 +11,7 @@ import '../styles/Home.css';
 const Home = () => {
   return (
     <div className='homepage-container'>
+      <h1 className='home-greeting'>Shalom, Friend!</h1>
       <div className='hero-wrapper'>
         <div className='hero-container'>
           <h1 className='hero-title hero-text'>

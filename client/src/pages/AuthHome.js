@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState, useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 import rating from '../assets/rating.svg';
 import pizzaPaddle from '../assets/pizzaPaddle.svg';
 import pizzaMonster from '../assets/pizzamonster.svg';
@@ -8,9 +9,11 @@ import { Carousel } from 'react-responsive-carousel';
 import PreviousOrder from '../components/PreviousOrder';
 
 const AuthHome = () => {
+  const { userState } = useContext(AppContext);
+  const [user] = userState;
   return (
     <div className='homepage-container'>
-      <h1 className='home-greeting'>Shalom, Friend!</h1>
+      <h1 className='home-greeting'>Shalom, {user.name}</h1>
       <div className='hero-wrapper'>
         <div className='hero-container'>
           <h1 className='hero-title hero-text'>

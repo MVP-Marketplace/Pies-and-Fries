@@ -7,7 +7,12 @@ const UserInfoCard = () => {
   return (
     <>
       <div className='hm-user-info-card'>
-        <div className='hm-user-image'></div>
+        <img
+          src={require(`../assets/profilepic.svg`).default}
+          className='profile-pic-cart-hm'
+          alt='pizza-img'
+        />
+
         <div className='hm-user-info'>
           <p className='hm-user-name'>{user && user.name}</p>
           <p className='hm-user-email'>{user && user.email}</p>

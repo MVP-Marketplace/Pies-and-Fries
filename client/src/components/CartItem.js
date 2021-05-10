@@ -7,6 +7,7 @@ const CartItem = props => {
         <img
           src={require(`../assets/pizzaBackground.svg`).default}
           className='pizza-pic-cart'
+          alt='pizza'
         />
       </div>
       <div className='cart-card-right-section'>
