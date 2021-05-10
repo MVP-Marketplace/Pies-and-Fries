@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 import CartIcon from '../assets/CartIcon.svg';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import Checkout from '../components/Checkout';
 import { set } from 'mongoose';
 
-export const Cart = () => {
+export const Cart = props => {
   const [displayModal, setDisplayModal] = useState(false);
   const [name, setName] = useState('Pizza');
   const [price, setPrice] = useState(12.0);
@@ -14,8 +15,10 @@ export const Cart = () => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(null);
   const [contactFree, setContactFree] = useState(false);
+  const { userState } = useContext(AppContext);
+  const [user] = userState;
 
-  const getTotal = () => {
+  const getTotal = props => {
     setTotal(price * quantity);
   };
   return (
@@ -24,9 +27,9 @@ export const Cart = () => {
         src={CartIcon}
         alt='cart'
         className='hm-cart'
-        onClick={() => setDisplayModal(!displayModal)}
+        onClick={() => props.setDisplayModal(!props.displayModal)}
       />
-      <div className={`Modal ${displayModal ? 'Show' : ''}`}>
+      <div className={`Modal ${props.displayModal ? 'Show' : ''}`}>
         <h3 className='cart-heading'>Cart:</h3>
         <CartItem
           setQuantity={setQuantity}
@@ -37,7 +40,7 @@ export const Cart = () => {
         <div className='pc-adderss-card'>
           <div className='pc-location-container'>
             <p className='pc-location-name'>Home</p>
-            <p className='pc-address'>1723 SunDown Road</p>
+            <p className='pc-address'>{user.delivery_address}</p>
           </div>
           <button className='pc-address-edit-btn'>Edit</button>
         </div>
@@ -111,19 +114,19 @@ export const Cart = () => {
             size={size}
             contactFree={contactFree}
             className='checkout-btn'
-            onClick={() => setDisplayModal(!displayModal)}
+            onClick={() => props.setDisplayModal(!props.displayModal)}
           />
         </Link>
         <button
           className='Close'
-          onClick={() => setDisplayModal(!displayModal)}
+          onClick={() => props.setDisplayModal(!props.displayModal)}
         >
           X
         </button>
       </div>
       <div
         className={`Overlay ${displayModal ? 'Show' : ''}`}
-        onClick={() => setDisplayModal(!displayModal)}
+        onClick={() => props.setDisplayModal(!props.displayModal)}
       />
     </>
   );

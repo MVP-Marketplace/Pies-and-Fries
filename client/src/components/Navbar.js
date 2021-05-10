@@ -43,7 +43,12 @@ const Navbar = props => {
           } else if (user && user.admin === true) {
             return null;
           } else if (user) {
-            return <Cart />;
+            return (
+              <Cart
+                displayModal={props.displayModal}
+                setDisplayModal={props.setDisplayModal}
+              />
+            );
           } else {
             return null;
           }

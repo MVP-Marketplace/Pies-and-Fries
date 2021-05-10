@@ -20,6 +20,7 @@
 }
 
 .hm-user-name {
+  margin: initial;
   font-size: 12px;
   font-weight: bold;
 }
