@@ -1,4 +1,4 @@
-import ReactMapboxGl, { Marker, ZoomControl, Popup } from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker, ZoomControl } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../styles/DriverOrderDetails.css';
 

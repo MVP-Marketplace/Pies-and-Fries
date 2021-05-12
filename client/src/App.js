@@ -24,10 +24,8 @@ import { Route, Redirect } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import Admin from './components/Admin';
 import Navbar from './components/Navbar';
-import Store from './components/Store';
 import Home from './pages/Home';
 import AuthHome from './pages/AuthHome';
-import Profile from './pages/Profile';
 import Tracking from './pages/Tracking';
 import './styles/Admin.css';
 import { AppContext } from './context/AppContext';
@@ -35,11 +33,11 @@ import Driver from './components/Driver';
 import OrderHistory from './pages/OrderHistory';
 
 function App() {
-  const { userState, userCheck } = useContext(AppContext);
+  const { userState, userCheck} = useContext(AppContext);
   const [displayModal, setDisplayModal] = useState(false);
   const [user] = userState;
 
-  // eslint-disable-next-line
+
   useEffect(userCheck, []);
 
   return (

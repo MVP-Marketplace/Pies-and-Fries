@@ -5,7 +5,7 @@ const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null)
 
-  const userCheck = async () => {
+  const userCheck = () => {
     fetch('./api/users/me', 
     {'credentials': 'include'})
     .then(res => res.json())

@@ -1,6 +1,6 @@
 import React from 'react';
 import rating from '../assets/rating.svg';
-import pizzaPaddle from '../assets/pizzaPaddle.svg';
+// import pizzaPaddle from '../assets/pizzaPaddle.svg';
 import pizzaMonster from '../assets/pizzamonster.svg';
 import pizzaSlice from '../assets/pizzaSlice.svg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
@@ -30,7 +30,7 @@ const Home = () => {
           <button className='btn-order'>Order Now!</button>
         </div>
         <div className='pizza-card right-card'>
-          <img src={pizzaPaddle} alt='pizza' />
+          {/* <img src={pizzaPaddle} alt='pizza' /> */}
         </div>
       </div>
       <Carousel

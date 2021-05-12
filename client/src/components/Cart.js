@@ -7,7 +7,6 @@ import Checkout from '../components/Checkout';
 import { set } from 'mongoose';
 
 export const Cart = props => {
-  const [displayModal, setDisplayModal] = useState(false);
   const [name, setName] = useState('Pizza');
   const [price, setPrice] = useState(12.0);
   const [quantity, setQuantity] = useState(1);
@@ -125,7 +124,7 @@ export const Cart = props => {
         </button>
       </div>
       <div
-        className={`Overlay ${displayModal ? 'Show' : ''}`}
+        className={`Overlay ${props.displayModal ? 'Show' : ''}`}
         onClick={() => props.setDisplayModal(!props.displayModal)}
       />
     </>

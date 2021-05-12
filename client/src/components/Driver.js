@@ -3,7 +3,7 @@ import '../styles/Driver.css'
 import {AppContext} from '../context/AppContext'
 import OrderPreview from './OrderPreview'
 import DriverOrderDetails from './DriverOrderDetails'
-import MapboxDirections from './MapboxDirections'
+// import MapboxDirections from './MapboxDirections'
 const Driver = () => {
   const {userState} = useContext(AppContext)
   const[user] = userState
