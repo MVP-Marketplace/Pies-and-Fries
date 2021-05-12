@@ -7,6 +7,10 @@ const CustomerOrderDetails = (props) => {
     const [percentage,setPercentage] = useState(0)
 
     useEffect(() => {
+        setOrderValue()
+    },[])
+
+    const setOrderValue = () => {
         if(props.order.isReady === true && props.order.delivered === true) {
             setPercentage(100)
         } else if (props.order.isReady === true && props.order.delivered === false) {
@@ -14,7 +18,7 @@ const CustomerOrderDetails = (props) => {
         } else {
             setPercentage(30)
         }
-    },[])
+    }
 
     return (
         <>

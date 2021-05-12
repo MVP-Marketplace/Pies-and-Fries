@@ -27,7 +27,7 @@ const Map = () => {
         // profile: 'mapbox/cycling'
       })
 
-    const marker = new mapboxgl.Marker({
+    new mapboxgl.Marker({
     }).setLngLat([-74.055984,40.883884 ]).addTo(map)
 
     // Add navigation control (the +/- zoom buttons)

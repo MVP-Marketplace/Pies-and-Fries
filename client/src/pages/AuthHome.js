@@ -1,12 +1,12 @@
-import { useState, useContext } from 'react';
+import {  useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import rating from '../assets/rating.svg';
-import pizzaPaddle from '../assets/pizzaPaddle.svg';
+// import pizzaPaddle from '../assets/pizzaPaddle.svg';
 import pizzaMonster from '../assets/pizzamonster.svg';
 import pizzaSlice from '../assets/pizzaSlice.svg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import PreviousOrder from '../components/PreviousOrder';
+// import PreviousOrder from '../components/PreviousOrder';
 import Cart from '../components/Cart';
 
 const AuthHome = props => {
@@ -50,7 +50,7 @@ const AuthHome = props => {
           </button>
         </div>
         <div className='pizza-card right-card'>
-          <img src={pizzaPaddle} alt='pizza' />
+          {/* <img src={pizzaPaddle} alt='pizza' /> */}
         </div>
       </div>
       <Carousel
