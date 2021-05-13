@@ -3,7 +3,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '../styles/DriverOrderDetails.css';
 
 const MapBox = new ReactMapboxGl({
-  accessToken: process.env.REACT_APP_MAPBOX_TOKEN,
+  accessToken: 'pk.eyJ1IjoicGllc2FuZGZyaWVzIiwiYSI6ImNrb2VwNjk4YjBjNnMydXB3ZG93b2hrNTMifQ.tF6tUKvutcojrjA6MXMECw',
 });
 
 const Map = ({ lng, lat }) => {
