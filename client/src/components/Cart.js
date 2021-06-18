@@ -104,18 +104,17 @@ export const Cart = props => {
           </div>
         </div>
 
-        <Link to='/tracking'>
-          <Checkout
-            name={name}
-            price={price}
-            quantity={quantity}
-            total={total}
-            size={size}
-            contactFree={contactFree}
-            className='checkout-btn'
-            onClick={() => props.setDisplayModal(!props.displayModal)}
-          />
-        </Link>
+        {/* <Link to='/tracking'></Link> */}
+        <Checkout
+          name={name}
+          price={price}
+          quantity={quantity}
+          total={total}
+          size={size}
+          contactFree={contactFree}
+          className='checkout-btn'
+          onClick={() => props.setDisplayModal(!props.displayModal)}
+        />
         <button
           className='Close'
           onClick={() => props.setDisplayModal(!props.displayModal)}
