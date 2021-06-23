@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-import {io} from "socket.io-client"
 
 const AppContext = createContext();
 
@@ -20,12 +19,9 @@ const AppContextProvider = ({ children }) => {
       })
     }
 
-    const socket = io("http://localhost:8080")
-
   const state = {
     userState: [currentUser,setCurrentUser],
     userCheck: userCheck,
-    socket: []
   }
 
   return (

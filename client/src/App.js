@@ -31,12 +31,14 @@ import './styles/Admin.css';
 import { AppContext } from './context/AppContext';
 import Driver from './components/Driver';
 import OrderHistory from './pages/OrderHistory';
+import {io} from "socket.io-client"
 
 function App() {
   const { userState, userCheck} = useContext(AppContext);
   const [displayModal, setDisplayModal] = useState(false);
   const [user] = userState;
 
+  const socket = io("http://localhost:8080")
 
   useEffect(userCheck, []);
 
