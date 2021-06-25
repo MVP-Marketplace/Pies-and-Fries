@@ -1,4 +1,4 @@
-import '../styles/DriverOrderDetails.css'
+import '../styles/DriverOrderDetails.scss'
 
 import Map from './MapBox'
 

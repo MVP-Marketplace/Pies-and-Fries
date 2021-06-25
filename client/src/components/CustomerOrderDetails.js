@@ -1,7 +1,7 @@
 import Tracker from './Tracker'
 
 import {useState, useEffect} from 'react'
-import '../styles/CustomerOrderDetails.css'
+import '../styles/CustomerOrderDetails.scss'
 
 const CustomerOrderDetails = (props) => {
     const [percentage,setPercentage] = useState(0)

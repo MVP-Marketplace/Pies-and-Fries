@@ -1,4 +1,4 @@
-import '../styles/Admin.css'
+import '../styles/Admin.scss'
 
 
 const Order = (props) => {

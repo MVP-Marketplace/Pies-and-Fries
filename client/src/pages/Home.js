@@ -1,12 +1,12 @@
 import React from 'react';
 import rating from '../assets/rating.svg';
-// import pizzaPaddle from '../assets/pizzaPaddle.svg';
+import pizzaPaddle from '../assets/pizzaPaddle.svg';
 import pizzaMonster from '../assets/pizzamonster.svg';
 import pizzaSlice from '../assets/pizzaSlice.svg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-import '../styles/Home.css';
+import '../styles/Home.scss';
 
 const Home = () => {
   return (
@@ -22,15 +22,16 @@ const Home = () => {
         </div>
       </div>
       <div className='pizza-wrapper'>
-        <div className='pizza-card left-card'>
+        <div className='pizza-card.left-card'>
           <h3>Classic Plain Cheese Pie</h3>
           <p>Estimated Delivery</p>
           <p>30 minutes</p>
           <img src={rating} alt='rating' id='rating-img' />
+          <br/>
           <button className='btn-order'>Order Now!</button>
         </div>
-        <div className='pizza-card right-card'>
-          {/* <img src={pizzaPaddle} alt='pizza' /> */}
+        <div className='pizza-card.right-card'>
+        <img src= {pizzaPaddle} alt="pizza paddle" id="pizza-paddle-img" />
         </div>
       </div>
       <Carousel

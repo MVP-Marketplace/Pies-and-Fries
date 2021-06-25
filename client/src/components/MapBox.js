@@ -1,6 +1,6 @@
 import ReactMapboxGl, { Marker, ZoomControl } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import '../styles/DriverOrderDetails.css';
+import '../styles/DriverOrderDetails.scss';
 
 const MapBox = new ReactMapboxGl({
   accessToken: 'pk.eyJ1IjoicGllc2FuZGZyaWVzIiwiYSI6ImNrb2VwNjk4YjBjNnMydXB3ZG93b2hrNTMifQ.tF6tUKvutcojrjA6MXMECw',

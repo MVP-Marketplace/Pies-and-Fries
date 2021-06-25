@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-import '../styles/Driver.css'
+import '../styles/Driver.scss'
 import {AppContext} from '../context/AppContext'
 import OrderPreview from './OrderPreview'
 import DriverOrderDetails from './DriverOrderDetails'

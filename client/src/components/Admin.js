@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Order from './Order'
-import '../styles/Admin.css'
+import '../styles/Admin.scss'
 const Admin = () => {
   const[activeOrders,setActiveOrders] = useState(null)
   const [readyOrders, setReadyOrders] = useState(null)

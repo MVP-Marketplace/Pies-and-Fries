@@ -2,7 +2,7 @@ import {AppContext} from '../context/AppContext'
 import {useContext, useState} from 'react'
 import OrderPreview from '../components/OrderPreview'
 import CustomerOrderDetails from '../components/CustomerOrderDetails'
-import '../styles/OrderHistory.css'
+import '../styles/OrderHistory.scss'
 
 const OrderHistory = () => {
     const {userState} = useContext(AppContext)

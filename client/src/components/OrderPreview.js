@@ -1,4 +1,4 @@
-import '../styles/Order.css'
+import '../styles/Order.scss'
 
 const OrderPreview = (props) => {
     
