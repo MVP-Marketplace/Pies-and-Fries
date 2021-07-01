@@ -1,5 +1,7 @@
+
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useHistory } from "react-router-dom"
 
 const CreateAccountForm = props => {
   const [name, setName] = useState('');
@@ -53,6 +55,7 @@ const CreateAccountForm = props => {
         },
       })
         .then(res => {
+          history.push('/')
           console.log(res);
           console.log(res.json());
         })
@@ -63,6 +66,8 @@ const CreateAccountForm = props => {
       alert('passwords do not match');
     }
   };
+
+  const history = useHistory();
   return (
     <>
       <div className='ac-profile-card'>
@@ -137,7 +142,7 @@ const CreateAccountForm = props => {
                   value={password}
                   onChange={e => setPassword(e.target.value)}
                 />
-                <Form.Label className='formBasicPassword-creation'>
+                <Form.Label className='formBasicPassword-confirm'>
                   Confirm Password
                 </Form.Label>
                 <Form.Control
@@ -159,7 +164,7 @@ const CreateAccountForm = props => {
                   onChange={e => setNumber(e.target.value)}
                 />
               </Form.Group>
-
+{/* //
               <li
                 onClick={() => setDisplayPaymentInfo(!displayPaymentInfo)}
                 className='profile-creation-payment-i'
@@ -266,7 +271,7 @@ const CreateAccountForm = props => {
                   </Form.Group>
                 </div>
                 <div className='line'></div>
-              </div>
+//              </div> */}
               <li
                 onClick={() => setDisplayAdressInfo(!displayAddressInfo)}
                 className='profile-creation-address-i'
@@ -278,7 +283,7 @@ const CreateAccountForm = props => {
                   displayAddressInfo ? 'show' : ''
                 }`}
               >
-                <Form.Group controlId='formBasicAddress'>
+                <Form.Group controlId='formBasicAddress-delivery'>
                   <Form.Label className='formBasicAddress'>Address</Form.Label>
                   <Form.Control
                     type='text'
@@ -334,13 +339,16 @@ const CreateAccountForm = props => {
                   </Form.Group>
                 </div>
               </div>
-              <Button
-                variant='primary'
-                type='submit'
-                className='profile-creation-submit-btn'
-              >
-                Submit
-              </Button>
+              
+                <Button
+                  variant='primary'
+                  type='submit'
+                  className='profile-creation-submit-btn'
+                  // onClick={history.push('/')}
+                >
+                  Submit
+                </Button>
+          
             </Form>
           </div>
         </ul>

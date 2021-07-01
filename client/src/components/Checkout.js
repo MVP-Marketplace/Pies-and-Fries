@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import { AppContext } from '../context/AppContext';
-
+import { useHistory } from 'react-router-dom';
 /// we need to make the orders
 
 const Checkout = props => {
@@ -55,16 +55,18 @@ const Checkout = props => {
               total: props.total,
             }),
           }).then(res => {
+            history.push('/tracking');
             console.log(res);
           });
         }
       })
       .catch(error => {
+        history.push('/');
         console.log('DID NOT WORK');
         console.log(error);
       });
   };
-
+const history = useHistory();
   return (
     <>
       <StripeCheckout
